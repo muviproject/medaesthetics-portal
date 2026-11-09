@@ -26,8 +26,8 @@ NETS = {
     "FB": ("FB", "net-fb"),
     "Facebook": ("FB", "net-fb"),
     "TikTok": ("TK", "net-tt"),
-    "YT": ("YouTube", "net-yt"),
-    "YouTube": ("YouTube", "net-yt"),
+    "YT": ("YT", "net-yt"),
+    "YouTube": ("YT", "net-yt"),
 }
 def nets_pills(redes):
     """Convierte 'IG + FB + TikTok + YouTube' en cápsulas con el color de cada marca.
@@ -598,7 +598,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section id="calendario" style="background:#fff"><div class="wrap">
   <h2>Calendario · 10 al 30 de noviembre de 2026</h2>
-  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">IG</span> y <span class="net net-fb">FB</span>; <span class="net net-tt">TK</span> y <span class="net net-yt">YouTube</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
+  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">IG</span> y <span class="net net-fb">FB</span>; <span class="net net-tt">TK</span> y <span class="net net-yt">YT</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
   <div class="cal">__CALENDAR__</div>
 </div></section>
 
