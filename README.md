@@ -32,9 +32,9 @@ Cambiar el valor entre comillas, hacer commit y push. No hay nada más que tocar
 El portal funciona con o sin imágenes. Si existen, las usa; si no, muestra un
 gradiente con los colores de marca (no se rompe nada):
 
-- `assets/hero.jpg` — foto principal del hero (portada).
-- `assets/flatlay.jpg` — imagen de la sección de piezas gráficas.
-- `assets/texture.jpg` — imagen de la banda de la sección de ofertas.
+- `assets/hero.png` — foto principal del hero (portada).
+- `assets/flatlay.png` — imagen de la sección de piezas gráficas.
+- `assets/texture.png` — imagen de la banda de la sección de ofertas.
 
 Las imágenes llegan aparte (desde ChatGPT) y se suben a `assets/` con esos
 nombres exactos. No usar fotos reales de pacientes ni antes/después sin
