@@ -69,3 +69,21 @@ a Daniel con el mensaje prellenado `Sobre [nombre de la pieza]: [comentario]`,
 con el mismo nombre de pieza que usa el botón de aprobar. Como con las
 aprobaciones, nada se envía solo: el mensaje se manda solo cuando Rosanna
 pulsa Enviar en WhatsApp. El portal no guarda comentarios.
+
+### Redes: cápsulas de color
+
+Donde se publica cada pieza se muestra con cápsulas con el color de cada
+marca (definidas una sola vez en el CSS: `.net-ig` gradiente de Instagram,
+`.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y acento rojo
+#FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita esa clase en
+`index.html`; todo el portal usa la misma definición.
+
+### Vista previa (popup)
+
+Cada pieza tiene un botón "Vista previa" que abre un modal con el detalle
+completo de esa pieza (título, fecha, formato, redes, estado y, según el
+tipo, hook + cuerpo + CTA + caption, o descripción y qué falta), con los
+botones de aprobar y de feedback de esa pieza adentro. Cierra con la X, con
+clic fuera del popup, o con Escape; mientras está abierto, el fondo no hace
+scroll. En el celular el modal es una lámina de ~94vw y ~90vh, con el botón
+de cerrar grande y alcanzable.

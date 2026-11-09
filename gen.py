@@ -20,6 +20,35 @@ def fb(piece):
     return ('<div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea>'
             '<button type="button" class="fb-btn" data-piece="%s" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div>' % esc(piece))
 
+NETS = {
+    "IG": ("Instagram", "net-ig"),
+    "Instagram": ("Instagram", "net-ig"),
+    "FB": ("Facebook", "net-fb"),
+    "Facebook": ("Facebook", "net-fb"),
+    "TikTok": ("TikTok", "net-tt"),
+    "YT": ("YouTube", "net-yt"),
+    "YouTube": ("YouTube", "net-yt"),
+}
+def nets_pills(redes):
+    """Convierte 'IG + FB + TikTok + YouTube' en cápsulas con el color de cada marca.
+
+    El color se define una sola vez en el CSS (.net-ig, .net-fb, .net-tt,
+    .net-yt). No cambia qué redes lleva cada pieza, solo cómo se muestran.
+    """
+    if not redes or redes.strip() in ("—", "-"):
+        return ""
+    out = []
+    for tok in redes.split("+"):
+        tok = tok.strip()
+        if tok in NETS:
+            label, cls = NETS[tok]
+            out.append('<span class="net %s">%s</span>' % (cls, label))
+    return '<div class="nets">%s</div>' % "".join(out) if out else ""
+
+def pv_btn():
+    """Botón 'Vista previa': abre el modal con el detalle completo de la pieza."""
+    return ('<div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div>')
+
 # ---------------------------------------------------------------- datos
 # Scripts: n, titulo, fuente, servicio, duracion, hook, cuerpo (beats), cta, caption, aviso
 SCRIPTS = [
@@ -288,7 +317,7 @@ PENDIENTES = [
 CSS = """
 :root{--gold:#e3b533;--gray:#606163;--ink:#2b2b2b;--light:#f2f9ff;--cream:#ecf0e4;--brown:#4b3618;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:#faf8f2;line-height:1.55}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:#faf8f2;line-height:1.55;overflow-x:hidden}
 .brand{font-family:Georgia,'Times New Roman',serif}
 .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
 /* ---------- login ---------- */
@@ -379,7 +408,36 @@ footer a{color:var(--gold)}
 .topbar{background:var(--brown);color:#fff;font-size:13px;padding:10px 0}
 .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .topbar a{color:var(--gold);text-decoration:none}
-@media(max-width:640px){.hero h1{font-size:32px}section h2{font-size:25px}}
+/* redes: cápsulas con el color de cada marca (definido una vez acá) */
+.nets{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.net{display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#fff;white-space:nowrap}
+.net-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.net-fb{background:#1877F2}
+.net-tt{background:#010101;border:1.5px solid #25F4EE;box-shadow:inset 0 -2px 0 #FE2C55}
+.net-yt{background:#FF0000}
+/* botón vista previa */
+.pv{margin-top:10px}
+.pv-btn{display:inline-block;background:#fff;color:var(--brown);border:1.5px solid var(--gray);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.pv-btn:hover{border-color:var(--gold);background:#fdf6e0}
+/* modal de vista previa */
+.modal-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(43,43,43,.65);padding:16px}
+.modal-overlay.open{display:flex}
+.modal{position:relative;background:#fff;border-radius:14px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:26px 24px 22px;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+.modal-close{position:absolute;top:10px;right:12px;width:44px;height:44px;border:0;border-radius:50%;background:var(--cream);color:var(--brown);font-size:28px;line-height:1;cursor:pointer;z-index:1}
+.modal-close:hover{background:var(--gold);color:#fff}
+.modal .day,.modal .card{border:0;padding:0}
+.modal details{border:0;padding:0;margin:0}
+.modal .approve,.modal .fb{margin-top:14px}
+@media(max-width:640px){
+  .hero h1{font-size:32px}
+  section h2{font-size:25px}
+  .hero-inner{padding:44px 20px 38px}
+  .modal-overlay{padding:8px}
+  .modal{width:94vw;max-height:90vh;padding:22px 16px 18px;border-radius:16px}
+  .modal-close{width:48px;height:48px;font-size:30px;top:8px;right:8px}
+  .approve a,.fb-btn,.pv-btn{display:block;text-align:center;margin-top:8px}
+  .fb textarea{font-size:16px}
+}
 """
 
 def cal_rows():
@@ -392,12 +450,12 @@ def cal_rows():
         out.append(
             '<article class="day%s"><span class="badge%s">%s</span> '
             '<div class="d">%s</div><div class="fmt">%s · %s</div><p>%s</p>'
-            '<div class="nets">%s</div>%s'
-            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s</article>' % (
+            '%s%s'
+            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
                 empty, " warn" if warn else "", esc(fmt), esc(dia), esc(fmt), esc(fuente), esc(tema),
-                esc(redes),
+                nets_pills(redes),
                 ('<div class="note">%s</div>' % esc(nota)) if nota and nota != "—" else "",
-                wa(msg), fb(piece)))
+                wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 def script_blocks():
@@ -414,9 +472,9 @@ def script_blocks():
             '<div class="lbl">Cuerpo</div><ul>%s</ul>'
             '<div class="lbl">CTA único</div><p>%s</p>'
             '<div class="cap"><b>Caption:</b> %s</div>%s'
-            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar guion por WhatsApp</a></div>%s</details>' % (
+            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar guion por WhatsApp</a></div>%s%s</details>' % (
                 s["n"], esc(s["t"]), esc(s["f"]), esc(s["v"]), esc(s["d"]), "Inglés",
-                esc(s["h"]), beats, esc(s["c"]), esc(s["cap"]), warn, wa(msg), fb(piece)))
+                esc(s["h"]), beats, esc(s["c"]), esc(s["cap"]), warn, wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 def graphic_cards():
@@ -429,8 +487,8 @@ def graphic_cards():
             '<article class="card"><span class="badge%s">%s</span>'
             '<h3>%s</h3><p>%s</p><p class="vig">%s</p>'
             '<div class="need">Falta: %s</div>'
-            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s</article>' % (
-                " warn" if und else "", esc(gid), esc(pieza), esc(tipo), esc(fecha), esc(falta), wa(msg), fb(piece)))
+            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
+                " warn" if und else "", esc(gid), esc(pieza), esc(tipo), esc(fecha), esc(falta), wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 def offer_cards():
@@ -441,10 +499,10 @@ def offer_cards():
         out.append(
             '<article class="card"><span class="badge%s">%s</span>'
             '<h3>%s</h3><div class="price">%s</div><p class="vig">Vigencia: %s</p>%s'
-            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s</article>' % (
+            '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
                 " warn" if confirmar else " gold", esc(grupo), esc(nombre), esc(detalle), esc(vig),
                 '<div class="need">Precio A CONFIRMAR POR ROSANNA — no usar sin su confirmación.</div>' if confirmar else "",
-                wa(msg), fb(piece)))
+                wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 TPL = """<!DOCTYPE html>
@@ -540,7 +598,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section id="calendario" style="background:#fff"><div class="wrap">
   <h2>Calendario · 10 al 30 de noviembre de 2026</h2>
-  <p class="intro">21 días, día por día. Instagram y Facebook en todos los días; TikTok y YouTube (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
+  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">Instagram</span> y <span class="net net-fb">Facebook</span>; <span class="net net-tt">TikTok</span> y <span class="net net-yt">YouTube</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
   <div class="cal">__CALENDAR__</div>
 </div></section>
 
@@ -577,6 +635,43 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
     <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
   </div>
 </footer>
+<div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+    <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<script>
+/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+   cajita de feedback. Cierra con la X, con clic fuera del popup, o con
+   Escape. Mientras está abierto, el fondo no hace scroll. */
+var _pvScroll = 0;
+function openPreview(btn){
+  var piece = btn.closest('article, details');
+  if(!piece) return;
+  var clone = piece.cloneNode(true);
+  var pv = clone.querySelector('.pv');
+  if(pv) pv.remove();
+  if(clone.tagName === 'DETAILS') clone.setAttribute('open', '');
+  var body = document.getElementById('modal-body');
+  body.innerHTML = '';
+  body.appendChild(clone);
+  document.getElementById('modal-overlay').classList.add('open');
+  _pvScroll = window.scrollY || 0;
+  document.body.style.overflow = 'hidden';
+  var c = document.querySelector('.modal-close');
+  if(c) c.focus();
+}
+function closePreview(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-body').innerHTML = '';
+  document.body.style.overflow = '';
+  window.scrollTo(0, _pvScroll);
+}
+document.addEventListener('keydown', function(ev){
+  if(ev.key === 'Escape') closePreview();
+});
+</script>
 <script>
 /* Feedback por WhatsApp: abre WhatsApp con "Sobre [pieza]: [comentario]".
    No envía nada solo: el mensaje se manda solo si Rosanna pulsa Enviar
@@ -675,6 +770,24 @@ a Daniel con el mensaje prellenado `Sobre [nombre de la pieza]: [comentario]`,
 con el mismo nombre de pieza que usa el botón de aprobar. Como con las
 aprobaciones, nada se envía solo: el mensaje se manda solo cuando Rosanna
 pulsa Enviar en WhatsApp. El portal no guarda comentarios.
+
+### Redes: cápsulas de color
+
+Donde se publica cada pieza se muestra con cápsulas con el color de cada
+marca (definidas una sola vez en el CSS: `.net-ig` gradiente de Instagram,
+`.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y acento rojo
+#FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita esa clase en
+`index.html`; todo el portal usa la misma definición.
+
+### Vista previa (popup)
+
+Cada pieza tiene un botón "Vista previa" que abre un modal con el detalle
+completo de esa pieza (título, fecha, formato, redes, estado y, según el
+tipo, hook + cuerpo + CTA + caption, o descripción y qué falta), con los
+botones de aprobar y de feedback de esa pieza adentro. Cierra con la X, con
+clic fuera del popup, o con Escape; mientras está abierto, el fondo no hace
+scroll. En el celular el modal es una lámina de ~94vw y ~90vh, con el botón
+de cerrar grande y alcanzable.
 """
 
 if __name__ == "__main__":
