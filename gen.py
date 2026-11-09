@@ -21,10 +21,10 @@ def fb(piece):
             '<button type="button" class="fb-btn" data-piece="%s" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div>' % esc(piece))
 
 NETS = {
-    "IG": ("Instagram", "net-ig"),
-    "Instagram": ("Instagram", "net-ig"),
-    "FB": ("Facebook", "net-fb"),
-    "Facebook": ("Facebook", "net-fb"),
+    "IG": ("IG", "net-ig"),
+    "Instagram": ("IG", "net-ig"),
+    "FB": ("FB", "net-fb"),
+    "Facebook": ("FB", "net-fb"),
     "TikTok": ("TikTok", "net-tt"),
     "YT": ("YouTube", "net-yt"),
     "YouTube": ("YouTube", "net-yt"),
@@ -409,7 +409,7 @@ footer a{color:var(--gold)}
 .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .topbar a{color:var(--gold);text-decoration:none}
 /* redes: cápsulas con el color de cada marca (definido una vez acá) */
-.nets{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.nets{display:flex;flex-wrap:nowrap;gap:6px;margin-top:8px}
 .net{display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#fff;white-space:nowrap}
 .net-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 .net-fb{background:#1877F2}
@@ -598,7 +598,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section id="calendario" style="background:#fff"><div class="wrap">
   <h2>Calendario · 10 al 30 de noviembre de 2026</h2>
-  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">Instagram</span> y <span class="net net-fb">Facebook</span>; <span class="net net-tt">TikTok</span> y <span class="net net-yt">YouTube</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
+  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">IG</span> y <span class="net net-fb">FB</span>; <span class="net net-tt">TikTok</span> y <span class="net net-yt">YouTube</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
   <div class="cal">__CALENDAR__</div>
 </div></section>
 
