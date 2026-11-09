@@ -59,3 +59,13 @@ consentimiento.
 El sitio estático no guarda aprobaciones. Cada pieza tiene un botón
 "Aprobar por WhatsApp" que abre WhatsApp a Daniel (+1 845-699-6606) con el
 mensaje prellenado. La aprobación sigue siendo por WhatsApp, como hasta ahora.
+
+### Comentarios (feedback)
+
+Cada pieza tiene además una cajita "Escribí tu comentario sobre esta pieza…"
+con un botón "Enviar comentario por WhatsApp". Si la cajita está vacía, el
+portal pide que se escriba algo y no abre nada. Si tiene texto, abre WhatsApp
+a Daniel con el mensaje prellenado `Sobre [nombre de la pieza]: [comentario]`,
+con el mismo nombre de pieza que usa el botón de aprobar. Como con las
+aprobaciones, nada se envía solo: el mensaje se manda solo cuando Rosanna
+pulsa Enviar en WhatsApp. El portal no guarda comentarios.
