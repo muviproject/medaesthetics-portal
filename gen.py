@@ -246,27 +246,27 @@ SCRIPTS += [
 
 # Calendario 10–30 nov: (dia, formato, tema, fuente, redes, nota)
 CALENDAR = [
- ("mar 10 nov", "Carrusel", "«QuantumRF: Men Included» — antes/después abdomen masculino", "Deck · G-02", "IG + FB", "Confirmar el orden correcto del antes/después + foto real con consentimiento"),
- ("mié 11 nov", "Reel", "Rosanna a cámara: purging vs. breakout («Before you throw out the product…»)", "Banco · guion #3", "IG + FB", "Guion y video con Rosanna"),
- ("jue 12 nov", "Reel", "«A FEW THINGS YOU'LL FIND AT MED AESTHETICS MIAMI» — Rosanna muestra tratamientos", "Deck R3 · guion #21", "IG + FB + TikTok + YouTube", "Video con Rosanna"),
- ("vie 13 nov", "Estática", "Tarjeta oferta siempre activa: Botox $10/unidad", "Q4 · G-05", "IG + FB", "Aprobar diseño de la tarjeta"),
- ("sáb 14 nov", "Reel", "Sculptra — «WHERE CAN SCULPTRA GO?» (rostro, cuello, glúteos)", "Deck R4 · guion #11", "IG + FB + TikTok + YouTube", "Video y contenido de zonas"),
- ("dom 15 nov", "Carrusel", "Checklist «Preguntas para tu consulta» v2, con pregunta final para comentarios", "Banco · G-10", "IG + FB", "Contenido del checklist + CTA final"),
- ("lun 16 nov", "Reel", "Línea de tiempo de tratamientos: HydraFacial mensual, Botox 3–4 meses, Morpheus8 cada 4–6 semanas", "Banco · guion #8", "IG + FB", "Video y tiempos indicados"),
- ("mar 17 nov", "Carrusel", "QuantumRF — antes/después de brazos; «individual results vary»", "Deck · G-03", "IG + FB", "Foto real con consentimiento"),
- ("mié 18 nov", "Reel", "Ángulo «confianza» (el de mejor rendimiento de Med: M-13)", "Banco · guion #1", "IG + FB", "Definir si es material nuevo de la jornada o remontaje"),
- ("jue 19 nov", "Reel", "«What is PRP? Explained by Rosanna» — Día Internacional del Hombre", "Deck R5 · guion #10", "IG + FB + TikTok + YouTube", "Video con Rosanna"),
- ("vie 20 nov", "Estática", "Tarjeta oferta siempre activa: Morpheus8 $200 off la serie — solo Aventura", "Q4 · G-07", "IG + FB", "Diseño + aclarar «Aventura Location Only»"),
- ("sáb 21 nov", "Reel", "No hace falta ocasión especial para un retoque («Because I wanted to»)", "Deck R6 · guion #20", "IG + FB + TikTok + YouTube", "Video"),
- ("dom 22 nov", "Carrusel", "«Retire the Razor» zona por zona (espalda, pecho, cuello, línea de barba)", "Q4 · G-12", "IG + FB", "Rosanna confirma sesiones por zona"),
- ("lun 23 nov", "Reel", "«Where does age show first?» — Rosanna muestra dónde se nota primero el envejecimiento", "Deck R7 · guion #9", "IG + FB + TikTok + YouTube", "Video con Rosanna"),
- ("mar 24 nov", "Reel", "«Why QuantumRF?» — grasa + tensión de piel en una sesión", "Banco · guion #12", "IG + FB", "Video y contenido"),
- ("mié 25 nov", "Estática", "Tarjeta oferta: Glow Duo, 20% off primer HydraFacial + Aerolase — últimos días (vence 26-nov)", "Q4 · G-01", "IG + FB", "Diseño de la tarjeta"),
- ("jue 26 nov", "Estática", "Recordatorio último día: ofertas de noviembre vencen hoy (Glow Duo, The Contour Edit, Retire the Razor)", "Q4", "IG + FB", "Texto y diseño. Además: apagar anuncios de noviembre en Meta Ads"),
- ("vie 27 nov", "Carrusel", "«Gold Friday Package Event»", "Deck · G-04", "IG + FB", "PRECIOS A CONFIRMAR POR ROSANNA"),
- ("sáb 28 nov", "Reel", "Antes/después QuantumRF corporal (piernas/rodillas); Gold Friday hasta 30-nov", "Deck R8 · guion #23", "IG + FB + TikTok + YouTube", "«NOT CONFIRMED»: precios Gold Friday + foto real con consentimiento"),
- ("dom 29 nov", "Sin pieza definida", "—", "—", "—", "Falta definir: recordatorio Gold Friday, reel de humor o no publicar"),
- ("lun 30 nov", "Reel", "Último día de Gold Friday; incluye #cybermonday", "Deck R9 · guion #24", "IG + FB + TikTok + YouTube", "Precios Gold Friday a confirmar por Rosanna"),
+ ("mar 10 nov", "Carrusel", "«QuantumRF: Men Included» — antes/después abdomen masculino", "Deck · G-02", "IG + FB + TikTok + YouTube", "Confirmar el orden correcto del antes/después + foto real con consentimiento", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("mié 11 nov", "Reel", "Rosanna a cámara: purging vs. breakout («Before you throw out the product…»)", "Banco · guion #3", "IG + FB + TikTok + YouTube", "Guion y video con Rosanna", "También en TK y como Short en YT."),
+ ("jue 12 nov", "Reel", "«A FEW THINGS YOU'LL FIND AT MED AESTHETICS MIAMI» — Rosanna muestra tratamientos", "Deck R3 · guion #21", "IG + FB + TikTok + YouTube", "Video con Rosanna", ""),
+ ("vie 13 nov", "Estática", "Tarjeta oferta siempre activa: Botox $10/unidad", "Q4 · G-05", "IG + FB + TikTok + YouTube", "Aprobar diseño de la tarjeta", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
+ ("sáb 14 nov", "Reel", "Sculptra — «WHERE CAN SCULPTRA GO?» (rostro, cuello, glúteos)", "Deck R4 · guion #11", "IG + FB + TikTok + YouTube", "Video y contenido de zonas", ""),
+ ("dom 15 nov", "Carrusel", "Checklist «Preguntas para tu consulta» v2, con pregunta final para comentarios", "Banco · G-10", "IG + FB + TikTok + YouTube", "Contenido del checklist + CTA final", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("lun 16 nov", "Reel", "Línea de tiempo de tratamientos: HydraFacial mensual, Botox 3–4 meses, Morpheus8 cada 4–6 semanas", "Banco · guion #8", "IG + FB + TikTok + YouTube", "Video y tiempos indicados", "También en TK y como Short en YT."),
+ ("mar 17 nov", "Carrusel", "QuantumRF — antes/después de brazos; «individual results vary»", "Deck · G-03", "IG + FB + TikTok + YouTube", "Foto real con consentimiento", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("mié 18 nov", "Reel", "Ángulo «confianza» (el de mejor rendimiento de Med: M-13)", "Banco · guion #1", "IG + FB + TikTok + YouTube", "Definir si es material nuevo de la jornada o remontaje", "También en TK y como Short en YT."),
+ ("jue 19 nov", "Reel", "«What is PRP? Explained by Rosanna» — Día Internacional del Hombre", "Deck R5 · guion #10", "IG + FB + TikTok + YouTube", "Video con Rosanna", ""),
+ ("vie 20 nov", "Estática", "Tarjeta oferta siempre activa: Morpheus8 $200 off la serie — solo Aventura", "Q4 · G-07", "IG + FB + TikTok + YouTube", "Diseño + aclarar «Aventura Location Only»", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
+ ("sáb 21 nov", "Reel", "No hace falta ocasión especial para un retoque («Because I wanted to»)", "Deck R6 · guion #20", "IG + FB + TikTok + YouTube", "Video", ""),
+ ("dom 22 nov", "Carrusel", "«Retire the Razor» zona por zona (espalda, pecho, cuello, línea de barba)", "Q4 · G-12", "IG + FB + TikTok + YouTube", "Rosanna confirma sesiones por zona", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("lun 23 nov", "Reel", "«Where does age show first?» — Rosanna muestra dónde se nota primero el envejecimiento", "Deck R7 · guion #9", "IG + FB + TikTok + YouTube", "Video con Rosanna", ""),
+ ("mar 24 nov", "Reel", "«Why QuantumRF?» — grasa + tensión de piel en una sesión", "Banco · guion #12", "IG + FB + TikTok + YouTube", "Video y contenido", "También en TK y como Short en YT."),
+ ("mié 25 nov", "Estática", "Tarjeta oferta: Glow Duo, 20% off primer HydraFacial + Aerolase — últimos días (vence 26-nov)", "Q4 · G-01", "IG + FB + TikTok + YouTube", "Diseño de la tarjeta", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
+ ("jue 26 nov", "Estática", "Recordatorio último día: ofertas de noviembre vencen hoy (Glow Duo, The Contour Edit, Retire the Razor)", "Q4", "IG + FB + TikTok + YouTube", "Texto y diseño. Además: apagar anuncios de noviembre en Meta Ads", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
+ ("vie 27 nov", "Carrusel", "«Gold Friday Package Event»", "Deck · G-04", "IG + FB + TikTok + YouTube", "PRECIOS A CONFIRMAR POR ROSANNA", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("sáb 28 nov", "Reel", "Antes/después QuantumRF corporal (piernas/rodillas); Gold Friday hasta 30-nov", "Deck R8 · guion #23", "IG + FB + TikTok + YouTube", "«NOT CONFIRMED»: precios Gold Friday + foto real con consentimiento", ""),
+ ("dom 29 nov", "Sin pieza definida", "—", "—", "—", "Falta definir: recordatorio Gold Friday, reel de humor o no publicar", ""),
+ ("lun 30 nov", "Reel", "Último día de Gold Friday; incluye #cybermonday", "Deck R9 · guion #24", "IG + FB + TikTok + YouTube", "Precios Gold Friday a confirmar por Rosanna", ""),
 ]
 
 # Piezas gráficas G-01..G-15: (id, pieza, tipo, fecha, falta)
@@ -311,6 +311,20 @@ PENDIENTES = [
  "Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov.",
  "Accesos para publicar: TikTok y Pinterest sin aceptar; Meta Business/Instagram y YouTube sin constancia; falta Meta Ads Manager.",
  "Morpheus8: el caption M-06 ofrece 15% off, el Q4 trae $200 off la serie — confirmar cuál rige.",
+]
+
+# Encuestas compañeras — PROPUESTAS, no están en el calendario.
+# Cada una acompaña a una pieza y Daniel elige cuáles hacer.
+# Plataformas: IG Stories (sticker) + YT Comunidad (encuesta) + FB Story
+# (si la Página tiene el sticker) o voto en comentarios — FB no tiene
+# encuesta nativa en el feed de la Página.
+# (dia, pieza, pregunta, opciones)
+POLLS = [
+ ("lun 23 nov", "«Where does age show first?»", "¿Dónde se te nota primero la edad?", "Ojos · Cuello · Manos · Mandíbula"),
+ ("mar 24 nov", "«Why QuantumRF?»", "¿Qué te molesta más?", "Grasa localizada · Flacidez · Las dos"),
+ ("dom 15 nov", "Checklist «Preguntas para tu consulta»", "¿Qué te frena para agendar tu consulta?", "El precio · No sé qué necesito · Miedo a las agujas"),
+ ("dom 22 nov", "«Retire the Razor» zona por zona", "¿Cada cuánto te afeitás?", "Todos los días · 2–3 veces por semana · 1 vez por semana"),
+ ("sáb 21 nov", "«Because I wanted to» (retoque)", "¿Te harías un retoque solo porque querés?", "Sí, sin dudarlo · Lo pensaría · No"),
 ]
 
 # ---------------------------------------------------------------- render
@@ -367,6 +381,8 @@ section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
 .day .fmt{font-size:13px;color:var(--gray);margin:2px 0 8px}
 .day p{font-size:14px}
 .day .note{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+.day .adapt{font-size:13px;color:#2b2b2b;background:#f2f9ff;border-left:3px solid var(--gold);border-radius:8px;padding:8px 10px;margin-top:10px}
+.rule{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:14px 18px;font-size:15px;margin-bottom:20px}
 .day .nets{font-size:12px;color:var(--gray);margin-top:8px}
 .day.empty{background:var(--cream);border-style:dashed}
 /* scripts */
@@ -442,7 +458,7 @@ footer a{color:var(--gold)}
 
 def cal_rows():
     out = []
-    for dia, fmt, tema, fuente, redes, nota in CALENDAR:
+    for dia, fmt, tema, fuente, redes, nota, adapt in CALENDAR:
         empty = " empty" if dia.startswith("dom 29") else ""
         warn = "A CONFIRMAR POR ROSANNA" in nota or "PRECIOS" in nota
         piece = "la pieza del " + dia + ": " + tema
@@ -450,12 +466,19 @@ def cal_rows():
         out.append(
             '<article class="day%s"><span class="badge%s">%s</span> '
             '<div class="d">%s</div><div class="fmt">%s · %s</div><p>%s</p>'
-            '%s%s'
+            '%s%s%s'
             '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
                 empty, " warn" if warn else "", esc(fmt), esc(dia), esc(fmt), esc(fuente), esc(tema),
                 nets_pills(redes),
                 ('<div class="note">%s</div>' % esc(nota)) if nota and nota != "—" else "",
+                ('<div class="adapt">Adaptación: %s</div>' % esc(adapt)) if adapt else "",
                 wa(msg), pv_btn(), fb(piece)))
+    return "\n".join(out)
+
+def poll_rows():
+    out = []
+    for dia, pieza, preg, opc in POLLS:
+        out.append("<li><b>%s — %s</b><br>Pregunta: «%s»<br>Opciones: %s</li>" % (esc(dia), esc(pieza), esc(preg), esc(opc)))
     return "\n".join(out)
 
 def script_blocks():
@@ -598,8 +621,15 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section id="calendario" style="background:#fff"><div class="wrap">
   <h2>Calendario · 10 al 30 de noviembre de 2026</h2>
-  <p class="intro">21 días, día por día. Todas las piezas se publican en <span class="net net-ig">IG</span> y <span class="net net-fb">FB</span>; <span class="net net-tt">TK</span> y <span class="net net-yt">YT</span> (Shorts) solo en las fechas que indica cada pieza. Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
+  <div class="rule"><b>Regla de publicación:</b> cada pieza se adapta y se publica en <b>todas las plataformas que aceptan su formato</b> — los reels como Reels y Shorts, los carruseles como carrusel de fotos, las estáticas como foto o publicación de Comunidad. Nada queda en una sola red pudiendo ir a más.</div>
+  <p class="intro">21 días, día por día. Todas las piezas salen en <span class="net net-ig">IG</span> <span class="net net-fb">FB</span> <span class="net net-tt">TK</span> <span class="net net-yt">YT</span>, adaptadas a cada formato (ver la nota «Adaptación» en cada tarjeta). Todas las piezas están en estado <b>Borrador</b>. Los posts del 2, 4 y 7-nov nunca salieron y quedan a decidir: recuperar o seguir desde el 10-nov.</p>
   <div class="cal">__CALENDAR__</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Encuestas compañeras · propuestas (sin programar)</h2>
+  <p class="intro">Estas encuestas NO están en el calendario: son ideas para acompañar una pieza, y Daniel elige cuáles hacer. Cada una iría en IG Stories (sticker de encuesta) y en YT Comunidad (encuesta). En FB no hay encuesta nativa en el feed de la Página: iría como Story con sticker (si la Página lo tiene) o con voto en comentarios.</p>
+  <div class="pend"><ul>__POLLS__</ul></div>
 </div></section>
 
 <section><div class="wrap">
@@ -693,6 +723,7 @@ function mamFeedback(btn){
 def build():
     out = TPL.replace("__CSS__", CSS)
     out = out.replace("__CALENDAR__", cal_rows())
+    out = out.replace("__POLLS__", poll_rows())
     out = out.replace("__SCRIPTS__", script_blocks())
     out = out.replace("__GRAPHICS__", graphic_cards())
     out = out.replace("__OFFERS__", offer_cards())
@@ -704,6 +735,9 @@ README = """# Med Aesthetics Miami — Portal del cliente (MuViProject)
 Portal visual para Rosanna Bermejo (Med Aesthetics Miami): calendario 10–30 nov 2026,
 banco de 26 guiones de reels, 15 piezas gráficas y ofertas Q4 verificadas.
 Todo es BORRADOR: nada se publica sin la aprobación de Rosanna.
+Regla de publicación: cada pieza se adapta y se publica en todas las
+plataformas que aceptan su formato (reel → Reels/Shorts; carrusel →
+carrusel de fotos; estática → foto o Comunidad).
 
 ## Acceso (contraseña simple)
 

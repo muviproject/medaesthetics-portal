@@ -3,6 +3,9 @@
 Portal visual para Rosanna Bermejo (Med Aesthetics Miami): calendario 10–30 nov 2026,
 banco de 26 guiones de reels, 15 piezas gráficas y ofertas Q4 verificadas.
 Todo es BORRADOR: nada se publica sin la aprobación de Rosanna.
+Regla de publicación: cada pieza se adapta y se publica en todas las
+plataformas que aceptan su formato (reel → Reels/Shorts; carrusel →
+carrusel de fotos; estática → foto o Comunidad).
 
 ## Acceso (contraseña simple)
 
