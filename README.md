@@ -7,6 +7,19 @@ Regla de publicación: cada pieza se adapta y se publica en todas las
 plataformas que aceptan su formato (reel → Reels/Shorts; carrusel →
 carrusel de fotos; estática → foto o Comunidad).
 
+## Contenido de Vallure — para aprobar (10-nov-2026)
+
+Sección con todo lo que hizo Vallure Agency y está publicado o corriendo:
+10 anuncios de Meta Ads (lo visible en la Biblioteca de Anuncios) y
+49 posteos orgánicos de Instagram (29-may a 29-oct-2026). Cada tarjeta
+lleva su texto y el link al original para ver el visual, con los botones
+de aprobar, vista previa y feedback de siempre.
+Detalle y limitaciones en
+`../med-aesthetics-materiales/inventario-anuncios-vallure.md`: la cuenta
+publicitaria no está habilitada para Ads MCP (sin acceso por API a las
+49 campañas) y los visuales no se pudieron descargar desde el entorno
+(la Biblioteca devuelve 403; instagram-cli no expone las imágenes).
+
 ## Acceso (contraseña simple)
 
 El portal pide email + contraseña antes de mostrar el contenido.
