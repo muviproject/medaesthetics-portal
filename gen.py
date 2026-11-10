@@ -246,7 +246,7 @@ SCRIPTS += [
 
 # Calendario 10–30 nov: (dia, formato, tema, fuente, redes, nota)
 CALENDAR = [
- ("mar 10 nov", "Carrusel", "«QuantumRF: Men Included» — antes/después abdomen masculino", "Deck · G-02", "IG + FB + TikTok + YouTube", "Confirmar el orden correcto del antes/después + foto real con consentimiento", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("mar 10 nov", "Carrusel", "«QuantumRF: Men Included» — antes/después abdomen masculino", "Deck · G-02", "IG + FB + TikTok + YouTube", "Confirmar el orden correcto del antes/después + foto real con consentimiento. Diseño borrador con las fotos pendientes ya visible en esta tarjeta.", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
  ("mié 11 nov", "Reel", "Rosanna a cámara: purging vs. breakout («Before you throw out the product…»)", "Banco · guion #3", "IG + FB + TikTok + YouTube", "Guion y video con Rosanna", "También en TK y como Short en YT."),
  ("jue 12 nov", "Reel", "«A FEW THINGS YOU'LL FIND AT MED AESTHETICS MIAMI» — Rosanna muestra tratamientos", "Deck R3 · guion #21", "IG + FB + TikTok + YouTube", "Video con Rosanna", ""),
  ("vie 13 nov", "Estática", "Tarjeta oferta siempre activa: Botox $10/unidad", "Q4 · G-05", "IG + FB + TikTok + YouTube", "Aprobar diseño de la tarjeta", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
@@ -272,7 +272,7 @@ CALENDAR = [
 # Piezas gráficas G-01..G-15: (id, pieza, tipo, fecha, falta)
 GRAPHICS = [
  ("G-01", "Estática-resumen ofertas noviembre (Glow Duo + The Contour Edit + Retire the Razor)", "Tipo 2 · Tarjeta de oferta", "Deck 4-nov — a decidir: recuperar o seguir desde el 10-nov", "Decisión de Daniel/Rosanna: ¿se recupera el 4-nov o se descarta?"),
- ("G-02", "Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)", "Tipo 1 · Antes / después", "Mar 10-nov", "Confirmar el orden del antes/después + foto real con consentimiento"),
+ ("G-02", "Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)", "Tipo 1 · Antes / después", "Mar 10-nov", "Confirmar el orden del antes/después + foto real con consentimiento. Diseño borrador con las fotos pendientes ya visible en esta tarjeta."),
  ("G-03", "Carrusel QuantumRF antes/después de brazos", "Tipo 1 · Antes / después", "Mar 17-nov", "Foto real con consentimiento + «individual results vary»"),
  ("G-04", "Carrusel «Gold Friday Package Event»", "Tipo 2 · Tarjeta de oferta", "Vie 27-nov", "Precios A CONFIRMAR POR ROSANNA"),
  ("G-05", "Tarjeta oferta siempre activa — Botox $10/unidad", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aprobación del diseño"),
@@ -382,6 +382,7 @@ section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
 .day p{font-size:14px}
 .day .note{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
 .day .adapt{font-size:13px;color:#2b2b2b;background:#f2f9ff;border-left:3px solid var(--gold);border-radius:8px;padding:8px 10px;margin-top:10px}
+.thumbs{display:flex;gap:8px;margin:12px 0}.thumbs img{width:32%;height:auto;border-radius:10px;border:2px solid var(--gold);display:block}
 .rule{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:14px 18px;font-size:15px;margin-bottom:20px}
 .day .nets{font-size:12px;color:var(--gray);margin-top:8px}
 .day.empty{background:var(--cream);border-style:dashed}
@@ -456,6 +457,15 @@ footer a{color:var(--gold)}
 }
 """
 
+# Diseños visuales (mockups borrador) por pieza: se muestran en la tarjeta
+# del calendario y en la pieza gráfica, y por tanto también en «Vista previa»
+# (el modal clona la tarjeta). Clave = día del calendario o id de pieza.
+IMGS = {
+ "mar 10 nov": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
+ "G-02": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
+}
+
+
 def cal_rows():
     out = []
     for dia, fmt, tema, fuente, redes, nota, adapt in CALENDAR:
@@ -463,15 +473,18 @@ def cal_rows():
         warn = "A CONFIRMAR POR ROSANNA" in nota or "PRECIOS" in nota
         piece = "la pieza del " + dia + ": " + tema
         msg = "Hola Daniel, apruebo " + piece
+        thumbs = ('<div class="thumbs">%s</div>' % "".join(
+            '<img src="assets/%s" alt="Diseño borrador del carrusel">' % f for f in IMGS[dia])) if dia in IMGS else ""
         out.append(
             '<article class="day%s"><span class="badge%s">%s</span> '
             '<div class="d">%s</div><div class="fmt">%s · %s</div><p>%s</p>'
-            '%s%s%s'
+            '%s%s%s%s'
             '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
                 empty, " warn" if warn else "", esc(fmt), esc(dia), esc(fmt), esc(fuente), esc(tema),
                 nets_pills(redes),
                 ('<div class="note">%s</div>' % esc(nota)) if nota and nota != "—" else "",
                 ('<div class="adapt">Adaptación: %s</div>' % esc(adapt)) if adapt else "",
+                thumbs,
                 wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
@@ -506,12 +519,14 @@ def graphic_cards():
         und = "SIN DEFINIR" in fecha or "NO producir" in fecha
         piece = "la pieza %s: %s" % (gid, pieza)
         msg = "Hola Daniel, apruebo " + piece
+        thumbs = ('<div class="thumbs">%s</div>' % "".join(
+            '<img src="assets/%s" alt="Diseño borrador de la pieza">' % f for f in IMGS[gid])) if gid in IMGS else ""
         out.append(
             '<article class="card"><span class="badge%s">%s</span>'
-            '<h3>%s</h3><p>%s</p><p class="vig">%s</p>'
+            '<h3>%s</h3><p>%s</p>%s<p class="vig">%s</p>'
             '<div class="need">Falta: %s</div>'
             '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
-                " warn" if und else "", esc(gid), esc(pieza), esc(tipo), esc(fecha), esc(falta), wa(msg), pv_btn(), fb(piece)))
+                " warn" if und else "", esc(gid), esc(pieza), esc(tipo), thumbs, esc(fecha), esc(falta), wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 def offer_cards():
