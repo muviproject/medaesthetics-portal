@@ -310,7 +310,7 @@ PENDIENTES = [
  "Fecha de la jornada de filmación mensual (los reels del 11, 12, 16, 18, 19, 21, 23 y 24-nov la necesitan).",
  "Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov.",
  "Accesos para publicar: Meta Business y Ads CONFIRMADOS 10-nov (49 campañas, 1 activa); TikTok y Pinterest sin aceptar; Instagram y YouTube sin verificar en vivo.",
- "Contenido de Vallure capturado en el portal 10-nov (10 anuncios de la Biblioteca + 49 posts orgánicos de IG): falta el visual de cada pieza — ver inventario-anuncios-vallure.md §5.",
+ "Contenido de Vallure capturado en el portal 10-nov (10 anuncios de la Biblioteca + 49 posts orgánicos de IG): visuales embebidos 10-nov (capturas de página, 900 px; 3 reels con el fotograma en negro porque el video no cargó en la captura — ver inventario-anuncios-vallure.md §5).",
  "Morpheus8: el caption M-06 ofrece 15% off, el Q4 trae $200 off la serie — confirmar cuál rige.",
 ]
 
@@ -395,7 +395,7 @@ section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
 .day p{font-size:14px}
 .day .note{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
 .day .adapt{font-size:13px;color:#2b2b2b;background:#f2f9ff;border-left:3px solid var(--gold);border-radius:8px;padding:8px 10px;margin-top:10px}
-.thumbs{display:flex;gap:8px;margin:12px 0}.thumbs img{width:32%;height:auto;border-radius:10px;border:2px solid var(--gold);display:block}
+.thumbs{display:flex;gap:8px;margin:12px 0}.thumbs img{width:32%;height:auto;border-radius:10px;border:2px solid var(--gold);display:block}.thumbs.one img{width:100%}
 .rule{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:14px 18px;font-size:15px;margin-bottom:20px}
 .day .nets{font-size:12px;color:var(--gray);margin-top:8px}
 .day.empty{background:var(--cream);border-style:dashed}
@@ -477,6 +477,14 @@ IMGS = {
  "mar 10 nov": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
  "G-02": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
 }
+
+# Capturas de página de Vallure (10-nov-2026): 1a página del PDF de
+# captura de cada pieza, 900 px, en assets/vallure/. Clave = id de la
+# tarjeta en vallure_rows() (vallure-ad-01..10, vallure-org-01..49).
+for _i in range(1, 11):
+    IMGS["vallure-ad-%02d" % _i] = ["vallure/vallure-ad-%02d.jpg" % _i]
+for _i in range(1, 50):
+    IMGS["vallure-org-%02d" % _i] = ["vallure/vallure-org-%02d.jpg" % _i]
 
 
 def cal_rows():
@@ -560,22 +568,31 @@ def offer_cards():
 def vallure_rows():
     """Tarjetas del contenido de Vallure: 10 anuncios + 49 posts orgánicos.
 
-    Cada tarjeta lleva su texto (titular del anuncio o caption completo
-    del post), su link al original (Biblioteca de Anuncios / Instagram)
-    y los botones de aprobar + vista previa + feedback de siempre.
+    Cada tarjeta lleva su visual embebido (captura de la página original,
+    1a página del PDF, 900 px, en assets/vallure/ — vía IMGS), su texto
+    (titular del anuncio o caption completo del post), su link al original
+    (Biblioteca de Anuncios / Instagram) y los botones de aprobar + vista
+    previa + feedback de siempre. Como la Vista previa clona la tarjeta,
+    el visual se ve también en el preview.
     """
     out = []
-    for a in VALLURE_ADS:
+    for i, a in enumerate(VALLURE_ADS, 1):
+        key = "vallure-ad-%02d" % i
+        thumbs = ('<div class="thumbs one">%s</div>' % "".join(
+            '<img src="assets/%s" alt="Captura del anuncio de Vallure">' % f for f in IMGS[key])) if key in IMGS else ""
         piece = "el anuncio de Vallure: %s" % a["t"]
         msg = "Hola Daniel, apruebo " + piece
         out.append(
             '<article class="card"><span class="badge gold">Anuncio Meta Ads</span>'
             '<h3>%s</h3><p>Creado %s · en la Biblioteca de Anuncios de Meta.</p>'
             '<p>El texto completo y el visual del anuncio se ven en el link de abajo.</p>'
-            '<p><a href="%s" target="_blank" rel="noopener">Ver el anuncio en la Biblioteca de Anuncios ↗</a></p>'
+            '<p><a href="%s" target="_blank" rel="noopener">Ver el anuncio en la Biblioteca de Anuncios ↗</a></p>%s'
             '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
-                esc(a["t"]), esc(a["created"]), esc(a["url"]), wa(msg), pv_btn(), fb(piece)))
-    for p in VALLURE_POSTS:
+                esc(a["t"]), esc(a["created"]), esc(a["url"]), thumbs, wa(msg), pv_btn(), fb(piece)))
+    for i, p in enumerate(VALLURE_POSTS, 1):
+        key = "vallure-org-%02d" % i
+        thumbs = ('<div class="thumbs one">%s</div>' % "".join(
+            '<img src="assets/%s" alt="Captura del post de Vallure">' % f for f in IMGS[key])) if key in IMGS else ""
         piece = "el post orgánico del %s: %s" % (p["date"], p["cap"][:60])
         msg = "Hola Daniel, apruebo " + piece
         cap_html = esc(p["cap"]).replace("\n", "<br>")
@@ -585,9 +602,9 @@ def vallure_rows():
             '<article class="card"><span class="badge gray">Post orgánico · IG</span>'
             '<h3>%s · %s</h3><div class="cap">%s</div>'
             '<p class="vig">%s likes · %s comentarios</p>'
-            '<p><a href="%s" target="_blank" rel="noopener">Ver la publicación en Instagram ↗</a></p>'
+            '<p><a href="%s" target="_blank" rel="noopener">Ver la publicación en Instagram ↗</a></p>%s'
             '<div class="approve"><a href="%s" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div>%s%s</article>' % (
-                esc(p["date"]), esc(p["type"]), cap_html, likes, coms, esc(p["url"]), wa(msg), pv_btn(), fb(piece)))
+                esc(p["date"]), esc(p["type"]), cap_html, likes, coms, esc(p["url"]), thumbs, wa(msg), pv_btn(), fb(piece)))
     return "\n".join(out)
 
 TPL = """<!DOCTYPE html>
@@ -690,7 +707,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section style="background:#fff"><div class="wrap">
   <h2>Contenido de Vallure — para aprobar</h2>
-  <p class="intro">Todo lo que hizo Vallure Agency y está publicado o corriendo: <b>10 anuncios de Meta Ads</b> (lo visible en la Biblioteca de Anuncios) y <b>49 posteos orgánicos de Instagram</b> (29-may a 29-oct-2026, el último post fue el 29-oct). Cada tarjeta tiene su texto y el link al original para ver el visual, y los botones de siempre: aprobar por WhatsApp, Vista previa y enviar comentario. <b>Ojo:</b> el visual de cada pieza no quedó embebido acá porque la Biblioteca de Anuncios no deja descargarlo desde nuestro entorno y el conector de Instagram no expone las imágenes — se ve abriendo el link de la tarjeta (también dentro de la Vista previa). Si un anuncio o post no te gusta, pedí el cambio en esa misma tarjeta.</p>
+  <p class="intro">Todo lo que hizo Vallure Agency y está publicado o corriendo: <b>10 anuncios de Meta Ads</b> (lo visible en la Biblioteca de Anuncios) y <b>49 posteos orgánicos de Instagram</b> (29-may a 29-oct-2026, el último post fue el 29-oct). Cada tarjeta muestra su visual (captura de la página original) y el link al original, y los botones de siempre: aprobar por WhatsApp, Vista previa y enviar comentario. <b>Ojo:</b> los visuales son capturas de página, no los archivos originales: en los carruseles se ve solo la 1ª lámina y en los reels un fotograma; 3 reels (22-oct, 23-sep y 27-jun) salieron con el fotograma en negro porque el video no cargó en la captura — se ven abriendo el link de la tarjeta. Si un anuncio o post no te gusta, pedí el cambio en esa misma tarjeta.</p>
   <div class="grid">__VALLURE__</div>
 </div></section>
 
