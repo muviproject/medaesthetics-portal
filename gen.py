@@ -215,18 +215,18 @@ SCRIPTS += [
   h="«Legs and knees. The area nobody talks about.»",
   b=["QuantumRF tensa la piel y apunta a la grasa en la misma sesión.",
      "Paciente real, resultados reales. Individual results vary.",
-     "Gold Friday hasta el 30 de noviembre. La consulta la podés reservar hoy."],
+     "Black Friday hasta el 30 de noviembre. La consulta la podés reservar hoy."],
   c="Book a QuantumRF consultation — link in bio.",
-  cap="Before and after: QuantumRF on legs and knees. Gold Friday continues until November 30. Individual results vary.",
-  w="BLOQUEADO: láser y QuantumRF Gold Friday a confirmar por Rosanna y orden del antes/después. Morpheus8 $1.750 CONFIRMADO 10-nov. No grabar sin eso."),
- dict(n=24, t="Last Day of Gold Friday", f="R9 · deck de noviembre (30-nov)", v="Gold Friday", d="30 s",
+  cap="Before and after: QuantumRF on legs and knees. Black Friday continues until November 30. Individual results vary.",
+  w="BLOQUEADO: láser y QuantumRF Black Friday a confirmar por Rosanna y orden del antes/después. Morpheus8 $1.750 CONFIRMADO 10-nov. No grabar sin eso."),
+ dict(n=24, t="Last Day of Black Friday", f="R9 · deck de noviembre (30-nov)", v="Black Friday", d="30 s",
   h="«Today is the last day. That's it.»",
-  b=["Gold Friday termina esta noche. Láser de cuerpo completo, Morpheus8, QuantumRF: los paquetes terminan con él.",
+  b=["Black Friday termina esta noche. Láser de cuerpo completo, Morpheus8, QuantumRF: los paquetes terminan con él.",
      "Si lo venís pensando… este es el momento.",
      "Llamanos o tocá el link en bio. Antes de medianoche."],
   c="Call (305) 356-7402 — today.",
-  cap="Last day of Gold Friday. Packages end tonight. Call (305) 356-7402 or tap the link in bio. #goldfriday #cybermonday",
-  w="BLOQUEADO: láser y QuantumRF Gold Friday a confirmar por Rosanna (Morpheus8 $1.750 CONFIRMADO 10-nov). Sin los precios restantes, este reel NO se puede publicar."),
+  cap="Last day of Black Friday. Packages end tonight. Call (305) 356-7402 or tap the link in bio. #blackfriday #cybermonday",
+  w="BLOQUEADO: láser y QuantumRF Black Friday a confirmar por Rosanna (Morpheus8 $1.750 CONFIRMADO 10-nov). Sin los precios restantes, este reel NO se puede publicar."),
  dict(n=25, t="Glass Skin", f="SK-01 SKINNEY + LU-02 LUX (9 comentarios)", v="HydraFacial", d="35 s",
   h="«“Oh my gosh, my skin looks like glass!”»",
   b=["Ella ya se cuida la piel. Y aun así dijo eso después de un HydraFacial.",
@@ -263,10 +263,10 @@ CALENDAR = [
  ("mar 24 nov", "Reel", "«Why QuantumRF?» — grasa + tensión de piel en una sesión", "Banco · guion #12", "IG + FB + TikTok + YouTube", "Video y contenido", "También en TK y como Short en YT."),
  ("mié 25 nov", "Estática", "Tarjeta oferta: Glow Duo, 20% off primer HydraFacial + Aerolase — últimos días (vence 26-nov)", "Q4 · G-01", "IG + FB + TikTok + YouTube", "Diseño de la tarjeta", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
  ("jue 26 nov", "Estática", "Recordatorio último día: ofertas de noviembre vencen hoy (Glow Duo, The Contour Edit, Retire the Razor)", "Q4", "IG + FB + TikTok + YouTube", "Texto y diseño. Además: apagar anuncios de noviembre en Meta Ads", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
- ("vie 27 nov", "Carrusel", "«Gold Friday Package Event»", "Deck · G-04", "IG + FB + TikTok + YouTube", "Morpheus8 $1.750 confirmado 10-nov; láser y QuantumRF a confirmar por Rosanna", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
- ("sáb 28 nov", "Reel", "Antes/después QuantumRF corporal (piernas/rodillas); Gold Friday hasta 30-nov", "Deck R8 · guion #23", "IG + FB + TikTok + YouTube", "«NOT CONFIRMED»: precios Gold Friday + foto real con consentimiento", ""),
- ("dom 29 nov", "Sin pieza definida", "—", "—", "—", "Falta definir: recordatorio Gold Friday, reel de humor o no publicar", ""),
- ("lun 30 nov", "Reel", "Último día de Gold Friday; incluye #cybermonday", "Deck R9 · guion #24", "IG + FB + TikTok + YouTube", "Láser y QuantumRF Gold Friday a confirmar por Rosanna (Morpheus8 $1.750 confirmado 10-nov)", ""),
+ ("vie 27 nov", "Carrusel", "«Black Friday Package Event»", "Deck · G-04", "IG + FB + TikTok + YouTube", "Morpheus8 $1.750 confirmado 10-nov; láser y QuantumRF a confirmar por Rosanna", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
+ ("sáb 28 nov", "Reel", "Antes/después QuantumRF corporal (piernas/rodillas); Black Friday hasta 30-nov", "Deck R8 · guion #23", "IG + FB + TikTok + YouTube", "«NOT CONFIRMED»: precios Black Friday + foto real con consentimiento", ""),
+ ("dom 29 nov", "Sin pieza definida", "—", "—", "—", "Falta definir: recordatorio Black Friday, reel de humor o no publicar", ""),
+ ("lun 30 nov", "Reel", "Último día de Black Friday; incluye #cybermonday", "Deck R9 · guion #24", "IG + FB + TikTok + YouTube", "Láser y QuantumRF Black Friday a confirmar por Rosanna (Morpheus8 $1.750 confirmado 10-nov)", ""),
 ]
 
 # Piezas gráficas G-01..G-15: (id, pieza, tipo, fecha, falta)
@@ -274,7 +274,7 @@ GRAPHICS = [
  ("G-01", "Estática-resumen ofertas noviembre (Glow Duo + The Contour Edit + Retire the Razor)", "Tipo 2 · Tarjeta de oferta", "Deck 4-nov — a decidir: recuperar o seguir desde el 10-nov", "Decisión de Daniel/Rosanna: ¿se recupera el 4-nov o se descarta?"),
  ("G-02", "Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)", "Tipo 1 · Antes / después", "Mar 10-nov", "Confirmar el orden del antes/después + foto real con consentimiento. Diseño borrador con las fotos pendientes ya visible en esta tarjeta."),
  ("G-03", "Carrusel QuantumRF antes/después de brazos", "Tipo 1 · Antes / después", "Mar 17-nov", "Foto real con consentimiento + «individual results vary»"),
- ("G-04", "Carrusel «Gold Friday Package Event»", "Tipo 2 · Tarjeta de oferta", "Vie 27-nov", "Precios A CONFIRMAR POR ROSANNA"),
+ ("G-04", "Carrusel «Black Friday Package Event»", "Tipo 2 · Tarjeta de oferta", "Vie 27-nov", "Precios A CONFIRMAR POR ROSANNA"),
  ("G-05", "Tarjeta oferta siempre activa — Botox $10/unidad", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aprobación del diseño"),
  ("G-06", "Tarjeta oferta siempre activa — Láser 30% off", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aprobación del diseño"),
  ("G-07", "Tarjeta oferta siempre activa — Morpheus8 $200 off la serie", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aclarar «Aventura Location Only»"),
@@ -298,14 +298,14 @@ OFFERS = [
  ("Noviembre · 1–26 nov", "Glow Duo — HydraFacial + Aerolase", "20% off el primer Glow Duo", "Hasta 26-nov", False),
  ("Noviembre · 1–26 nov", "The Contour Edit — Inyectables", "$200 off gastando $1,000+ en inyectables", "Hasta 26-nov", False),
  ("Noviembre · 1–26 nov", "Retire the Razor — Láser para hombres", "Sesión bonus con paquete de láser para hombres", "Hasta 26-nov", False),
- ("Gold Friday · 27–30 nov", "Láser cuerpo completo", "$999 + sesión bonus", "27–30 nov", True),
- ("Gold Friday · 27–30 nov", "Morpheus8 (paquete de 3)", "$1,750", "27–30 nov", False),
- ("Gold Friday · 27–30 nov", "QuantumRF", "$2,500 cara / $3,000 cuerpo", "27–30 nov", True),
+ ("Black Friday · 27–30 nov", "Láser cuerpo completo", "$999 + sesión bonus", "27–30 nov", True),
+ ("Black Friday · 27–30 nov", "Morpheus8 (paquete de 3)", "$1,750", "27–30 nov", False),
+ ("Black Friday · 27–30 nov", "QuantumRF", "$2,500 cara / $3,000 cuerpo", "27–30 nov", True),
 ]
 
 PENDIENTES = [
  "Orden del antes/después del carrusel del 10-nov (lo pidió Rosanna).",
- "Precios del Gold Friday 27–30 nov: Morpheus8 $1.750 CONFIRMADO 10-nov; láser $999 y QuantumRF $2,500/$3,000 a confirmar.",
+ "Precios del Black Friday 27–30 nov: Morpheus8 $1.750 CONFIRMADO 10-nov; láser $999 y QuantumRF $2,500/$3,000 a confirmar.",
  "Posts del 2, 4 y 7-nov: recuperar o seguir desde el 10-nov.",
  "Fecha de la jornada de filmación mensual (los reels del 11, 12, 16, 18, 19, 21, 23 y 24-nov la necesitan).",
  "Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov.",
@@ -732,7 +732,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 <section><div class="wrap">
   <h2>Ofertas vigentes · Q4 2026</h2>
-  <p class="intro">Solo las ofertas verificadas del documento Q4. Las de Gold Friday (27–30 nov) están <b>a confirmar por Rosanna</b>: no se usan sus precios hasta que ella los confirme.</p>
+  <p class="intro">Solo las ofertas verificadas del documento Q4. Las de Black Friday (27–30 nov) están <b>a confirmar por Rosanna</b>: no se usan sus precios hasta que ella los confirme. Antes se llamaba Gold Friday (nombre inventado por Vallure); desde el 12-nov es Black Friday por decisión de Daniel — Rosanna no estaba convencida del nombre.</p>
   <div class="band"><img src="assets/texture.png" alt="" onerror="this.remove()"><span>«Ready to Claim This Month's Offer? Call (305) 356-7402»</span></div>
   <div class="grid">__OFFERS__</div>
   <p class="intro" style="margin-top:18px">Diciembre (Lip Filler «The Midnight Kiss» 15% off · QuantumRF «New Year, Already Snatched» · Gift Cards «Drop a Hint» $250 + $50 bonus) se programa en el calendario de diciembre, no en este portal.</p>
