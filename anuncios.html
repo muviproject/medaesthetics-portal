@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Med Aesthetics Miami — Anuncios en simple · Portal del cliente</title>
+<style>
+:root{--gold:#e3b533;--gray:#606163;--ink:#2b2b2b;--light:#f2f9ff;--cream:#ecf0e4;--brown:#4b3618;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:#faf8f2;line-height:1.55;overflow-x:hidden}
+.brand{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* ---------- login ---------- */
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#4b3618 0%,#606163 55%,#e3b533 130%);padding:20px}
+#gate.hidden{display:none}
+.gate-card{background:#fff;border-radius:14px;max-width:420px;width:100%;padding:34px 30px;box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
+.gate-card h1{font-family:Georgia,serif;color:var(--brown);font-size:26px;font-weight:400;letter-spacing:1px}
+.gate-card .sub{color:var(--gray);font-size:14px;margin:6px 0 22px}
+.gate-card label{display:block;text-align:left;font-size:13px;color:var(--gray);margin:12px 0 4px}
+.gate-card input{width:100%;padding:11px 12px;border:1px solid #d8d2c4;border-radius:8px;font-size:15px}
+.gate-card input:focus{outline:2px solid var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#fff;border:0;border-radius:8px;padding:12px 22px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{background:#cfa12a}
+.btn-ghost{background:#fff;color:var(--brown);border:1.5px solid var(--gold)}
+#gate-err{color:#b3261e;font-size:13px;min-height:18px;margin-top:10px}
+.gate-note{font-size:12px;color:#999;margin-top:16px}
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(120deg,#4b3618 0%,#606163 60%,#8a7a3a 100%)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(75,54,24,.88),rgba(96,97,99,.72) 60%,rgba(227,181,51,.45))}
+.hero-inner{position:relative;padding:64px 0 54px}
+.hero-eyebrow{letter-spacing:3px;font-size:12px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:Georgia,serif;font-weight:400;font-size:44px;line-height:1.15;margin:12px 0 10px;max-width:640px}
+.hero p.lede{font-size:18px;max-width:620px;color:#f4efe2}
+.hero-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.hero-cta .btn-ghost{color:#fff;border-color:#fff;background:transparent}
+.seals{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.seal{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:13px}
+/* ---------- sections ---------- */
+section{padding:44px 0}
+section h2{font-family:Georgia,serif;font-weight:400;font-size:30px;color:var(--brown);margin-bottom:6px}
+section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
+.why div{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.why b{color:var(--gold);font-size:22px;font-family:Georgia,serif;display:block}
+.why h3{font-size:16px;margin:4px 0}
+.why p{font-size:14px;color:var(--gray)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:999px;padding:3px 10px;background:var(--cream);color:var(--brown)}
+.badge.warn{background:#fdeecb;color:#8a6d00}
+.badge.gold{background:var(--gold);color:#fff}
+.badge.gray{background:#e9e9e9;color:var(--gray)}
+/* ---------- Anuncios en simple ---------- */
+.verdict{display:inline-block;font-size:15px;font-weight:800;letter-spacing:1px;border-radius:999px;padding:6px 14px;margin:8px 0}
+.verdict.good{background:#e2f3e5;color:#1d6b2f}
+.verdict.mid{background:#fdf6e0;color:#8a6d00}
+.verdict.bad{background:#fde8e8;color:#a12020}
+.verdict.none{background:#e9e9e9;color:#606163}
+.adnums{font-size:14px;line-height:1.7;margin:8px 0}
+.adnums b{color:var(--brown)}
+.adrec{font-size:14px;background:var(--light);border-left:3px solid var(--gold);border-radius:8px;padding:10px 12px;margin-top:10px}
+.adrec b{color:var(--brown)}
+.sumbox{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:16px 20px;margin-bottom:20px;font-size:15px;line-height:1.7}
+.sumbox .big{font-family:Georgia,serif;font-size:22px;color:var(--brown);line-height:1.3}
+.sumbox b{color:var(--brown)}
+.sub{font-family:Georgia,serif;font-size:22px;color:var(--brown);margin:28px 0 8px}
+.minitable{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.minitable th,.minitable td{border-bottom:1px solid #e8e2d2;padding:6px 8px;text-align:left}
+.minitable th{color:var(--gray)}
+.glos{font-size:14px;line-height:1.8}
+.glos b{color:var(--brown)}
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.day{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.day .d{font-family:Georgia,serif;font-size:19px;color:var(--brown)}
+.day .fmt{font-size:13px;color:var(--gray);margin:2px 0 8px}
+.day p{font-size:14px}
+.day .note{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+.day .adapt{font-size:13px;color:#2b2b2b;background:#f2f9ff;border-left:3px solid var(--gold);border-radius:8px;padding:8px 10px;margin-top:10px}
+.thumbs{display:flex;gap:8px;margin:12px 0}.thumbs img{width:32%;height:auto;border-radius:10px;border:2px solid var(--gold);display:block}.thumbs.one img{width:100%}
+.rule{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:14px 18px;font-size:15px;margin-bottom:20px}
+.day .nets{font-size:12px;color:var(--gray);margin-top:8px}
+.day.empty{background:var(--cream);border-style:dashed}
+/* scripts */
+details{background:#fff;border:1px solid #e8e2d2;border-radius:12px;margin-bottom:12px;padding:16px 18px}
+details summary{cursor:pointer;font-family:Georgia,serif;font-size:19px;color:var(--brown);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary .n{color:var(--gold);font-weight:700;margin-right:8px}
+details .meta{font-size:13px;color:var(--gray);margin:6px 0 10px}
+details .lbl{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-top:12px}
+details .hook{font-family:Georgia,serif;font-size:18px;color:var(--brown)}
+details ul{margin:6px 0 6px 20px;font-size:14px}
+details .cap{font-size:13px;color:var(--gray);background:var(--light);border-radius:8px;padding:10px 12px;margin-top:8px}
+.warnbox{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+/* graphics + offers */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:18px;color:var(--brown);margin:6px 0}
+.card p{font-size:14px}
+.card .price{font-family:Georgia,serif;font-size:22px;color:var(--brown);margin:6px 0}
+.card .vig{font-size:12px;color:var(--gray)}
+.card .need{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+.approve{margin-top:12px}
+.approve a{display:inline-block;background:#25D366;color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:8px 16px;text-decoration:none}
+.approve a:hover{background:#1da851}
+/* feedback por WhatsApp */
+.fb{margin-top:10px}
+.fb textarea{width:100%;padding:10px 12px;border:1px solid #d8d2c4;border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;min-height:56px}
+.fb textarea:focus{outline:2px solid var(--gold)}
+.fb-btn{display:inline-block;margin-top:8px;background:#fff;color:var(--brown);border:1.5px solid var(--gold);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.fb-btn:hover{background:#fdf6e0}
+.band{position:relative;overflow:hidden;border-radius:12px;min-height:120px;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#4b3618,#606163 60%,#e3b533);margin:8px 0 22px}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band span{position:relative;color:#fff;font-family:Georgia,serif;font-size:22px;text-align:center;padding:20px}
+/* pendientes */
+.pend{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:22px}
+.pend li{margin:8px 0 8px 20px;font-size:14px}
+footer{background:var(--brown);color:#e8dfc8;padding:30px 0;text-align:center;font-size:13px}
+footer a{color:var(--gold)}
+.topbar{background:var(--brown);color:#fff;font-size:13px;padding:10px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+/* redes: cápsulas con el color de cada marca (definido una vez acá) */
+.nets{display:flex;flex-wrap:nowrap;gap:6px;margin-top:8px}
+.net{display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#fff;white-space:nowrap}
+.net-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.net-fb{background:#1877F2}
+.net-tt{background:#010101;border:1.5px solid #25F4EE;box-shadow:inset 0 -2px 0 #FE2C55}
+.net-yt{background:#FF0000}
+/* botón vista previa */
+.pv{margin-top:10px}
+.pv-btn{display:inline-block;background:#fff;color:var(--brown);border:1.5px solid var(--gray);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.pv-btn:hover{border-color:var(--gold);background:#fdf6e0}
+/* modal de vista previa */
+.modal-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(43,43,43,.65);padding:16px}
+.modal-overlay.open{display:flex}
+.modal{position:relative;background:#fff;border-radius:14px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:26px 24px 22px;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+.modal-close{position:absolute;top:10px;right:12px;width:44px;height:44px;border:0;border-radius:50%;background:var(--cream);color:var(--brown);font-size:28px;line-height:1;cursor:pointer;z-index:1}
+.modal-close:hover{background:var(--gold);color:#fff}
+.modal .day,.modal .card{border:0;padding:0}
+.modal details{border:0;padding:0;margin:0}
+.modal .approve,.modal .fb{margin-top:14px}
+@media(max-width:640px){
+  .hero h1{font-size:32px}
+  section h2{font-size:25px}
+  .hero-inner{padding:44px 20px 38px}
+  .modal-overlay{padding:8px}
+  .modal{width:94vw;max-height:90vh;padding:22px 16px 18px;border-radius:16px}
+  .modal-close{width:48px;height:48px;font-size:30px;top:8px;right:8px}
+  .approve a,.fb-btn,.pv-btn{display:block;text-align:center;margin-top:8px}
+  .fb textarea{font-size:16px}
+}
+/* ---------- menú superior (siempre visible) ---------- */
+.nav{position:sticky;top:0;z-index:60;background:var(--brown);border-bottom:3px solid var(--gold)}
+.nav .wrap{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding-top:0;padding-bottom:0}
+.nav a{color:#e8dfc8;text-decoration:none;font-size:14px;font-weight:600;padding:12px 13px;flex-shrink:0}
+.nav a:hover{color:#fff}
+.nav a.active{background:var(--gold);color:#fff}
+</style>
+</head>
+<body>
+<!-- ============================================================
+     CONFIGURACIÓN DEL ACCESO (editar acá para cambiar la clave)
+     La contraseña de este portal es una CORTINA VISUAL, no
+     seguridad real: al ser un sitio estático (GitHub Pages),
+     cualquiera que lea el código puede verla. Para acceso
+     protegido de verdad, usar Cloudflare Access.
+     ============================================================ -->
+<script>
+var PORTAL_PASSWORD = "MedAesthetics2026";
+var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
+</script>
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="brand" style="color:#e3b533;font-size:15px;letter-spacing:2px">MED AESTHETICS MIAMI</div>
+    <h1>Portal del cliente</h1>
+    <div class="sub">MuViProject · Contenido en revisión — nada se publica sin la aprobación de Rosanna</div>
+    <form id="gate-form">
+      <label for="gate-email">Email</label>
+      <input id="gate-email" type="email" placeholder="info@medaestheticsmiami.com" autocomplete="username" required>
+      <label for="gate-pass">Contraseña</label>
+      <input id="gate-pass" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+      <div id="gate-err"></div>
+      <div style="margin-top:16px"><button class="btn" type="submit" style="width:100%">Entrar al portal</button></div>
+    </form>
+    <div class="gate-note">Acceso para Rosanna y el equipo de Med Aesthetics Miami.<br>¿Problemas para entrar? Escribinos por WhatsApp al (845) 699-6606.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var gate = document.getElementById('gate');
+  try { if (sessionStorage.getItem('mam_auth') === '1') { gate.classList.add('hidden'); } } catch(e){}
+  document.getElementById('gate-form').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = document.getElementById('gate-email').value.trim().toLowerCase();
+    var pass = document.getElementById('gate-pass').value;
+    var err = document.getElementById('gate-err');
+    if (email.slice(-PORTAL_EMAIL_DOMAIN.length) !== PORTAL_EMAIL_DOMAIN) {
+      err.textContent = 'Usá tu email de Med Aesthetics Miami (@medaestheticsmiami.com).';
+      return;
+    }
+    if (pass !== PORTAL_PASSWORD) {
+      err.textContent = 'Contraseña incorrecta. Revisala e intentá de nuevo.';
+      return;
+    }
+    try { sessionStorage.setItem('mam_auth', '1'); } catch(e){}
+    gate.classList.add('hidden');
+    window.scrollTo(0, 0);
+  });
+})();
+</script>
+
+<div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
+<nav class="nav"><div class="wrap"><a href="inicio.html">Inicio</a><a href="index.html">Calendario</a><a href="guiones.html">Guiones</a><a href="graficas.html">Gráficas</a><a href="ofertas.html">Ofertas</a><a href="vallure.html">Vallure</a><a href="anuncios.html" class="active">Anuncios</a><a href="encuestas.html">Encuestas</a><a href="pendientes.html">Pendientes</a></div></nav>
+
+
+<section style="background:#fff"><div class="wrap">
+  <h2>Anuncios en simple</h2>
+  <p class="intro">Los anuncios de Meta Ads explicados en palabras simples, para decidir sin saber de anuncios: qué aviso va bien, cuál va mal y qué hacer con cada uno. Los números son reales, leídos en Ads Manager, y se actualizan una vez por día.</p>
+  <div class="sumbox"><div class="big">Solo 1 de 49 campañas está corriendo. En 30 días se gastaron $1.390,48 y llegaron 4 clientes potenciales.</div><p style="margin-top:10px">Actualizado: <b>12-nov-2026</b> · Datos del <b>13-oct al 11-nov-2026</b> · Cuenta publicitaria Med Aesthetics Miami (140482630498719).</p><p>De las 49 campañas, <b>10 tienen el interruptor encendido</b> (9 son viejas y no entregan nada hace 30 días) y <b>39 están apagadas</b>. CBO: $1.083,90 y 3 clientes potenciales · Warm (apagada): $102,28 y 1 · Prospecting (apagada): $204,30, resultados no reportados.</p></div>
+<h3 class="sub">Campaña que está corriendo: «Vallure - Prospecting + Retargeting - Website | CBO»</h3>
+<div class="sumbox">Encendida · <b>$45 por día</b> · Gastó <b>$1.083,90</b> · Se mostró <b>10.875 veces</b> · La vieron <b>3.864 personas</b> distintas · Cada persona la vio <b>~2,81 veces</b> · <b>304 clics</b> · Cada 1.000 veces que se mostró costó <b>$99,67</b> · <b>3 clientes potenciales</b> · Cada cliente potencial costó <b>$361,30</b>.<p style="margin-top:10px">Por público: <b>Cold Men 25+:</b> $155,48 · 2.573 veces · 0 clientes potenciales · <b>Warm+Retargeting:</b> $819,29 · 7.365 veces · 3 clientes potenciales · <b>Cold Website:</b> $109,13 · 937 veces · 0 clientes potenciales.</p><p style="margin-top:6px">De sus 10 avisos: <b>1 va bien, 5 regular, 4 van mal</b>.</p></div>
+<div class="grid"><article class="card"><span class="badge gold">Ad 23</span><h3>Lift. Tighten. Rebuild.</h3><p>Morpheus8 $200 off la serie, solo Aventura (foto: rostro de mujer, mano con guante).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-05.jpg" alt="Imagen del aviso"></div><div><span class="verdict good">🟢 VA BIEN</span></div><div class="adnums">Lo vieron <b>1.136 personas</b> · Se mostró <b>3.505 veces</b><br>Hicieron clic <b>134</b> · De cada 100 veces que se mostró, hicieron clic <b>3,82%</b><br>Cada clic costó <b>$3,05</b> · Gasto total <b>$408,85</b> · Clientes potenciales: <b>3</b></div><div class="adrec"><b>Qué hacer:</b> Dejarlo corriendo y darle más presupuesto: es el único aviso que trae clientes potenciales. Hacer 2–3 variantes con la misma idea (otra foto, otro texto) para que no se canse.</div></article>
+<article class="card"><span class="badge gold">Ad 39</span><h3>20% Off Your First Glow Duo</h3><p>HydraFacial + Aerolase (foto: perfil de mujer, piel luminosa).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-01.jpg" alt="Imagen del aviso"></div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>214 personas</b> · Se mostró <b>376 veces</b><br>Hicieron clic <b>19</b> · De cada 100 veces que se mostró, hicieron clic <b>5,05%</b><br>Cada clic costó <b>$1,86</b> · Gasto total <b>$35,32</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Tiene los clics más baratos ($1,86) y el mejor CTR (5,05%), pero nadie dejó sus datos. El problema probablemente no es la imagen sino la página a la que llegan: revisar la página de ofertas. Merece una prueba con más presupuesto.</div></article>
+<article class="card"><span class="badge gold">Ad 38</span><h3>$10 Per Unit, Every Visit</h3><p>Neuromoduladores (foto: mujer con ojos cerrados, guantes negros).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-08.jpg" alt="Imagen del aviso"></div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>619 personas</b> · Se mostró <b>1.296 veces</b><br>Hicieron clic <b>47</b> · De cada 100 veces que se mostró, hicieron clic <b>3,63%</b><br>Cada clic costó <b>$3,09</b> · Gasto total <b>$145,07</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Clics a buen precio ($3,09) y buen CTR, pero 0 clientes potenciales. Revisar a dónde llega el clic y qué pide la página; si en una semana no trae nada, cambiar la imagen.</div></article>
+<article class="card"><span class="badge gold">Ad 33</span><h3>Collagen Remodeling at Depth</h3><p>Morpheus8, Top 10% InMode (foto: mujer recibiendo Morpheus8 en la frente).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-04.jpg" alt="Imagen del aviso"></div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>235 personas</b> · Se mostró <b>492 veces</b><br>Hicieron clic <b>15</b> · De cada 100 veces que se mostró, hicieron clic <b>3,05%</b><br>Cada clic costó <b>$4,50</b> · Gasto total <b>$67,46</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Buen CTR (3,05%) y clic a $4,50, pero 0 clientes potenciales. Mantenerlo una semana más y mirar si la página de destino convence; si no, cambiar la foto.</div></article>
+<article class="card"><span class="badge gold">Ad 21</span><h3>Your Exclusive Offer Is Here</h3><p>Láser 30% off (foto: mujer, láser en la mejilla).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-10.jpg" alt="Imagen del aviso"></div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>157 personas</b> · Se mostró <b>220 veces</b><br>Hicieron clic <b>5</b> · De cada 100 veces que se mostró, hicieron clic <b>2,27%</b><br>Cada clic costó <b>$4,27</b> · Gasto total <b>$21,37</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> CTR bueno (2,27%) y clic barato ($4,27). Dejarlo correr y ver si con más días trae clientes potenciales; si no, cambiar la imagen.</div></article>
+<article class="card"><span class="badge gold">Ad 41</span><h3>Ad 41 (creatividad sin identificar)</h3><p>En Ads Manager no quedó registrada qué imagen lleva este aviso.</p><div class="need">Foto por confirmar.</div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>28 personas</b> · Se mostró <b>41 veces</b><br>Hicieron clic <b>1</b> · De cada 100 veces que se mostró, hicieron clic <b>2,44%</b><br>Cada clic costó <b>$5,23</b> · Gasto total <b>$5,23</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Solo se mostró 41 veces y tuvo 1 clic: no se puede sacar una conclusión. Dejarlo unos días más o apagarlo si hace falta el presupuesto para el Ad 23.</div></article>
+<article class="card"><span class="badge gold">Ad 40</span><h3>Retire the Razor</h3><p>Láser para hombres (foto: torso de hombre con afeitadora).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-02.jpg" alt="Imagen del aviso"></div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>1.569 personas</b> · Se mostró <b>2.573 veces</b><br>Hicieron clic <b>36</b> · De cada 100 veces que se mostró, hicieron clic <b>1,40%</b><br>Cada clic costó <b>$4,32</b> · Gasto total <b>$155,48</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Apagarlo: gastó $155,48 y no trajo ningún cliente potencial. El público de hombres no está convirtiendo con esta oferta; probar otra oferta o pausarlo.</div></article>
+<article class="card"><span class="badge gold">Ad 20</span><h3>Your Private Consultation Awaits</h3><p>Rejuvenecimiento vaginal 30% off (foto: torso inferior de mujer, ropa interior blanca).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-07.jpg" alt="Imagen del aviso"></div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>724 personas</b> · Se mostró <b>1.676 veces</b><br>Hicieron clic <b>33</b> · De cada 100 veces que se mostró, hicieron clic <b>1,97%</b><br>Cada clic costó <b>$4,51</b> · Gasto total <b>$148,90</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Apagarlo: gastó $148,90 y no trajo nada. La oferta no está convirtiendo con esta imagen; cambiar la imagen o pausarlo.</div></article>
+<article class="card"><span class="badge gold">Ad 30</span><h3>Help Your Skin Keep Up</h3><p>QuantumRF 15% off (foto: abdomen de mujer, «the snapback»).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-09.jpg" alt="Imagen del aviso"></div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>216 personas</b> · Se mostró <b>297 veces</b><br>Hicieron clic <b>4</b> · De cada 100 veces que se mostró, hicieron clic <b>1,35%</b><br>Cada clic costó <b>$11,18</b> · Gasto total <b>$44,70</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Apagarlo o cambiar la imagen: tiene el clic más caro de todos ($11,18) y 0 clientes potenciales.</div></article>
+<article class="card"><span class="badge gold">Ad 34 Video</span><h3>Video de láser (15 s)</h3><p>Video del tratamiento de láser.</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-06.jpg" alt="Imagen del aviso"></div><div class="need">Foto por confirmar: parece ser el video «30% Off Laser Hair Removal» de la Biblioteca, pero no está verificado que sea este aviso.</div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>82 personas</b> · Se mostró <b>134 veces</b><br>Hicieron clic <b>1</b> · De cada 100 veces que se mostró, hicieron clic <b>0,75%</b><br>Cada clic costó <b>$7,98</b> · Gasto total <b>$7,98</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> El video rindió peor acá (CTR 0,75%, el más bajo de todos). No concluir que el video no funciona: el mismo video rindió mejor en la campaña Warm (CTR 6,38%). Probar el video de la Warm en la CBO antes de apagarlo.</div></article></div>
+<h3 class="sub">Avisos pausados de la CBO que gastaron algo en el periodo</h3>
+<p class="intro">Ya están pausados; gastaron esto antes de apagarse. No hace falta hacer nada con ellos.</p>
+<table class="minitable"><tr><th>Aviso</th><th>Veces que se mostró</th><th>Clics</th><th>Gasto</th></tr><tr><td>Ad 27</td><td>165</td><td>5</td><td>$29,65</td></tr><tr><td>Ad 35</td><td>37</td><td>2</td><td>$2,96</td></tr><tr><td>Ad 37 Row 42</td><td>32</td><td>1</td><td>$6,80</td></tr><tr><td>Ad 4</td><td>9</td><td>0</td><td>$0,56</td></tr><tr><td>Ad 1 Video</td><td>3</td><td>0</td><td>$0,38</td></tr><tr><td>Ad 28</td><td>19</td><td>1</td><td>$3,19</td></tr></table>
+<p class="intro">Pausados y sin gasto en el periodo (no tienen tarjeta porque no se mostraron ni gastaron nada): Ad 36 Row 41 (dos avisos distintos con ese nombre), Ad 2 Video, Ad 32, Ad 36, Ad 3, Ad 37.</p>
+<h3 class="sub">Campaña apagada: «Vallure - Warm + Retargeting - Website»</h3>
+<div class="sumbox">Apagada · <b>$17 por día</b> (desde el 14-ago-2026) · Gastó <b>$102,28</b> · Se mostró <b>939 veces</b> · La vieron <b>509 personas</b> distintas · Cada persona la vio <b>~1,84 veces</b> · <b>29 clics</b> · Cada 1.000 veces que se mostró costó <b>$108,92</b> · <b>1 cliente potencial</b> · Cada cliente potencial costó <b>$102,28</b>.<p style="margin-top:6px">De sus 10 avisos: <b>1 va bien, 4 regular, 4 van mal, 1 sin datos</b>.</p></div>
+<div class="grid"><article class="card"><span class="badge gold">Ad 20</span><h3>Your Private Consultation Awaits</h3><p>Rejuvenecimiento vaginal 30% off (foto: torso inferior de mujer, ropa interior blanca). Misma creatividad que el Ad 20 de la CBO.</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-07.jpg" alt="Imagen del aviso"></div><div><span class="verdict good">🟢 VA BIEN</span></div><div class="adnums">Lo vieron <b>21 personas</b> · Se mostró <b>30 veces</b><br>Hicieron clic <b>1</b> · De cada 100 veces que se mostró, hicieron clic <b>3,33%</b><br>Cada clic costó <b>$1,61</b> · Gasto total <b>$1,61</b> · Clientes potenciales: <b>1</b></div><div class="adrec"><b>Qué hacer:</b> El único cliente potencial de esta campaña y costó solo $1,61. Mantenerlo. Ojo: es el mismo aviso que en la CBO no convierte — lo que lo hace funcionar acá es el público (gente que ya conoce la clínica), no la imagen.</div></article>
+<article class="card"><span class="badge gold">Ad 34 Video</span><h3>Video de láser (15 s)</h3><p>Video del tratamiento de láser.</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-06.jpg" alt="Imagen del aviso"></div><div class="need">Foto por confirmar: parece ser el video «30% Off Laser Hair Removal» de la Biblioteca, pero no está verificado que sea este aviso.</div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>29 personas</b> · Se mostró <b>47 veces</b><br>Hicieron clic <b>3</b> · De cada 100 veces que se mostró, hicieron clic <b>6,38%</b><br>Cada clic costó <b>$0,93</b> · Gasto total <b>$2,80</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> El mejor CTR de la Warm (6,38%) con el clic más barato ($0,93), pero muestra chica (47 veces visto). Probar este video en la CBO, donde el video rindió mal: puede ser la versión que sí funciona.</div></article>
+<article class="card"><span class="badge gold">Ad 27</span><h3>Ad 27 (creatividad sin identificar)</h3><p>En Ads Manager no quedó registrada qué imagen lleva este aviso.</p><div class="need">Foto por confirmar.</div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>18 personas</b> · Se mostró <b>23 veces</b><br>Hicieron clic <b>2</b> · De cada 100 veces que se mostró, hicieron clic <b>8,70%</b><br>Cada clic costó <b>$1,42</b> · Gasto total <b>$2,83</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> CTR muy bueno (8,70%) pero muestra chica (23 veces visto). Darle unos días más para ver si trae clientes potenciales.</div></article>
+<article class="card"><span class="badge gold">Ad 35</span><h3>Ad 35 (creatividad sin identificar)</h3><p>En Ads Manager no quedó registrada qué imagen lleva este aviso.</p><div class="need">Foto por confirmar.</div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>8 personas</b> · Se mostró <b>9 veces</b><br>Hicieron clic <b>1</b> · De cada 100 veces que se mostró, hicieron clic <b>11,11%</b><br>Cada clic costó <b>$0,27</b> · Gasto total <b>$0,27</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> El clic más barato de todos ($0,27) y CTR 11,11%, pero solo se mostró 9 veces: sin conclusión. Dejarlo correr un poco más.</div></article>
+<article class="card"><span class="badge gold">Ad 33</span><h3>Collagen Remodeling at Depth</h3><p>Morpheus8, Top 10% InMode (foto: mujer recibiendo Morpheus8 en la frente).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-04.jpg" alt="Imagen del aviso"></div><div><span class="verdict mid">🟡 REGULAR</span></div><div class="adnums">Lo vieron <b>52 personas</b> · Se mostró <b>64 veces</b><br>Hicieron clic <b>2</b> · De cada 100 veces que se mostró, hicieron clic <b>3,13%</b><br>Cada clic costó <b>$4,09</b> · Gasto total <b>$8,17</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> CTR 3,13%, clic a $4,09, 0 clientes potenciales. Vigilarlo una semana; si no trae nada, cambiar la imagen.</div></article>
+<article class="card"><span class="badge gold">Ad 23</span><h3>Lift. Tighten. Rebuild.</h3><p>Morpheus8 $200 off la serie, solo Aventura (foto: rostro de mujer, mano con guante).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-05.jpg" alt="Imagen del aviso"></div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>226 personas</b> · Se mostró <b>327 veces</b><br>Hicieron clic <b>14</b> · De cada 100 veces que se mostró, hicieron clic <b>4,28%</b><br>Cada clic costó <b>$2,60</b> · Gasto total <b>$36,34</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Gastó $36,34 y no trajo nada en esta campaña (en la CBO sí convierte). El público es distinto: acá no funciona. Apagarlo en la Warm y dejarlo solo en la CBO.</div></article>
+<article class="card"><span class="badge gold">Ad 32</span><h3>Firmer Skin, Face and Body</h3><p>QuantumRF (foto: abdomen pellizcando piel flácida, «The weight went. The skin didn&#x27;t.»).</p><div class="need">Foto por confirmar.</div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>255 personas</b> · Se mostró <b>391 veces</b><br>Hicieron clic <b>6</b> · De cada 100 veces que se mostró, hicieron clic <b>1,53%</b><br>Cada clic costó <b>$7,30</b> · Gasto total <b>$43,79</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Gastó $43,79, 0 clientes potenciales, y tiene el clic más caro de la Warm ($7,30). Cambiar la imagen o apagarlo.</div></article>
+<article class="card"><span class="badge gold">Ad 38</span><h3>$10 Per Unit, Every Visit</h3><p>Neuromoduladores (foto: mujer con ojos cerrados, guantes negros).</p><div class="thumbs one"><img src="assets/vallure/vallure-ad-08.jpg" alt="Imagen del aviso"></div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>32 personas</b> · Se mostró <b>40 veces</b><br>Hicieron clic <b>0</b> · De cada 100 veces que se mostró, hicieron clic <b>—</b><br>Cada clic costó <b>—</b> · Gasto total <b>$4,45</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Gastó $4,45 y nadie hizo clic. Apagarlo.</div></article>
+<article class="card"><span class="badge gold">Ad 28</span><h3>Ad 28 (creatividad sin identificar)</h3><p>En Ads Manager no quedó registrada qué imagen lleva este aviso.</p><div class="need">Foto por confirmar.</div><div><span class="verdict bad">🔴 VA MAL</span></div><div class="adnums">Lo vieron <b>6 personas</b> · Se mostró <b>8 veces</b><br>Hicieron clic <b>0</b> · De cada 100 veces que se mostró, hicieron clic <b>—</b><br>Cada clic costó <b>—</b> · Gasto total <b>$2,02</b> · Clientes potenciales: <b>0</b></div><div class="adrec"><b>Qué hacer:</b> Solo se mostró 8 veces y nadie hizo clic. Apagarlo.</div></article>
+<article class="card"><span class="badge gold">Ad 37</span><h3>Ad 37 (sin datos)</h3><p>Estaba apagado y no se mostró ni una vez en el periodo.</p><div class="need">Foto por confirmar.</div><div><span class="verdict none">⚪ SIN DATOS</span></div><div class="adnums">Sin datos: estaba apagado y no se mostró ni una vez en el periodo.</div><div class="adrec"><b>Qué hacer:</b> No hay nada que decidir.</div></article></div>
+<h3 class="sub">Campaña apagada con gasto: «Vallure - Prospecting - Website»</h3>
+<div class="sumbox">Apagada · Gastó <b>$204,30</b> en el periodo. <b>Resultados no reportados:</b> no se puede decir cuántos clientes potenciales trajo. No afirmar que fueron 0.</div>
+<h3 class="sub">Qué hay que mejorar (recomendaciones reales)</h3>
+<div class="pend"><ol style="margin:0;padding-left:22px;line-height:1.8;font-size:15px"><li><b>Solo el Ad 23 convierte: cuidarlo, hacer variantes, darle más presupuesto.</b> Es el único aviso que trajo clientes potenciales (3). Antes de apagar nada, hay que tener 2–3 variantes de este aviso listas.</li><li><b>Los avisos con clics pero sin clientes potenciales (Ad 39, Ad 38, Ad 33) apuntan a la página de destino, no a la imagen.</b> La gente hace clic y después no deja sus datos: hay que revisar la página de ofertas y qué pasa después del clic (¿el formulario es largo? ¿pide demasiados datos? ¿carga lento en el celular?).</li><li><b>Nadie sabe si los 4 clientes potenciales se hicieron clientes de verdad.</b> Preguntar en cada consulta cómo llegaron («¿nos viste en Instagram/Facebook?») y anotarlo: sin eso no se sabe si los $1.390,48 volvieron.</li><li><b>El público de hombres no convierte ($155,48 a cero).</b> Pausar el conjunto Cold Men 25+ o cambiar la oferta para hombres.</li><li><b>Apagar las 9 campañas viejas prendidas sin entrega.</b> Están encendidas pero no entregan nada hace 30 días: solo ensucian la cuenta y confunden.</li><li><b>El video rindió peor en la CBO (CTR 0,75%) pero mejor en la Warm (6,38%).</b> Probar el video de la Warm en la CBO antes de concluir que el video no funciona.</li><li><b>El Ad 39 (clics más baratos, mejor CTR) merece una prueba con más presupuesto.</b> Es el aviso con el clic más barato ($1,86) y el mejor CTR (5,05%): si la página de destino se arregla, puede ser el segundo que convierta.</li><li><b>Black Friday: crear los avisos con los precios corregidos</b> (Morpheus8 $1.750 confirmado; láser $999 y QuantumRF $2.500/$3.000 a confirmar por Rosanna) <b>y apagar los de noviembre el 26-nov.</b></li><li><b>Frecuencia 2,81: la gente ve los avisos ~3 veces en 30 días.</b> Vigilar fatiga y refrescar la creatividad cuando la misma gente vea los mismos avisos muchas veces.</li></ol></div>
+<h3 class="sub">Qué significa cada palabra</h3>
+<div class="glos"><b>Impresiones</b> = veces que se mostró el aviso. · <b>Alcance</b> = personas distintas que lo vieron. · <b>Clic</b> = alguien tocó el aviso. · <b>CTR</b> = de cada 100 veces que se mostró, cuántas veces hicieron clic. · <b>CPC</b> = lo que costó cada clic. · <b>Cliente potencial</b> = alguien que dejó sus datos (en Ads Manager se llama «lead»).</div>
+<p class="intro" style="margin-top:18px">Datos leídos en Ads Manager el 12-nov-2026. Próxima actualización: diaria.</p>
+</div></section>
+
+
+
+<footer>
+  <div class="wrap">
+    <p><b>Borradores — nada se publica sin la aprobación de Rosanna.</b></p>
+    <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
+  </div>
+</footer>
+<div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+    <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<script>
+/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+   cajita de feedback. Cierra con la X, con clic fuera del popup, o con
+   Escape. Mientras está abierto, el fondo no hace scroll. */
+var _pvScroll = 0;
+function openPreview(btn){
+  var piece = btn.closest('article, details');
+  if(!piece) return;
+  var clone = piece.cloneNode(true);
+  var pv = clone.querySelector('.pv');
+  if(pv) pv.remove();
+  if(clone.tagName === 'DETAILS') clone.setAttribute('open', '');
+  var body = document.getElementById('modal-body');
+  body.innerHTML = '';
+  body.appendChild(clone);
+  document.getElementById('modal-overlay').classList.add('open');
+  _pvScroll = window.scrollY || 0;
+  document.body.style.overflow = 'hidden';
+  var c = document.querySelector('.modal-close');
+  if(c) c.focus();
+}
+function closePreview(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-body').innerHTML = '';
+  document.body.style.overflow = '';
+  window.scrollTo(0, _pvScroll);
+}
+document.addEventListener('keydown', function(ev){
+  if(ev.key === 'Escape') closePreview();
+});
+</script>
+<script>
+/* Feedback por WhatsApp: abre WhatsApp con "Sobre [pieza]: [comentario]".
+   No envía nada solo: el mensaje se manda solo si Rosanna pulsa Enviar
+   en WhatsApp. Si la cajita está vacía, no abre nada. */
+function mamFeedback(btn){
+  var box = btn.parentElement;
+  var ta = box ? box.querySelector('textarea') : null;
+  var txt = ta ? ta.value.trim() : '';
+  if (!txt) { alert('Escribí tu comentario sobre esta pieza antes de enviarlo.'); if (ta) ta.focus(); return; }
+  var piece = btn.getAttribute('data-piece') || 'esta pieza';
+  var url = 'https://wa.me/18456996606?text=' + encodeURIComponent('Sobre ' + piece + ': ' + txt);
+  window.open(url, '_blank');
+}
+</script>
+</body>
+</html>

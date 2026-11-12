@@ -69,6 +69,11 @@ consentimiento.
   - `graficas.html` — 15 piezas gráficas.
   - `ofertas.html` — Ofertas Q4 verificadas + Black Friday.
   - `vallure.html` — Contenido de Vallure (10 anuncios + 49 posts).
+  - `anuncios.html` — Anuncios en simple: métricas reales de Ads Manager
+    (leídas el 12-nov-2026, rango 13-oct al 11-nov-2026), con veredicto
+    por aviso (va bien / regular / va mal) y recomendaciones reales.
+    Se actualiza una vez por día. Los números viven en
+    `../med-aesthetics-materiales/anuncios-metricas-2026-11-12.json`.
   - `encuestas.html` — 5 encuestas compañeras propuestas.
   - `pendientes.html` — Pendientes de confirmación.
   Para agregar una página: una línea en `PAGES` de `gen.py` + su sección
