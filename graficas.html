@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Med Aesthetics Miami — Piezas gráficas · 15 · Portal del cliente</title>
+<style>
+:root{--gold:#e3b533;--gray:#606163;--ink:#2b2b2b;--light:#f2f9ff;--cream:#ecf0e4;--brown:#4b3618;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);background:#faf8f2;line-height:1.55;overflow-x:hidden}
+.brand{font-family:Georgia,'Times New Roman',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* ---------- login ---------- */
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#4b3618 0%,#606163 55%,#e3b533 130%);padding:20px}
+#gate.hidden{display:none}
+.gate-card{background:#fff;border-radius:14px;max-width:420px;width:100%;padding:34px 30px;box-shadow:0 20px 60px rgba(0,0,0,.35);text-align:center}
+.gate-card h1{font-family:Georgia,serif;color:var(--brown);font-size:26px;font-weight:400;letter-spacing:1px}
+.gate-card .sub{color:var(--gray);font-size:14px;margin:6px 0 22px}
+.gate-card label{display:block;text-align:left;font-size:13px;color:var(--gray);margin:12px 0 4px}
+.gate-card input{width:100%;padding:11px 12px;border:1px solid #d8d2c4;border-radius:8px;font-size:15px}
+.gate-card input:focus{outline:2px solid var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:#fff;border:0;border-radius:8px;padding:12px 22px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none}
+.btn:hover{background:#cfa12a}
+.btn-ghost{background:#fff;color:var(--brown);border:1.5px solid var(--gold)}
+#gate-err{color:#b3261e;font-size:13px;min-height:18px;margin-top:10px}
+.gate-note{font-size:12px;color:#999;margin-top:16px}
+/* ---------- hero ---------- */
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(120deg,#4b3618 0%,#606163 60%,#8a7a3a 100%)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(75,54,24,.88),rgba(96,97,99,.72) 60%,rgba(227,181,51,.45))}
+.hero-inner{position:relative;padding:64px 0 54px}
+.hero-eyebrow{letter-spacing:3px;font-size:12px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:Georgia,serif;font-weight:400;font-size:44px;line-height:1.15;margin:12px 0 10px;max-width:640px}
+.hero p.lede{font-size:18px;max-width:620px;color:#f4efe2}
+.hero-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.hero-cta .btn-ghost{color:#fff;border-color:#fff;background:transparent}
+.seals{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.seal{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:7px 14px;font-size:13px}
+/* ---------- sections ---------- */
+section{padding:44px 0}
+section h2{font-family:Georgia,serif;font-weight:400;font-size:30px;color:var(--brown);margin-bottom:6px}
+section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
+.why div{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.why b{color:var(--gold);font-size:22px;font-family:Georgia,serif;display:block}
+.why h3{font-size:16px;margin:4px 0}
+.why p{font-size:14px;color:var(--gray)}
+.badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:999px;padding:3px 10px;background:var(--cream);color:var(--brown)}
+.badge.warn{background:#fdeecb;color:#8a6d00}
+.badge.gold{background:var(--gold);color:#fff}
+.badge.gray{background:#e9e9e9;color:var(--gray)}
+/* calendar */
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.day{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.day .d{font-family:Georgia,serif;font-size:19px;color:var(--brown)}
+.day .fmt{font-size:13px;color:var(--gray);margin:2px 0 8px}
+.day p{font-size:14px}
+.day .note{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+.day .adapt{font-size:13px;color:#2b2b2b;background:#f2f9ff;border-left:3px solid var(--gold);border-radius:8px;padding:8px 10px;margin-top:10px}
+.thumbs{display:flex;gap:8px;margin:12px 0}.thumbs img{width:32%;height:auto;border-radius:10px;border:2px solid var(--gold);display:block}.thumbs.one img{width:100%}
+.rule{background:#fdf6e0;border:1.5px solid var(--gold);border-radius:12px;padding:14px 18px;font-size:15px;margin-bottom:20px}
+.day .nets{font-size:12px;color:var(--gray);margin-top:8px}
+.day.empty{background:var(--cream);border-style:dashed}
+/* scripts */
+details{background:#fff;border:1px solid #e8e2d2;border-radius:12px;margin-bottom:12px;padding:16px 18px}
+details summary{cursor:pointer;font-family:Georgia,serif;font-size:19px;color:var(--brown);list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary .n{color:var(--gold);font-weight:700;margin-right:8px}
+details .meta{font-size:13px;color:var(--gray);margin:6px 0 10px}
+details .lbl{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-top:12px}
+details .hook{font-family:Georgia,serif;font-size:18px;color:var(--brown)}
+details ul{margin:6px 0 6px 20px;font-size:14px}
+details .cap{font-size:13px;color:var(--gray);background:var(--light);border-radius:8px;padding:10px 12px;margin-top:8px}
+.warnbox{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+/* graphics + offers */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:18px}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:18px;color:var(--brown);margin:6px 0}
+.card p{font-size:14px}
+.card .price{font-family:Georgia,serif;font-size:22px;color:var(--brown);margin:6px 0}
+.card .vig{font-size:12px;color:var(--gray)}
+.card .need{font-size:13px;color:#8a6d00;background:#fdf6e0;border-radius:8px;padding:8px 10px;margin-top:10px}
+.approve{margin-top:12px}
+.approve a{display:inline-block;background:#25D366;color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:8px 16px;text-decoration:none}
+.approve a:hover{background:#1da851}
+/* feedback por WhatsApp */
+.fb{margin-top:10px}
+.fb textarea{width:100%;padding:10px 12px;border:1px solid #d8d2c4;border-radius:8px;font-size:14px;font-family:inherit;resize:vertical;min-height:56px}
+.fb textarea:focus{outline:2px solid var(--gold)}
+.fb-btn{display:inline-block;margin-top:8px;background:#fff;color:var(--brown);border:1.5px solid var(--gold);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.fb-btn:hover{background:#fdf6e0}
+.band{position:relative;overflow:hidden;border-radius:12px;min-height:120px;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#4b3618,#606163 60%,#e3b533);margin:8px 0 22px}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band span{position:relative;color:#fff;font-family:Georgia,serif;font-size:22px;text-align:center;padding:20px}
+/* pendientes */
+.pend{background:#fff;border:1px solid #e8e2d2;border-radius:12px;padding:22px}
+.pend li{margin:8px 0 8px 20px;font-size:14px}
+footer{background:var(--brown);color:#e8dfc8;padding:30px 0;text-align:center;font-size:13px}
+footer a{color:var(--gold)}
+.topbar{background:var(--brown);color:#fff;font-size:13px;padding:10px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+/* redes: cápsulas con el color de cada marca (definido una vez acá) */
+.nets{display:flex;flex-wrap:nowrap;gap:6px;margin-top:8px}
+.net{display:inline-flex;align-items:center;border-radius:999px;padding:3px 11px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#fff;white-space:nowrap}
+.net-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.net-fb{background:#1877F2}
+.net-tt{background:#010101;border:1.5px solid #25F4EE;box-shadow:inset 0 -2px 0 #FE2C55}
+.net-yt{background:#FF0000}
+/* botón vista previa */
+.pv{margin-top:10px}
+.pv-btn{display:inline-block;background:#fff;color:var(--brown);border:1.5px solid var(--gray);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.pv-btn:hover{border-color:var(--gold);background:#fdf6e0}
+/* modal de vista previa */
+.modal-overlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(43,43,43,.65);padding:16px}
+.modal-overlay.open{display:flex}
+.modal{position:relative;background:#fff;border-radius:14px;max-width:640px;width:100%;max-height:88vh;overflow-y:auto;padding:26px 24px 22px;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+.modal-close{position:absolute;top:10px;right:12px;width:44px;height:44px;border:0;border-radius:50%;background:var(--cream);color:var(--brown);font-size:28px;line-height:1;cursor:pointer;z-index:1}
+.modal-close:hover{background:var(--gold);color:#fff}
+.modal .day,.modal .card{border:0;padding:0}
+.modal details{border:0;padding:0;margin:0}
+.modal .approve,.modal .fb{margin-top:14px}
+@media(max-width:640px){
+  .hero h1{font-size:32px}
+  section h2{font-size:25px}
+  .hero-inner{padding:44px 20px 38px}
+  .modal-overlay{padding:8px}
+  .modal{width:94vw;max-height:90vh;padding:22px 16px 18px;border-radius:16px}
+  .modal-close{width:48px;height:48px;font-size:30px;top:8px;right:8px}
+  .approve a,.fb-btn,.pv-btn{display:block;text-align:center;margin-top:8px}
+  .fb textarea{font-size:16px}
+}
+/* ---------- menú superior (siempre visible) ---------- */
+.nav{position:sticky;top:0;z-index:60;background:var(--brown);border-bottom:3px solid var(--gold)}
+.nav .wrap{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding-top:0;padding-bottom:0}
+.nav a{color:#e8dfc8;text-decoration:none;font-size:14px;font-weight:600;padding:12px 13px;flex-shrink:0}
+.nav a:hover{color:#fff}
+.nav a.active{background:var(--gold);color:#fff}
+</style>
+</head>
+<body>
+<!-- ============================================================
+     CONFIGURACIÓN DEL ACCESO (editar acá para cambiar la clave)
+     La contraseña de este portal es una CORTINA VISUAL, no
+     seguridad real: al ser un sitio estático (GitHub Pages),
+     cualquiera que lea el código puede verla. Para acceso
+     protegido de verdad, usar Cloudflare Access.
+     ============================================================ -->
+<script>
+var PORTAL_PASSWORD = "MedAesthetics2026";
+var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
+</script>
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="brand" style="color:#e3b533;font-size:15px;letter-spacing:2px">MED AESTHETICS MIAMI</div>
+    <h1>Portal del cliente</h1>
+    <div class="sub">MuViProject · Contenido en revisión — nada se publica sin la aprobación de Rosanna</div>
+    <form id="gate-form">
+      <label for="gate-email">Email</label>
+      <input id="gate-email" type="email" placeholder="info@medaestheticsmiami.com" autocomplete="username" required>
+      <label for="gate-pass">Contraseña</label>
+      <input id="gate-pass" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+      <div id="gate-err"></div>
+      <div style="margin-top:16px"><button class="btn" type="submit" style="width:100%">Entrar al portal</button></div>
+    </form>
+    <div class="gate-note">Acceso para Rosanna y el equipo de Med Aesthetics Miami.<br>¿Problemas para entrar? Escribinos por WhatsApp al (845) 699-6606.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var gate = document.getElementById('gate');
+  try { if (sessionStorage.getItem('mam_auth') === '1') { gate.classList.add('hidden'); } } catch(e){}
+  document.getElementById('gate-form').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = document.getElementById('gate-email').value.trim().toLowerCase();
+    var pass = document.getElementById('gate-pass').value;
+    var err = document.getElementById('gate-err');
+    if (email.slice(-PORTAL_EMAIL_DOMAIN.length) !== PORTAL_EMAIL_DOMAIN) {
+      err.textContent = 'Usá tu email de Med Aesthetics Miami (@medaestheticsmiami.com).';
+      return;
+    }
+    if (pass !== PORTAL_PASSWORD) {
+      err.textContent = 'Contraseña incorrecta. Revisala e intentá de nuevo.';
+      return;
+    }
+    try { sessionStorage.setItem('mam_auth', '1'); } catch(e){}
+    gate.classList.add('hidden');
+    window.scrollTo(0, 0);
+  });
+})();
+</script>
+
+<div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
+<nav class="nav"><div class="wrap"><a href="inicio.html">Inicio</a><a href="index.html">Calendario</a><a href="guiones.html">Guiones</a><a href="graficas.html" class="active">Gráficas</a><a href="ofertas.html">Ofertas</a><a href="vallure.html">Vallure</a><a href="encuestas.html">Encuestas</a><a href="pendientes.html">Pendientes</a></div></nav>
+
+
+<section style="background:#fff"><div class="wrap">
+  <h2>Piezas gráficas · 15 productos</h2>
+  <p class="intro">Clasificación por tipo, con lo que falta para producir cada una. Antes/después y testimoniales solo con fotos reales y consentimiento. Ninguna pieza se produce con fotos generadas ni de stock.</p>
+  <div class="band"><img src="assets/flatlay.png" alt="" onerror="this.remove()"><span>«More offers to explore» — las ofertas, en tarjetas</span></div>
+  <div class="grid"><article class="card"><span class="badge">G-01</span><h3>Estática-resumen ofertas noviembre (Glow Duo + The Contour Edit + Retire the Razor)</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Deck 4-nov — a decidir: recuperar o seguir desde el 10-nov</p><div class="need">Falta: Decisión de Daniel/Rosanna: ¿se recupera el 4-nov o se descarta?</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-01%3A%20Est%C3%A1tica-resumen%20ofertas%20noviembre%20%28Glow%20Duo%20%2B%20The%20Contour%20Edit%20%2B%20Retire%20the%20Razor%29" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-01: Estática-resumen ofertas noviembre (Glow Duo + The Contour Edit + Retire the Razor)" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-02</span><h3>Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)</h3><p>Tipo 1 · Antes / después</p><div class="thumbs"><img src="assets/carousel-10nov-1.png" alt="Diseño borrador de la pieza"><img src="assets/carousel-10nov-2.png" alt="Diseño borrador de la pieza"><img src="assets/carousel-10nov-3.png" alt="Diseño borrador de la pieza"></div><p class="vig">Mar 10-nov</p><div class="need">Falta: Confirmar el orden del antes/después + foto real con consentimiento. Diseño borrador con las fotos pendientes ya visible en esta tarjeta.</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-02%3A%20Carrusel%20%C2%ABQuantumRF%3A%20Men%20Included%C2%BB%20%28antes%2Fdespu%C3%A9s%20abdomen%20masculino%29" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-02: Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-03</span><h3>Carrusel QuantumRF antes/después de brazos</h3><p>Tipo 1 · Antes / después</p><p class="vig">Mar 17-nov</p><div class="need">Falta: Foto real con consentimiento + «individual results vary»</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-03%3A%20Carrusel%20QuantumRF%20antes%2Fdespu%C3%A9s%20de%20brazos" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-03: Carrusel QuantumRF antes/después de brazos" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-04</span><h3>Carrusel «Black Friday Package Event»</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Vie 27-nov</p><div class="need">Falta: Precios A CONFIRMAR POR ROSANNA</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-04%3A%20Carrusel%20%C2%ABBlack%20Friday%20Package%20Event%C2%BB" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-04: Carrusel «Black Friday Package Event»" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-05</span><h3>Tarjeta oferta siempre activa — Botox $10/unidad</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Rotación</p><div class="need">Falta: Aprobación del diseño</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-05%3A%20Tarjeta%20oferta%20siempre%20activa%20%E2%80%94%20Botox%20%2410%2Funidad" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-05: Tarjeta oferta siempre activa — Botox $10/unidad" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-06</span><h3>Tarjeta oferta siempre activa — Láser 30% off</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Rotación</p><div class="need">Falta: Aprobación del diseño</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-06%3A%20Tarjeta%20oferta%20siempre%20activa%20%E2%80%94%20L%C3%A1ser%2030%25%20off" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-06: Tarjeta oferta siempre activa — Láser 30% off" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-07</span><h3>Tarjeta oferta siempre activa — Morpheus8 $200 off la serie</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Rotación</p><div class="need">Falta: Aclarar «Aventura Location Only»</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-07%3A%20Tarjeta%20oferta%20siempre%20activa%20%E2%80%94%20Morpheus8%20%24200%20off%20la%20serie" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-07: Tarjeta oferta siempre activa — Morpheus8 $200 off la serie" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-08</span><h3>Tarjeta oferta siempre activa — QuantumRF 15% off</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Rotación</p><div class="need">Falta: Aprobación del diseño</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-08%3A%20Tarjeta%20oferta%20siempre%20activa%20%E2%80%94%20QuantumRF%2015%25%20off" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-08: Tarjeta oferta siempre activa — QuantumRF 15% off" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-09</span><h3>Tarjeta oferta siempre activa — Rejuvenecimiento vaginal 30% off</h3><p>Tipo 2 · Tarjeta de oferta</p><p class="vig">Rotación</p><div class="need">Falta: Aprobación de Rosanna (tema sensible: tono y foto)</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-09%3A%20Tarjeta%20oferta%20siempre%20activa%20%E2%80%94%20Rejuvenecimiento%20vaginal%2030%25%20off" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-09: Tarjeta oferta siempre activa — Rejuvenecimiento vaginal 30% off" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-10</span><h3>Carrusel checklist «Preguntas para tu consulta» v2</h3><p>Tipo 3 · Checklist «guardable»</p><p class="vig">Dom 15-nov</p><div class="need">Falta: Revisión del contenido + CTA final</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-10%3A%20Carrusel%20checklist%20%C2%ABPreguntas%20para%20tu%20consulta%C2%BB%20v2" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-10: Carrusel checklist «Preguntas para tu consulta» v2" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-11</span><h3>Carrusel «Tu preparación para fotos de fiestas» (Glow Duo)</h3><p>Tipo 3 · Checklist «guardable»</p><p class="vig">Semana 16–22 nov</p><div class="need">Falta: Rosanna confirma los tiempos antes del evento</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-11%3A%20Carrusel%20%C2%ABTu%20preparaci%C3%B3n%20para%20fotos%20de%20fiestas%C2%BB%20%28Glow%20Duo%29" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-11: Carrusel «Tu preparación para fotos de fiestas» (Glow Duo)" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-12</span><h3>Carrusel «Retire the Razor» zona por zona</h3><p>Tipo 5 · Educativo de tratamiento</p><p class="vig">Dom 22-nov</p><div class="need">Falta: Rosanna confirma sesiones por zona</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-12%3A%20Carrusel%20%C2%ABRetire%20the%20Razor%C2%BB%20zona%20por%20zona" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-12: Carrusel «Retire the Razor» zona por zona" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-13</span><h3>Foto testimonial con cita (formato VIO)</h3><p>Tipo 4 · Testimonial</p><p class="vig">Sin fecha — a definir</p><div class="need">Falta: Falta testimonio real + consentimiento escrito</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-13%3A%20Foto%20testimonial%20con%20cita%20%28formato%20VIO%29" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-13: Foto testimonial con cita (formato VIO)" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge">G-14</span><h3>Estática credencial Top 10% Morpheus8 + 3 sedes</h3><p>Tipo 7 · Credencial</p><p class="vig">Rotación</p><div class="need">Falta: Arte oficial del sello InMode (si existe)</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-14%3A%20Est%C3%A1tica%20credencial%20Top%2010%25%20Morpheus8%20%2B%203%20sedes" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-14: Estática credencial Top 10% Morpheus8 + 3 sedes" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article>
+<article class="card"><span class="badge warn">G-15</span><h3>Estática «para dos / regalo» (formato LUX)</h3><p>Tipo 6 · Para dos / regalo</p><p class="vig">Sin fecha — NO producir en noviembre</p><div class="need">Falta: Confirmar si Med ofrece algo «para dos» o gift cards en noviembre</div><div class="approve"><a href="https://wa.me/18456996606?text=Hola%20Daniel%2C%20apruebo%20la%20pieza%20G-15%3A%20Est%C3%A1tica%20%C2%ABpara%20dos%20%2F%20regalo%C2%BB%20%28formato%20LUX%29" target="_blank" rel="noopener">Aprobar por WhatsApp</a></div><div class="pv"><button type="button" class="pv-btn" onclick="openPreview(this)">Vista previa</button></div><div class="fb"><textarea rows="2" placeholder="Escribí tu comentario sobre esta pieza…"></textarea><button type="button" class="fb-btn" data-piece="la pieza G-15: Estática «para dos / regalo» (formato LUX)" onclick="mamFeedback(this)">Enviar comentario por WhatsApp</button></div></article></div>
+</div></section>
+
+
+
+<footer>
+  <div class="wrap">
+    <p><b>Borradores — nada se publica sin la aprobación de Rosanna.</b></p>
+    <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
+  </div>
+</footer>
+<div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+    <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<script>
+/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+   cajita de feedback. Cierra con la X, con clic fuera del popup, o con
+   Escape. Mientras está abierto, el fondo no hace scroll. */
+var _pvScroll = 0;
+function openPreview(btn){
+  var piece = btn.closest('article, details');
+  if(!piece) return;
+  var clone = piece.cloneNode(true);
+  var pv = clone.querySelector('.pv');
+  if(pv) pv.remove();
+  if(clone.tagName === 'DETAILS') clone.setAttribute('open', '');
+  var body = document.getElementById('modal-body');
+  body.innerHTML = '';
+  body.appendChild(clone);
+  document.getElementById('modal-overlay').classList.add('open');
+  _pvScroll = window.scrollY || 0;
+  document.body.style.overflow = 'hidden';
+  var c = document.querySelector('.modal-close');
+  if(c) c.focus();
+}
+function closePreview(){
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-body').innerHTML = '';
+  document.body.style.overflow = '';
+  window.scrollTo(0, _pvScroll);
+}
+document.addEventListener('keydown', function(ev){
+  if(ev.key === 'Escape') closePreview();
+});
+</script>
+<script>
+/* Feedback por WhatsApp: abre WhatsApp con "Sobre [pieza]: [comentario]".
+   No envía nada solo: el mensaje se manda solo si Rosanna pulsa Enviar
+   en WhatsApp. Si la cajita está vacía, no abre nada. */
+function mamFeedback(btn){
+  var box = btn.parentElement;
+  var ta = box ? box.querySelector('textarea') : null;
+  var txt = ta ? ta.value.trim() : '';
+  if (!txt) { alert('Escribí tu comentario sobre esta pieza antes de enviarlo.'); if (ta) ta.focus(); return; }
+  var piece = btn.getAttribute('data-piece') || 'esta pieza';
+  var url = 'https://wa.me/18456996606?text=' + encodeURIComponent('Sobre ' + piece + ': ' + txt);
+  window.open(url, '_blank');
+}
+</script>
+</body>
+</html>

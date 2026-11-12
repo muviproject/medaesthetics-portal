@@ -29,8 +29,8 @@ El portal pide email + contraseña antes de mostrar el contenido.
 
 ### Cómo cambiar la contraseña
 
-Editar en `index.html`, al inicio del archivo (bien visible, con el comentario
-`CONFIGURACIÓN DEL ACCESO`):
+Editar en `gen.py` (constante `PORTAL_PASSWORD` dentro del TPL, bien visible,
+con el comentario `CONFIGURACIÓN DEL ACCESO`) y regenerar (`python3 gen.py`):
 
 ```js
 var PORTAL_PASSWORD = "MedAesthetics2026";
@@ -58,9 +58,23 @@ consentimiento.
 
 ## Estructura
 
-- `index.html` — todo el portal, autocontenido (CSS/JS inline, sin CDN, sin
-  Google Fonts, sin imágenes externas). Stack de fuentes del sistema.
-- `assets/` — solo las 3 imágenes opcionales de arriba.
+- Páginas (todas autocontenidas: CSS/JS inline, sin CDN, sin Google
+  Fonts, sin imágenes externas; stack de fuentes del sistema). Todas
+  llevan el mismo menú superior (siempre visible, también en el celular)
+  y la misma puerta de acceso con contraseña:
+  - `index.html` — Calendario 10–30 nov (la landing, la que se abre al
+    entrar al portal).
+  - `inicio.html` — Bienvenida + «Por qué Med Aesthetics Miami».
+  - `guiones.html` — Banco de 26 guiones de reels.
+  - `graficas.html` — 15 piezas gráficas.
+  - `ofertas.html` — Ofertas Q4 verificadas + Black Friday.
+  - `vallure.html` — Contenido de Vallure (10 anuncios + 49 posts).
+  - `encuestas.html` — 5 encuestas compañeras propuestas.
+  - `pendientes.html` — Pendientes de confirmación.
+  Para agregar una página: una línea en `PAGES` de `gen.py` + su sección
+  en el TPL con marcadores `<!-- PAGE:X-START -->` / `<!-- PAGE:X-END -->`.
+- `assets/` — solo las 3 imágenes opcionales de arriba + `assets/vallure/`
+  (visuales embebidos del contenido de Vallure).
 
 ## Publicación
 
@@ -89,10 +103,10 @@ pulsa Enviar en WhatsApp. El portal no guarda comentarios.
 ### Redes: cápsulas de color
 
 Donde se publica cada pieza se muestra con cápsulas con el color de cada
-marca (definidas una sola vez en el CSS: `.net-ig` gradiente de Instagram,
-`.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y acento rojo
-#FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita esa clase en
-`index.html`; todo el portal usa la misma definición.
+marca (definidas una sola vez en el CSS de `gen.py`: `.net-ig` gradiente de
+Instagram, `.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y
+acento rojo #FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita
+esa clase en `gen.py` y se regenera; todo el portal usa la misma definición.
 
 ### Vista previa (popup)
 

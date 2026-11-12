@@ -468,6 +468,12 @@ footer a{color:var(--gold)}
   .approve a,.fb-btn,.pv-btn{display:block;text-align:center;margin-top:8px}
   .fb textarea{font-size:16px}
 }
+/* ---------- menú superior (siempre visible) ---------- */
+.nav{position:sticky;top:0;z-index:60;background:var(--brown);border-bottom:3px solid var(--gold)}
+.nav .wrap{display:flex;gap:2px;overflow-x:auto;white-space:nowrap;padding-top:0;padding-bottom:0}
+.nav a{color:#e8dfc8;text-decoration:none;font-size:14px;font-weight:600;padding:12px 13px;flex-shrink:0}
+.nav a:hover{color:#fff}
+.nav a.active{background:var(--gold);color:#fff}
 """
 
 # Diseños visuales (mockups borrador) por pieza: se muestran en la tarjeta
@@ -669,7 +675,9 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 </script>
 
 <div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
+__NAV__
 
+<!-- PAGE:INICIO-START -->
 <header class="hero">
   <div class="hero-media"><img src="assets/hero.png" alt="" onerror="this.remove()"></div>
   <div class="wrap hero-inner">
@@ -677,7 +685,7 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
     <h1 class="brand">Look and Feel Your Best.<br>Believe in you! Embrace your beauty.</h1>
     <p class="lede">Todo el contenido de noviembre en un solo lugar: calendario de publicaciones, guiones de reels y piezas gráficas. Cada pieza está en borrador y se publica solo con la aprobación de Rosanna.</p>
     <div class="hero-cta">
-      <a class="btn" href="#calendario">Ver calendario de noviembre</a>
+      <a class="btn" href="index.html">Ver calendario de noviembre</a>
       <a class="btn btn-ghost" href="tel:+13053567402">Call (305) 356-7402</a>
     </div>
     <div class="seals">
@@ -697,7 +705,8 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
     <div><b>03</b><h3>Cutting-edge treatments</h3><p>Morpheus8, QuantumRF, Sculptra, PRP, HydraFacial y láser de última generación.</p></div>
   </div>
 </div></section>
-
+<!-- PAGE:INICIO-END -->
+<!-- PAGE:CAL-START -->
 <section id="calendario" style="background:#fff"><div class="wrap">
   <h2>Calendario · 10 al 30 de noviembre de 2026</h2>
   <div class="rule"><b>Regla de publicación:</b> cada pieza se adapta y se publica en <b>todas las plataformas que aceptan su formato</b> — los reels como Reels y Shorts, los carruseles como carrusel de fotos, las estáticas como foto o publicación de Comunidad. Nada queda en una sola red pudiendo ir a más.</div>
@@ -705,24 +714,32 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
   <div class="cal">__CALENDAR__</div>
 </div></section>
 
+<!-- PAGE:CAL-END -->
+<!-- PAGE:VALLURE-START -->
 <section style="background:#fff"><div class="wrap">
   <h2>Contenido de Vallure — para aprobar</h2>
   <p class="intro">Todo lo que hizo Vallure Agency y está publicado o corriendo: <b>10 anuncios de Meta Ads</b> (lo visible en la Biblioteca de Anuncios) y <b>49 posteos orgánicos de Instagram</b> (29-may a 29-oct-2026, el último post fue el 29-oct). Cada tarjeta muestra su visual (captura de la página original) y el link al original, y los botones de siempre: aprobar por WhatsApp, Vista previa y enviar comentario. <b>Ojo:</b> los visuales son capturas de página, no los archivos originales: en los carruseles se ve solo la 1ª lámina y en los reels un fotograma; 3 reels (22-oct, 23-sep y 27-jun) salieron con el fotograma en negro porque el video no cargó en la captura — se ven abriendo el link de la tarjeta. Si un anuncio o post no te gusta, pedí el cambio en esa misma tarjeta.</p>
   <div class="grid">__VALLURE__</div>
 </div></section>
 
+<!-- PAGE:VALLURE-END -->
+<!-- PAGE:POLLS-START -->
 <section><div class="wrap">
   <h2>Encuestas compañeras · propuestas (sin programar)</h2>
   <p class="intro">Estas encuestas NO están en el calendario: son ideas para acompañar una pieza, y Daniel elige cuáles hacer. Cada una iría en IG Stories (sticker de encuesta) y en YT Comunidad (encuesta). En FB no hay encuesta nativa en el feed de la Página: iría como Story con sticker (si la Página lo tiene) o con voto en comentarios.</p>
   <div class="pend"><ul>__POLLS__</ul></div>
 </div></section>
 
+<!-- PAGE:POLLS-END -->
+<!-- PAGE:SCRIPTS-START -->
 <section><div class="wrap">
   <h2>Banco de scripts · 26 reels</h2>
   <p class="intro">Guiones rankeados con el método Kallaway (hook 0–3 s, cuerpo por beats, un solo CTA). Están escritos en inglés, como el material fuente. Hacé clic en cada uno para ver el hook, el cuerpo, el CTA y el caption.</p>
   __SCRIPTS__
 </div></section>
 
+<!-- PAGE:SCRIPTS-END -->
+<!-- PAGE:GRAPHICS-START -->
 <section style="background:#fff"><div class="wrap">
   <h2>Piezas gráficas · 15 productos</h2>
   <p class="intro">Clasificación por tipo, con lo que falta para producir cada una. Antes/después y testimoniales solo con fotos reales y consentimiento. Ninguna pieza se produce con fotos generadas ni de stock.</p>
@@ -730,6 +747,8 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
   <div class="grid">__GRAPHICS__</div>
 </div></section>
 
+<!-- PAGE:GRAPHICS-END -->
+<!-- PAGE:OFFERS-START -->
 <section><div class="wrap">
   <h2>Ofertas vigentes · Q4 2026</h2>
   <p class="intro">Solo las ofertas verificadas del documento Q4. Las de Black Friday (27–30 nov) están <b>a confirmar por Rosanna</b>: no se usan sus precios hasta que ella los confirme. Antes se llamaba Gold Friday (nombre inventado por Vallure); desde el 12-nov es Black Friday por decisión de Daniel — Rosanna no estaba convencida del nombre.</p>
@@ -738,11 +757,14 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
   <p class="intro" style="margin-top:18px">Diciembre (Lip Filler «The Midnight Kiss» 15% off · QuantumRF «New Year, Already Snatched» · Gift Cards «Drop a Hint» $250 + $50 bonus) se programa en el calendario de diciembre, no en este portal.</p>
 </div></section>
 
+<!-- PAGE:OFFERS-END -->
+<!-- PAGE:PEND-START -->
 <section style="background:#fff"><div class="wrap">
   <h2>Pendientes de confirmación</h2>
   <p class="intro">Lo que todavía necesita una decisión de Rosanna (o de Daniel) antes de producir o publicar:</p>
   <div class="pend"><ul>__PENDIENTES__</ul></div>
 </div></section>
+<!-- PAGE:PEND-END -->
 
 <footer>
   <div class="wrap">
@@ -805,8 +827,37 @@ function mamFeedback(btn){
 </html>
 """
 
-def build():
-    out = TPL.replace("__CSS__", CSS)
+# Páginas del portal: (archivo, título, etiqueta del menú, sección del TPL).
+# La landing es index.html (Calendario), la que se abre al entrar al portal.
+# Para agregar una página nueva (p. ej. "anuncios.html" cuando estén las
+# métricas de Ads), agregar una línea acá + su sección en el TPL con los
+# marcadores <!-- PAGE:X-START --> / <!-- PAGE:X-END -->.
+PAGES = [
+    ("inicio.html", "Inicio", "Inicio", "INICIO"),
+    ("index.html", "Calendario · 10–30 nov", "Calendario", "CAL"),
+    ("guiones.html", "Guiones · 26 reels", "Guiones", "SCRIPTS"),
+    ("graficas.html", "Piezas gráficas · 15", "Gráficas", "GRAPHICS"),
+    ("ofertas.html", "Ofertas · Q4 2026", "Ofertas", "OFFERS"),
+    ("vallure.html", "Contenido de Vallure", "Vallure", "VALLURE"),
+    ("encuestas.html", "Encuestas compañeras", "Encuestas", "POLLS"),
+    ("pendientes.html", "Pendientes de confirmación", "Pendientes", "PEND"),
+]
+
+def nav(active_file):
+    """Menú superior: mismo en todas las páginas, con la activa marcada."""
+    links = []
+    for fname, _title, label, _sec in PAGES:
+        cls = ' class="active"' if fname == active_file else ""
+        links.append('<a href="%s"%s>%s</a>' % (fname, cls, label))
+    return '<nav class="nav"><div class="wrap">%s</div></nav>' % "".join(links)
+
+def _page_section(tpl, name):
+    start = tpl.index("<!-- PAGE:%s-START -->" % name) + len("<!-- PAGE:%s-START -->" % name)
+    end = tpl.index("<!-- PAGE:%s-END -->" % name)
+    return tpl[start:end]
+
+def _fill(tpl):
+    out = tpl.replace("__CSS__", CSS)
     out = out.replace("__CALENDAR__", cal_rows())
     out = out.replace("__VALLURE__", vallure_rows())
     out = out.replace("__POLLS__", poll_rows())
@@ -815,6 +866,22 @@ def build():
     out = out.replace("__OFFERS__", offer_cards())
     out = out.replace("__PENDIENTES__", "".join("<li>%s</li>" % esc(p) for p in PENDIENTES))
     return out
+
+def build():
+    """Genera las 8 páginas: mismo head (puerta + menú) y mismo pie en todas."""
+    head_end = TPL.index("<!-- PAGE:INICIO-START -->")
+    head = TPL[:head_end]
+    foot_start = TPL.index("<!-- PAGE:PEND-END -->") + len("<!-- PAGE:PEND-END -->")
+    foot = TPL[foot_start:]
+    pages = {}
+    for fname, title, _label, sec in PAGES:
+        page = head + _page_section(TPL, sec) + foot
+        page = page.replace("__NAV__", nav(fname))
+        page = page.replace(
+            "<title>Med Aesthetics Miami — Portal del cliente · MuViProject</title>",
+            "<title>Med Aesthetics Miami — %s · Portal del cliente</title>" % title)
+        pages[fname] = _fill(page)
+    return pages
 
 README = """# Med Aesthetics Miami — Portal del cliente (MuViProject)
 
@@ -847,8 +914,8 @@ El portal pide email + contraseña antes de mostrar el contenido.
 
 ### Cómo cambiar la contraseña
 
-Editar en `index.html`, al inicio del archivo (bien visible, con el comentario
-`CONFIGURACIÓN DEL ACCESO`):
+Editar en `gen.py` (constante `PORTAL_PASSWORD` dentro del TPL, bien visible,
+con el comentario `CONFIGURACIÓN DEL ACCESO`) y regenerar (`python3 gen.py`):
 
 ```js
 var PORTAL_PASSWORD = "MedAesthetics2026";
@@ -876,9 +943,23 @@ consentimiento.
 
 ## Estructura
 
-- `index.html` — todo el portal, autocontenido (CSS/JS inline, sin CDN, sin
-  Google Fonts, sin imágenes externas). Stack de fuentes del sistema.
-- `assets/` — solo las 3 imágenes opcionales de arriba.
+- Páginas (todas autocontenidas: CSS/JS inline, sin CDN, sin Google
+  Fonts, sin imágenes externas; stack de fuentes del sistema). Todas
+  llevan el mismo menú superior (siempre visible, también en el celular)
+  y la misma puerta de acceso con contraseña:
+  - `index.html` — Calendario 10–30 nov (la landing, la que se abre al
+    entrar al portal).
+  - `inicio.html` — Bienvenida + «Por qué Med Aesthetics Miami».
+  - `guiones.html` — Banco de 26 guiones de reels.
+  - `graficas.html` — 15 piezas gráficas.
+  - `ofertas.html` — Ofertas Q4 verificadas + Black Friday.
+  - `vallure.html` — Contenido de Vallure (10 anuncios + 49 posts).
+  - `encuestas.html` — 5 encuestas compañeras propuestas.
+  - `pendientes.html` — Pendientes de confirmación.
+  Para agregar una página: una línea en `PAGES` de `gen.py` + su sección
+  en el TPL con marcadores `<!-- PAGE:X-START -->` / `<!-- PAGE:X-END -->`.
+- `assets/` — solo las 3 imágenes opcionales de arriba + `assets/vallure/`
+  (visuales embebidos del contenido de Vallure).
 
 ## Publicación
 
@@ -907,10 +988,10 @@ pulsa Enviar en WhatsApp. El portal no guarda comentarios.
 ### Redes: cápsulas de color
 
 Donde se publica cada pieza se muestra con cápsulas con el color de cada
-marca (definidas una sola vez en el CSS: `.net-ig` gradiente de Instagram,
-`.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y acento rojo
-#FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita esa clase en
-`index.html`; todo el portal usa la misma definición.
+marca (definidas una sola vez en el CSS de `gen.py`: `.net-ig` gradiente de
+Instagram, `.net-fb` #1877F2, `.net-tt` negro con borde cian #25F4EE y
+acento rojo #FE2C55, `.net-yt` #FF0000). Para cambiar un color, se edita
+esa clase en `gen.py` y se regenera; todo el portal usa la misma definición.
 
 ### Vista previa (popup)
 
@@ -926,8 +1007,10 @@ de cerrar grande y alcanzable.
 if __name__ == "__main__":
     import os
     base = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(base, "index.html"), "w", encoding="utf-8") as f:
-        f.write(build())
+    pages = build()
+    for fname, html in pages.items():
+        with open(os.path.join(base, fname), "w", encoding="utf-8") as f:
+            f.write(html)
     with open(os.path.join(base, "README.md"), "w", encoding="utf-8") as f:
         f.write(README)
-    print("OK: index.html + README.md generados")
+    print("OK: %d páginas + README.md generados: %s" % (len(pages), ", ".join(sorted(pages))))
