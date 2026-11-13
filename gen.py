@@ -393,6 +393,7 @@ section .intro{color:var(--gray);margin-bottom:22px;max-width:760px}
 .verdict.mid{background:#fdf6e0;color:#8a6d00}
 .verdict.bad{background:#fde8e8;color:#a12020}
 .verdict.none{background:#e9e9e9;color:#606163}
+.paused{display:inline-block;font-size:13px;font-weight:700;background:#e9e9e9;color:#606163;border-radius:999px;padding:4px 12px;margin:4px 0}
 .adnums{font-size:14px;line-height:1.7;margin:8px 0}
 .adnums b{color:var(--brown)}
 .adrec{font-size:14px;background:var(--light);border-left:3px solid var(--gold);border-radius:8px;padding:10px 12px;margin-top:10px}
@@ -612,7 +613,7 @@ ADS_DATA = {
  "gasto_total": 1390.48, "leads_total": 4,
  "campanas": [
   dict(nombre="Vallure - Prospecting + Retargeting - Website | CBO",
-       estado="ENCENDIDA", presupuesto_dia=45,
+       estado="ENCENDIDA", presupuesto_dia=33,
        gasto=1083.90, impresiones=10875, alcance=3864, frecuencia=2.81,
        clics=304, cpm=99.67, leads=3, costo_lead=361.30,
        conjuntos=[
@@ -638,18 +639,18 @@ ADS_DATA = {
         dict(ad="Ad 41", t="Ad 41 (creatividad sin identificar)", d="En Ads Manager no quedó registrada qué imagen lleva este aviso.", img=None, v="REGULAR", vc="mid",
              seen=41, reach=28, clicks=1, ctr="2,44%", cpc=5.23, spend=5.23, leads=0,
              rec="Solo se mostró 41 veces y tuvo 1 clic: no se puede sacar una conclusión. Dejarlo unos días más o apagarlo si hace falta el presupuesto para el Ad 23."),
-        dict(ad="Ad 40", t="Retire the Razor", d="Láser para hombres (foto: torso de hombre con afeitadora).", img="vallure-ad-02.jpg", v="VA MAL", vc="bad",
+        dict(ad="Ad 40", t="Retire the Razor", d="Láser para hombres (foto: torso de hombre con afeitadora).", img="vallure-ad-02.jpg", v="VA MAL", vc="bad", pausado="12-nov",
              seen=2573, reach=1569, clicks=36, ctr="1,40%", cpc=4.32, spend=155.48, leads=0,
              rec="Apagarlo: gastó $155,48 y no trajo ningún cliente potencial. El público de hombres no está convirtiendo con esta oferta; probar otra oferta o pausarlo."),
-        dict(ad="Ad 20", t="Your Private Consultation Awaits", d="Rejuvenecimiento vaginal 30% off (foto: torso inferior de mujer, ropa interior blanca).", img="vallure-ad-07.jpg", v="VA MAL", vc="bad",
+        dict(ad="Ad 20", t="Your Private Consultation Awaits", d="Rejuvenecimiento vaginal 30% off (foto: torso inferior de mujer, ropa interior blanca).", img="vallure-ad-07.jpg", v="VA MAL", vc="bad", pausado="12-nov",
              seen=1676, reach=724, clicks=33, ctr="1,97%", cpc=4.51, spend=148.90, leads=0,
              rec="Apagarlo: gastó $148,90 y no trajo nada. La oferta no está convirtiendo con esta imagen; cambiar la imagen o pausarlo."),
-        dict(ad="Ad 30", t="Help Your Skin Keep Up", d="QuantumRF 15% off (foto: abdomen de mujer, «the snapback»).", img="vallure-ad-09.jpg", v="VA MAL", vc="bad",
+        dict(ad="Ad 30", t="Help Your Skin Keep Up", d="QuantumRF 15% off (foto: abdomen de mujer, «the snapback»).", img="vallure-ad-09.jpg", v="VA MAL", vc="bad", pausado="12-nov",
              seen=297, reach=216, clicks=4, ctr="1,35%", cpc=11.18, spend=44.70, leads=0,
              rec="Apagarlo o cambiar la imagen: tiene el clic más caro de todos ($11,18) y 0 clientes potenciales."),
         dict(ad="Ad 34 Video", t="Video de láser (15 s)", d="Video del tratamiento de láser.", img="vallure-ad-06.jpg",
              img_note="Foto por confirmar: parece ser el video «30% Off Laser Hair Removal» de la Biblioteca, pero no está verificado que sea este aviso.",
-             v="VA MAL", vc="bad",
+             v="VA MAL", vc="bad", pausado="12-nov",
              seen=134, reach=82, clicks=1, ctr="0,75%", cpc=7.98, spend=7.98, leads=0,
              rec="El video rindió peor acá (CTR 0,75%, el más bajo de todos). No concluir que el video no funciona: el mismo video rindió mejor en la campaña Warm (CTR 6,38%). Probar el video de la Warm en la CBO antes de apagarlo."),
        ],
@@ -684,16 +685,16 @@ ADS_DATA = {
         dict(ad="Ad 33", t="Collagen Remodeling at Depth", d="Morpheus8, Top 10% InMode (foto: mujer recibiendo Morpheus8 en la frente).", img="vallure-ad-04.jpg", v="REGULAR", vc="mid",
              seen=64, reach=52, clicks=2, ctr="3,13%", cpc=4.09, spend=8.17, leads=0,
              rec="CTR 3,13%, clic a $4,09, 0 clientes potenciales. Vigilarlo una semana; si no trae nada, cambiar la imagen."),
-        dict(ad="Ad 23", t="Lift. Tighten. Rebuild.", d="Morpheus8 $200 off la serie, solo Aventura (foto: rostro de mujer, mano con guante).", img="vallure-ad-05.jpg", v="VA MAL", vc="bad",
+        dict(ad="Ad 23", t="Lift. Tighten. Rebuild.", d="Morpheus8 $200 off la serie, solo Aventura (foto: rostro de mujer, mano con guante).", img="vallure-ad-05.jpg", v="VA MAL", vc="bad", pausado="12-nov",
              seen=327, reach=226, clicks=14, ctr="4,28%", cpc=2.60, spend=36.34, leads=0,
              rec="Gastó $36,34 y no trajo nada en esta campaña (en la CBO sí convierte). El público es distinto: acá no funciona. Apagarlo en la Warm y dejarlo solo en la CBO."),
-        dict(ad="Ad 32", t="Firmer Skin, Face and Body", d="QuantumRF (foto: abdomen pellizcando piel flácida, «The weight went. The skin didn't.»).", img=None, v="VA MAL", vc="bad",
+        dict(ad="Ad 32", t="Firmer Skin, Face and Body", d="QuantumRF (foto: abdomen pellizcando piel flácida, «The weight went. The skin didn't.»).", img=None, v="VA MAL", vc="bad", pausado="12-nov",
              seen=391, reach=255, clicks=6, ctr="1,53%", cpc=7.30, spend=43.79, leads=0,
              rec="Gastó $43,79, 0 clientes potenciales, y tiene el clic más caro de la Warm ($7,30). Cambiar la imagen o apagarlo."),
-        dict(ad="Ad 38", t="$10 Per Unit, Every Visit", d="Neuromoduladores (foto: mujer con ojos cerrados, guantes negros).", img="vallure-ad-08.jpg", v="VA MAL", vc="bad",
+        dict(ad="Ad 38", t="$10 Per Unit, Every Visit", d="Neuromoduladores (foto: mujer con ojos cerrados, guantes negros).", img="vallure-ad-08.jpg", v="VA MAL", vc="bad", pausado="12-nov",
              seen=40, reach=32, clicks=0, ctr=None, cpc=None, spend=4.45, leads=0,
              rec="Gastó $4,45 y nadie hizo clic. Apagarlo."),
-        dict(ad="Ad 28", t="Ad 28 (creatividad sin identificar)", d="En Ads Manager no quedó registrada qué imagen lleva este aviso.", img=None, v="VA MAL", vc="bad",
+        dict(ad="Ad 28", t="Ad 28 (creatividad sin identificar)", d="En Ads Manager no quedó registrada qué imagen lleva este aviso.", img=None, v="VA MAL", vc="bad", pausado="12-nov",
              seen=8, reach=6, clicks=0, ctr=None, cpc=None, spend=2.02, leads=0,
              rec="Solo se mostró 8 veces y nadie hizo clic. Apagarlo."),
         dict(ad="Ad 37", t="Ad 37 (sin datos)", d="Estaba apagado y no se mostró ni una vez en el periodo.", img=None, v="SIN DATOS", vc="none",
@@ -725,6 +726,9 @@ def _ad_card(a):
         note = '<div class="need">%s</div>' % esc(a["img_note"])
     elif not a.get("img"):
         note = '<div class="need">Foto por confirmar.</div>'
+    paused = ""
+    if a.get("pausado"):
+        paused = '<div><span class="paused">⏸ Pausado el %s</span></div>' % esc(a["pausado"])
     if a.get("sin_datos"):
         nums = "Sin datos: estaba apagado y no se mostró ni una vez en el periodo."
     else:
@@ -736,11 +740,11 @@ def _ad_card(a):
                     _th(a["reach"]), _th(a["seen"]), a["clicks"], ctr, cpc, _money(a["spend"]), a["leads"]))
     return ('<article class="card"><span class="badge gold">%s</span>'
             '<h3>%s</h3><p>%s</p>%s%s'
-            '<div><span class="verdict %s">%s %s</span></div>'
+            '<div><span class="verdict %s">%s %s</span></div>%s'
             '<div class="adnums">%s</div>'
             '<div class="adrec"><b>Qué hacer:</b> %s</div></article>' % (
                 esc(a["ad"]), esc(a["t"]), esc(a["d"]), img, note,
-                a["vc"], "🟢" if a["vc"] == "good" else ("🟡" if a["vc"] == "mid" else ("🔴" if a["vc"] == "bad" else "⚪")), esc(a["v"]),
+                a["vc"], "🟢" if a["vc"] == "good" else ("🟡" if a["vc"] == "mid" else ("🔴" if a["vc"] == "bad" else "⚪")), esc(a["v"]), paused,
                 nums, esc(a["rec"])))
 
 def anuncios_rows():
@@ -752,10 +756,13 @@ def anuncios_rows():
         '<p style="margin-top:10px">Actualizado: <b>12-nov-2026</b> · Datos del <b>13-oct al 11-nov-2026</b> · Cuenta publicitaria Med Aesthetics Miami (140482630498719).</p>'
         '<p>De las 49 campañas, <b>10 tienen el interruptor encendido</b> (9 son viejas y no entregan nada hace 30 días) y <b>39 están apagadas</b>. '
         'CBO: $1.083,90 y 3 clientes potenciales · Warm (apagada): $102,28 y 1 · Prospecting (apagada): $204,30, resultados no reportados.</p></div>')
+    out.append(
+        '<div class="rule"><b>12-nov-2026:</b> presupuesto de la CBO bajado de $45 a $33 por día (tope ~$1.000/mes, por decisión de Rosanna) y los 8 avisos 🔴 VA MAL pausados. '
+        'Quedan prendidos el Ad 23 (el único que trae clientes potenciales) y los 🟡 REGULAR.</div>')
     # --- CBO (la que corre)
     out.append('<h3 class="sub">Campaña que está corriendo: «Vallure - Prospecting + Retargeting - Website | CBO»</h3>')
     out.append(
-        '<div class="sumbox">Encendida · <b>$45 por día</b> · Gastó <b>$1.083,90</b> · Se mostró <b>10.875 veces</b> · La vieron <b>3.864 personas</b> distintas · '
+        '<div class="sumbox">Encendida · <b>$33 por día</b> · Gastó <b>$1.083,90</b> · Se mostró <b>10.875 veces</b> · La vieron <b>3.864 personas</b> distintas · '
         'Cada persona la vio <b>~2,81 veces</b> · <b>304 clics</b> · Cada 1.000 veces que se mostró costó <b>$99,67</b> · <b>3 clientes potenciales</b> · Cada cliente potencial costó <b>$361,30</b>.'
         '<p style="margin-top:10px">Por público: <b>Cold Men 25+:</b> $155,48 · 2.573 veces · 0 clientes potenciales · '
         '<b>Warm+Retargeting:</b> $819,29 · 7.365 veces · 3 clientes potenciales · '
