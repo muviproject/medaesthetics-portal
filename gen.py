@@ -974,6 +974,93 @@ __NAV__
 </div></section>
 
 <!-- PAGE:ANUNCIOS-END -->
+<!-- PAGE:COMPETENCIA-START -->
+<section style="background:#fff"><div class="wrap">
+  <h2>Competencia · en qué nivel estamos y a quién copiar</h2>
+  <p class="intro">La competencia medida en Instagram: primero Miami (semana 26-oct al 1-nov-2026) y después todo Estados Unidos (top 10 por interacción, 10-nov-2026). La idea no es mirar seguidores: es mirar quién logra que la gente responda. La advertencia de abajo dice qué números son de verdad y cuáles son estimados.</p>
+
+  <div class="sumbox"><div class="big">En Miami, Med tiene el mejor engagement de las cuentas comparables: 0,115%. Pero es MUY bajo: todas están por debajo de 0,12%.</div>
+  <p style="margin-top:10px">Y ojo: Med lo es con <b>1 solo post</b> en la semana (carrusel educativo del 29-oct: 11 likes, 0 comentarios). Primero por muestra mínima, no por fortaleza. <b>La brecha no es calidad por post: es cadencia (1 post por semana), idioma (Med publica 100% en inglés, en Miami) y formato (sin gancho repetible).</b> Eso es lo que hay que mejorar.</p></div>
+
+  <h3 class="sub">Miami · semana 26-oct al 1-nov-2026</h3>
+  <table class="minitable"><tr><th>Cuenta</th><th>Seguidores</th><th>Posts en la semana</th><th>Interacción</th></tr>
+  <tr><td><b>@medaestheticsmiami (Med)</b></td><td>9.564</td><td>1</td><td><b>0,115%</b></td></tr>
+  <tr><td>@nofiltermiami</td><td>23.868</td><td>3</td><td>0,092% (ventana 5–11 oct)</td></tr>
+  <tr><td>@viomedspa.aventura</td><td>4.265</td><td>1</td><td>0,070%</td></tr>
+  <tr><td>@monaco.medspa</td><td>28.446</td><td>8</td><td>0,036%</td></tr>
+  <tr><td>@skinneymedspa</td><td>57.488</td><td>6</td><td>no calculable (sin likes)</td></tr></table>
+  <p class="intro">No Filter no publicó nada esa semana (se usó la semana 5–11 oct). LUX estrenó cuenta nueva con 7,65%, pero sobre 340 seguidores: no comparable. Las cuentas con más nombre en Miami son Monaco, LUX, SKINNEY, No Filter y Beauty Fix (las dos últimas, nombradas por Rosanna), VIO, Hochstein, Miami Skin Spa, Plénitude y SkinSpirit.</p>
+
+  <div class="rule"><b>REGLA DE USO — para pedir ejemplos:</b> cuando se pidan ejemplos de publicaciones, los ejemplos se buscan <b>DENTRO de esta lista (el top 10 nacional de abajo)</b>, que son las cuentas que de verdad logran que la gente responda. <b>NO</b> en cuentas de baja interacción: las que publican mucho y nadie les contesta no son ejemplo de nada, por más seguidores que tengan.</div>
+
+  <div class="sumbox" style="border-color:#a12020;background:#fde8e8"><div class="big" style="color:#a12020">⚠️ Advertencia honesta: solo 2 de las 10 tienen la mediana medida de verdad.</div>
+  <p style="margin-top:10px"><b>@skinologymedspa (0,498%) y @theprivatesuitela (0,209%)</b> son medición directa con instagram-cli. Las otras 8 son <b>ESTIMADOS de Flinque</b> (promedios de snapshots viejos, de abr-2025 a may-2026): la medición directa se cortó por el límite de ritmo de Instagram. <b>Hay que volver a medirlas antes de afirmar esos números como definitivos.</b> Cuando se re-mida, el orden puede cambiar — sobre todo entre los puestos 1–6, donde los promedios están inflados por likes sin comentarios.</p></div>
+
+  <h3 class="sub">Top 10 nacional por interacción (10-nov-2026)</h3>
+  <p class="intro">Ordenado por interacción mediana por post — (likes + comentarios) / seguidores — no por seguidores. Cuentas vivas, mínimo 4–5 posts, EE.UU. + Miami. La vara era estar por encima de Med (0,115%).</p>
+  <table class="minitable"><tr><th>#</th><th>Cuenta</th><th>Seguidores</th><th>Interacción</th><th>Dato</th></tr>
+  <tr><td>1</td><td>@skinconserv (Grapevine TX)</td><td>16.598</td><td><b>3,35%</b></td><td>estimado*</td></tr>
+  <tr><td>2</td><td>@kbeautylab808 (Hawái/Seattle)</td><td>62.743</td><td><b>3,11%</b></td><td>estimado*</td></tr>
+  <tr><td>3</td><td>@beautybeyondaesthetics1 (Lakeland FL)</td><td>48.907</td><td><b>2,34%</b></td><td>estimado*</td></tr>
+  <tr><td>4</td><td>@skinholics.miami (Doral, Miami)</td><td>21.270</td><td><b>2,14%</b></td><td>estimado*</td></tr>
+  <tr><td>5</td><td>@kumimedspa (Houston TX)</td><td>10.884</td><td><b>1,55%</b></td><td>estimado*</td></tr>
+  <tr><td>6</td><td>@beautybybel.rn (Bay Area CA)</td><td>9.548</td><td><b>1,47%</b></td><td>estimado*</td></tr>
+  <tr><td>7</td><td>@skinologymedspa (NYC/LA/Miami/Dallas/Atlanta)</td><td>101.683</td><td><b>0,498%</b></td><td><b>medido ✓</b></td></tr>
+  <tr><td>8</td><td>@skinelixerspa_miami (Miami)</td><td>13.785</td><td><b>0,49%</b></td><td>estimado*</td></tr>
+  <tr><td>9</td><td>@theprivatesuitela (LA)</td><td>152.893</td><td><b>0,209%</b></td><td><b>medido ✓</b></td></tr>
+  <tr><td>10</td><td>@bleuspany (Nueva York)</td><td>136.244</td><td><b>0,16%</b></td><td>estimado* limítrofe</td></tr></table>
+  <p class="intro">* = estimado (promedio Flinque, snapshot viejo) · ✓ = medido de verdad (mediana con instagram-cli). Med: 0,115% — por debajo de las 10 de esta lista.</p>
+
+  <h3 class="sub">Qué copiar de cada una</h3>
+  <p class="intro">Dos formatos por cuenta, ya adaptados para Med. Donde dice «foto real + consentimiento», solo se hace con foto real de paciente y permiso escrito. Nada de esto se publica sin la aprobación de Rosanna.</p>
+  <div class="grid">
+  <article class="card"><span class="badge gold">#1 · 3,35%*</span><h3>@skinconserv · Grapevine TX</h3>
+  <p><b>1. Reel/carrusel "el cuello también envejece":</b> RF microneedling de cuello, con DM "NECK" como CTA único. Para Med: Rosanna a cámara, Morpheus8 en cuello, CTA "escribí CUELLO". No necesita pacientes.</p>
+  <p><b>2. Post "para hombres" (BROTOX):</b> "solo vine porque ella me lo reservó… y salen preguntando por la membresía". Refuerza el carrusel del 10-nov (QuantumRF: Men Included).</p></article>
+  <article class="card"><span class="badge gold">#2 · 3,11%*</span><h3>@kbeautylab808 · Hawái/Seattle</h3>
+  <p><b>1. Serie "mi piel semana a semana":</b> el viaje de una clienta con promesa de continuación ("les comparto mis resultados a 30 días en el próximo video"). Para Med: "Mi piel con Morpheus8: semana 1, 2 y 4". Foto real + consentimiento.</p>
+  <p><b>2. Sorteo con mecánica de etiquetas:</b> seguir + like + etiquetar a 3 (cada etiqueta = entrada extra). Para Med: sorteo Black Friday 27–30 nov. A aprobar por Rosanna y revisar reglas antes de publicar.</p></article>
+  <article class="card"><span class="badge gold">#3 · 2,34%*</span><h3>@beautybeyondaesthetics1 · Lakeland FL</h3>
+  <p><b>1. Antes/después con el PLAN COMPLETO listado:</b> "2 sesiones de Sculptra + 3 de Radiesse + lip filler + Botox + retinol". Para Med: plan Morpheus8/QuantumRF + 3 palabras de resultado. Foto real + consentimiento.</p>
+  <p><b>2. Post de precio y pago en cuotas:</b> "New Botox pricing is here" + "Treat now, pay later". Para Med: Black Friday con precios reales aprobados (Morpheus8 $1.750). Nunca precios inventados.</p></article>
+  <article class="card"><span class="badge gold">#4 · 2,14%*</span><h3>@skinholics.miami · Doral, Miami</h3>
+  <p><b>1. Reel educativo anti-engaño, en español:</b> "El láser CO2 no es una varita mágica… Si no te cuidás después, ni el láser de la NASA te salva". Para Med: Rosanna a cámara en español — "El Morpheus8 no es magia: el 50% es tu cuidado después".</p>
+  <p><b>2. Reel ASMR del láser:</b> el ruidito del equipo. Para Med: ASMR Morpheus8/QuantumRF (sonido + manos + equipo, sin pacientes en cámara).</p></article>
+  <article class="card"><span class="badge gold">#5 · 1,55%*</span><h3>@kumimedspa · Houston TX</h3>
+  <p><b>1. Carrusel antes/después Morpheus8 con DM keyword:</b> "DM MORPHEUS para tu consulta". Para Med: mismo formato, CTA "escribí MORPHEUS". Foto real + consentimiento.</p>
+  <p><b>2. Paquetes con nombre y precio:</b> "Busy Boss Mom Package $850". Para Med: paquetes con nombre para Black Friday con los precios confirmados.</p></article>
+  <article class="card"><span class="badge gold">#6 · 1,47%*</span><h3>@beautybybel.rn · Bay Area CA</h3>
+  <p><b>1. "Facial balancing" con mapa de jeringas:</b> 7 jeringas en los lugares correctos ("Muchos creen que 1–2 jeringas transforman todo"). Para Med: Rosanna explica por qué el Morpheus8 va en 3 sesiones, no en 1 (con gráfico del rostro).</p>
+  <p><b>2. "Mommy Makeover" con desglose numerado:</b> 6 tratamientos con qué hace cada uno. Para Med: "El plan completo" desglosado de un plan real.</p></article>
+  <article class="card"><span class="badge gold">#7 · 0,498% ✓ MEDIDO</span><h3>@skinologymedspa · NYC/LA/Miami/Dallas/Atlanta</h3>
+  <p><b>1. Reel "la reacción al verse" (1,77% confirmado):</b> filmar el momento exacto en que la clienta se ve después del tratamiento. El post con más likes de toda la investigación (1.757). No es el antes/después: es la EMOCIÓN. Foto real + consentimiento.</p>
+  <p><b>2. Carrusel antes/después con 3 palabras de resultado:</b> "La diferencia está en la definición, la proyección y el contorno". Para Med: "Definición, firmeza y textura" (Morpheus8). Foto real + consentimiento.</p></article>
+  <article class="card"><span class="badge gold">#8 · 0,49%*</span><h3>@skinelixerspa_miami · Miami</h3>
+  <p><b>1. Carrusel educativo de protocolo:</b> "qué hace / para quién / cómo se usa" + "no es un tratamiento único, es un protocolo progresivo". Para Med: "El protocolo Morpheus8". Sin pacientes.</p>
+  <p><b>2. Antes/después de Botox EN ESPAÑOL:</b> "Resultados naturales que suavizan líneas sin perder tu esencia. Menos arrugas, más frescura, misma tú". Para Med: antes/después en español (Med publica 100% en inglés). Foto real + consentimiento.</p></article>
+  <article class="card"><span class="badge gold">#9 · 0,209% ✓ MEDIDO</span><h3>@theprivatesuitela · Los Ángeles</h3>
+  <p><b>1. Serie educativa con el mismo gancho en 3 ángulos:</b> "¿Te despertás a las 3 de la mañana después de los 40?". Para Med: Rosanna repite un gancho 3 veces — "¿Por qué se te marca el cuello a los 40?": (1) el colágeno, (2) el sol, (3) el celular. 30–45 s cada uno.</p>
+  <p><b>2. El giro "no es lo que creés":</b> "No es la edad, es el colágeno" / "No es grasa, es flacidez" — desmontar una creencia en 20 segundos. Es el formato que más comentarios genera en esta cuenta.</p></article>
+  <article class="card"><span class="badge warn">#10 · 0,16%* LIMÍTROFE</span><h3>@bleuspany · Nueva York</h3>
+  <p><b>1. Carrusel educativo HydraFacial en 10 beneficios numerados:</b> limpieza, exfoliación, hidratación, brillo, sin downtime… Para Med: carrusel "10 cosas que hace el HydraFacial" (20% off con Aerolase en noviembre). Sin pacientes.</p>
+  <p><b>2. Post comunitario bilingüe:</b> contenido para el barrio hispano. Para Med: post comunitario en español para Sunny Isles/Aventura.</p></article>
+  </div>
+
+  <h3 class="sub">Qué NO copiar</h3>
+  <div class="pend"><ul>
+  <li><b>Likes sin comentarios</b> (104:1, 95:1, 60:1): el like no es conversación. Med necesita preguntas y reservas, no solo toques. Publicar y no responder es la mitad del trabajo sin hacer.</li>
+  <li><b>El descuento como único contenido:</b> la oferta cierra, no abre conversación. Med ya tiene ese problema (marketing de descuento heredado).</li>
+  <li><b>Post personal larguísimo de la fundadora:</b> es contenido de fundadora, no de clínica. Rosanna no necesita exponer su vida personal para vender.</li>
+  <li><b>Post político mezclado con el feed:</b> desvía el tema y polariza. Feed 100% estética.</li>
+  <li><b>Captions de 80–100 palabras sin pregunta final:</b> texto largo sin conversación. Caption corto + una pregunta al final.</li>
+  <li><b>Feriados genéricos sin gancho ni CTA:</b> relleno. Si es feriado, que tenga oferta o historia real.</li>
+  </ul></div>
+
+  <h3 class="sub">Qué significa cada palabra</h3>
+  <div class="glos"><b>Interacción mediana por post</b> = (likes + comentarios) / seguidores, la del post del medio, no el promedio (el promedio lo infla un viral). · <b>* = estimado:</b> promedio de Flinque, snapshot viejo. · <b>✓ = medido de verdad:</b> mediana con instagram-cli. · <b>Cadencia</b> = cuántos posts por semana. · <b>DM keyword</b> = la gente escribe una palabra por mensaje directo ("MORPHEUS", "CUELLO") y eso abre la conversación para reservar.</div>
+  <p class="intro" style="margin-top:18px">Datos del 10-nov-2026. Nivel A: instagram-cli (cuenta musadaniel), solo lectura, perfiles públicos. Nivel B: Flinque, fichas públicas. Próximo paso: re-medición con CLI para confirmar los puestos 1–6, 8 y 10.</p>
+</div></section>
+<!-- PAGE:COMPETENCIA-END -->
 <!-- PAGE:POLLS-START -->
 <section><div class="wrap">
   <h2>Encuestas compañeras · propuestas (sin programar)</h2>
@@ -1090,6 +1177,7 @@ PAGES = [
     ("ofertas.html", "Ofertas · Q4 2026", "Ofertas", "OFFERS"),
     ("vallure.html", "Contenido de Vallure", "Vallure", "VALLURE"),
     ("anuncios.html", "Anuncios en simple", "Anuncios", "ANUNCIOS"),
+    ("competencia.html", "Competencia", "Competencia", "COMPETENCIA"),
     ("encuestas.html", "Encuestas compañeras", "Encuestas", "POLLS"),
     ("pendientes.html", "Pendientes de confirmación", "Pendientes", "PEND"),
 ]
@@ -1120,7 +1208,7 @@ def _fill(tpl):
     return out
 
 def build():
-    """Genera las 9 páginas: mismo head (puerta + menú) y mismo pie en todas."""
+    """Genera las 10 páginas: mismo head (puerta + menú) y mismo pie en todas."""
     head_end = TPL.index("<!-- PAGE:INICIO-START -->")
     head = TPL[:head_end]
     foot_start = TPL.index("<!-- PAGE:PEND-END -->") + len("<!-- PAGE:PEND-END -->")
@@ -1211,6 +1299,11 @@ consentimiento.
     por aviso (va bien / regular / va mal) y recomendaciones reales.
     Se actualiza una vez por día. Los números viven en
     `../med-aesthetics-materiales/anuncios-metricas-2026-11-13.json`.
+  - `competencia.html` — Competencia: engagement en Miami (Med 0,115%, la
+    mejor de las comparables pero muy bajo) y top 10 nacional por
+    interacción, con los 2 formatos a copiar de cada cuenta, la regla de
+    uso (los ejemplos se buscan dentro de esta lista) y la advertencia
+    honesta (solo 2 medianas medidas de verdad). Medido el 10-nov-2026.
   - `encuestas.html` — 5 encuestas compañeras propuestas.
   - `pendientes.html` — Pendientes de confirmación.
   Para agregar una página: una línea en `PAGES` de `gen.py` + su sección

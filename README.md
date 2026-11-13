@@ -74,6 +74,11 @@ consentimiento.
     por aviso (va bien / regular / va mal) y recomendaciones reales.
     Se actualiza una vez por día. Los números viven en
     `../med-aesthetics-materiales/anuncios-metricas-2026-11-13.json`.
+  - `competencia.html` — Competencia: engagement en Miami (Med 0,115%, la
+    mejor de las comparables pero muy bajo) y top 10 nacional por
+    interacción, con los 2 formatos a copiar de cada cuenta, la regla de
+    uso (los ejemplos se buscan dentro de esta lista) y la advertencia
+    honesta (solo 2 medianas medidas de verdad). Medido el 10-nov-2026.
   - `encuestas.html` — 5 encuestas compañeras propuestas.
   - `pendientes.html` — Pendientes de confirmación.
   Para agregar una página: una línea en `PAGES` de `gen.py` + su sección
