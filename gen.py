@@ -976,6 +976,50 @@ __NAV__
 </div></section>
 
 <!-- PAGE:ANUNCIOS-END -->
+<!-- PAGE:ANALITICA-START -->
+<section style="background:#fff"><div class="wrap">
+  <h2>Analítica web: qué pasa en medaestheticsmiami.com</h2>
+  <p class="intro">Los números reales de la web, leídos en Google Analytics el 14-nov-2026 (datos hasta el 13-nov). En palabras simples: cuánta gente entra, de dónde viene y qué hace. La web está recibiendo datos sin problema.</p>
+
+  <div class="sumbox"><div class="big">En los últimos 90 días entraron 13.068 personas y se registraron 3.623 acciones de reserva o contacto en la web.</div>
+  <p style="margin-top:10px">La mayoría de esas acciones son reservas iniciadas en las páginas de citas. Ojo: son acciones en la web, no citas confirmadas en la clínica. Y la última semana viene en baja: menos visitas y menos reservas que la semana anterior.</p></div>
+
+  <h3 class="sub">Los números, en dos ventanas</h3>
+  <table class="minitable"><tr><th></th><th>Últimos 90 días (16-ago al 13-nov)</th><th>Últimos 30 días (15-oct al 13-nov)</th></tr>
+  <tr><td><b>Personas que entraron</b></td><td>13.068</td><td>4.841</td></tr>
+  <tr><td><b>Visitas (sesiones)</b></td><td>14.831</td><td>5.414</td></tr>
+  <tr><td><b>Páginas vistas</b></td><td>23.001</td><td>7.874</td></tr>
+  <tr><td><b>Acciones de reserva o contacto</b></td><td>3.623</td><td>1.295</td></tr>
+  <tr><td><b>Tiempo medio por visita</b></td><td>1 min 40 s</td><td>1 min 22 s</td></tr>
+  </table>
+  <p>Últimos 7 días (cifras redondeadas por Google): visitas en baja, −25% frente a la semana anterior, y acciones de reserva −41%.</p>
+
+  <h3 class="sub">¿De dónde viene la gente? (90 días)</h3>
+  <table class="minitable"><tr><th>Fuente</th><th>Visitas</th><th>Qué tan bien responde</th></tr>
+  <tr><td><b>Directo</b> (escriben la dirección o la tienen guardada)</td><td>7.098 (48%)</td><td>Bajo: se queda 8 segundos en promedio</td></tr>
+  <tr><td><b>Búsqueda en Google (orgánica)</b></td><td>4.305 (29%)</td><td><b>La mejor:</b> se queda 50 segundos y genera la mayor cantidad de reservas (1.348)</td></tr>
+  <tr><td><b>Google Ads (pago por búsqueda)</b></td><td>1.498 (10%)</td><td>Buena: 38 segundos, 694 reservas</td></tr>
+  <tr><td><b>Redes sociales pagas</b></td><td>971 (7%)</td><td>Bajo: 14 segundos, 66 reservas</td></tr>
+  <tr><td><b>Redes sociales orgánicas</b></td><td>282 (2%)</td><td>22 reservas</td></tr>
+  </table>
+  <p>La búsqueda en Google es la que trae la gente que más se queda y más reserva. El tráfico directo es el más grande en número pero el que menos se queda.</p>
+
+  <h3 class="sub">Las 5 páginas más vistas (90 días)</h3>
+  <table class="minitable"><tr><th>Página</th><th>Vistas</th></tr>
+  <tr><td><b>Inicio</b> (medaestheticsmiami.com)</td><td>5.990</td></tr>
+  <tr><td><b>Ofertas</b> (/offer/)</td><td>1.199</td></tr>
+  <tr><td><b>Citas</b> (/appointments/)</td><td>821</td></tr>
+  <tr><td><b>Citas Coral Gables</b></td><td>658</td></tr>
+  <tr><td><b>Contacto</b> (/contact/)</td><td>608</td></tr>
+  </table>
+  <p>Las páginas de citas concentran las reservas: más de la mitad de las acciones (53,6%) ocurren en /appointments/.</p>
+
+  <h3 class="sub">Qué no dice este informe</h3>
+  <p>Google Analytics no tiene cargados los datos de «clientes potenciales» (leads): ese informe está en cero porque no está configurado, no porque no haya contactos. Las 3.623 acciones son el dato real que tenemos de reservas y contactos iniciados en la web. Tampoco dice cuántas de esas reservas se concretaron en citas en la clínica: eso solo se cruza con la agenda de cada sede.</p>
+  <p><i>Fuente: Google Analytics 4, propiedad Med Aesthetics Miami (G-YNXV7N67NZ). Lectura del 14-nov-2026, solo lectura, sin cambiar nada.</i></p>
+</div></section>
+
+<!-- PAGE:ANALITICA-END -->
 <!-- PAGE:COMPETENCIA-START -->
 <section style="background:#fff"><div class="wrap">
   <h2>Competencia: en qué nivel estamos</h2>
@@ -1135,6 +1179,7 @@ PAGES = [
     ("ofertas.html", "Ofertas · Q4 2026", "Ofertas", "OFFERS"),
     ("vallure.html", "Contenido de Vallure", "Vallure", "VALLURE"),
     ("anuncios.html", "Anuncios en simple", "Anuncios", "ANUNCIOS"),
+    ("analitica.html", "Analítica web", "Analítica", "ANALITICA"),
     ("competencia.html", "Competencia", "Competencia", "COMPETENCIA"),
     ("encuestas.html", "Encuestas compañeras", "Encuestas", "POLLS"),
     ("pendientes.html", "Pendientes de confirmación", "Pendientes", "PEND"),
