@@ -70,10 +70,10 @@ consentimiento.
   - `ofertas.html` — Ofertas Q4 verificadas + Black Friday.
   - `vallure.html` — Contenido de Vallure (10 anuncios + 49 posts).
   - `anuncios.html` — Anuncios en simple: métricas reales de Ads Manager
-    (leídas el 13-nov-2026, rango 14-oct al 12-nov-2026), con veredicto
+    (leídas el 14-nov-2026, rango 15-oct al 13-nov-2026), con veredicto
     por aviso (va bien / regular / va mal) y recomendaciones reales.
     Se actualiza una vez por día. Los números viven en
-    `../med-aesthetics-materiales/anuncios-metricas-2026-11-13.json`.
+    `../med-aesthetics-materiales/anuncios-metricas-2026-11-14.json`.
   - `competencia.html` — Competencia: engagement en Miami (Med 0,115%, la
     mejor de las comparables pero muy bajo) y top 10 nacional por
     interacción, con la advertencia honesta (solo 2 medianas medidas de
