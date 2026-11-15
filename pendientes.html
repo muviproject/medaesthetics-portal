@@ -158,8 +158,9 @@ footer a{color:var(--gold)}
 .nav a:hover{color:#fff}
 .nav a.active{background:var(--gold);color:#fff}
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
-<body>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <!-- ============================================================
      CONFIGURACIÓN DEL ACCESO (editar acá para cambiar la clave)
      La contraseña de este portal es una CORTINA VISUAL, no
@@ -213,30 +214,30 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 </script>
 
 <div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
-<nav class="nav"><div class="wrap"><a href="inicio.html">Inicio</a><a href="index.html">Calendario</a><a href="guiones.html">Guiones</a><a href="graficas.html">Gráficas</a><a href="ofertas.html">Ofertas</a><a href="vallure.html">Vallure</a><a href="anuncios.html">Anuncios</a><a href="analitica.html">Analítica</a><a href="competencia.html">Competencia</a><a href="encuestas.html">Encuestas</a><a href="pendientes.html" class="active">Pendientes</a></div></nav>
+<nav class="nav" aria-label="Navegación principal"><div class="wrap"><a href="index.html">Resumen</a><a href="calendario.html">Calendario</a><a href="revision.html" class="active" aria-current="page">Para revisar</a><a href="resultados.html">Resultados</a><a href="biblioteca.html">Biblioteca</a></div></nav><main id="contenido"><div class="wrap ux-breadcrumb"><a href="revision.html">Para revisar</a><span aria-hidden="true"> / </span><span>Pendientes</span></div>
 
 
 <section style="background:#fff"><div class="wrap">
-  <h2>Pendientes de confirmación</h2>
+  <h1>Pendientes de confirmación</h1>
   <p class="intro">Lo que todavía necesita una decisión de Rosanna (o de Daniel) antes de producir o publicar:</p>
   <div class="pend"><ul><li>Orden del antes/después del carrusel del 10-nov (lo pidió Rosanna).</li><li>Precios del Black Friday 27–30 nov: Morpheus8 $1.750 CONFIRMADO 10-nov; láser $999 y QuantumRF $2,500/$3,000 a confirmar.</li><li>Posts del 2, 4 y 7-nov: recuperar o seguir desde el 10-nov.</li><li>Fecha de la jornada de filmación mensual (los reels del 11, 12, 16, 18, 19, 21, 23 y 24-nov la necesitan).</li><li>Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov.</li><li>Accesos para publicar: Meta Business y Ads CONFIRMADOS 10-nov (49 campañas, 1 activa); TikTok y Pinterest sin aceptar; Instagram y YouTube sin verificar en vivo.</li><li>Contenido de Vallure capturado en el portal 10-nov (10 anuncios de la Biblioteca + 49 posts orgánicos de IG): visuales embebidos 10-nov (capturas de página, 900 px; 3 reels con el fotograma en negro porque el video no cargó en la captura — ver inventario-anuncios-vallure.md §5).</li><li>Morpheus8: el caption M-06 ofrece 15% off, el Q4 trae $200 off la serie — confirmar cuál rige.</li></ul></div>
 </div></section>
 
 
-<footer>
+</main><footer>
   <div class="wrap">
-    <p><b>Borradores — nada se publica sin la aprobación de Rosanna.</b></p>
+    <p><b>Med Aesthetics Miami · Tu espacio de trabajo con MuViProject</b></p>
     <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
   </div>
 </footer>
 <div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Ver detalle">
     <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
     <div id="modal-body"></div>
   </div>
 </div>
 <script>
-/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+/* Ver detalle: clona la pieza en el modal, con su botón de aprobar y su
    cajita de feedback. Cierra con la X, con clic fuera del popup, o con
    Escape. Mientras está abierto, el fondo no hace scroll. */
 var _pvScroll = 0;
@@ -280,5 +281,6 @@ function mamFeedback(btn){
   window.open(url, '_blank');
 }
 </script>
+<script src="ux.js" defer></script>
 </body>
 </html>

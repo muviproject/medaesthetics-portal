@@ -158,8 +158,9 @@ footer a{color:var(--gold)}
 .nav a:hover{color:#fff}
 .nav a.active{background:var(--gold);color:#fff}
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
-<body>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <!-- ============================================================
      CONFIGURACIÓN DEL ACCESO (editar acá para cambiar la clave)
      La contraseña de este portal es una CORTINA VISUAL, no
@@ -213,11 +214,11 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 </script>
 
 <div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
-<nav class="nav"><div class="wrap"><a href="inicio.html">Inicio</a><a href="index.html">Calendario</a><a href="guiones.html">Guiones</a><a href="graficas.html">Gráficas</a><a href="ofertas.html">Ofertas</a><a href="vallure.html">Vallure</a><a href="anuncios.html">Anuncios</a><a href="analitica.html">Analítica</a><a href="competencia.html" class="active">Competencia</a><a href="encuestas.html">Encuestas</a><a href="pendientes.html">Pendientes</a></div></nav>
+<nav class="nav" aria-label="Navegación principal"><div class="wrap"><a href="index.html">Resumen</a><a href="calendario.html">Calendario</a><a href="revision.html">Para revisar</a><a href="resultados.html" class="active" aria-current="page">Resultados</a><a href="biblioteca.html">Biblioteca</a></div></nav><main id="contenido"><div class="wrap ux-breadcrumb"><a href="resultados.html">Resultados</a><span aria-hidden="true"> / </span><span>Competencia</span></div>
 
 
 <section style="background:#fff"><div class="wrap">
-  <h2>Competencia: en qué nivel estamos</h2>
+  <h1>Competencia: en qué nivel estamos</h1>
   <p class="intro">La competencia medida en Instagram: primero Miami (semana 26-oct al 1-nov-2026) y después todo Estados Unidos (top 10 por interacción, 10-nov-2026). La idea no es mirar seguidores: es mirar quién logra que la gente responda. La advertencia de abajo dice qué números son de verdad y cuáles son estimados.</p>
 
   <div class="sumbox"><div class="big">En Miami, Med tiene el mejor engagement de las cuentas comparables: 0,115%. Pero es MUY bajo: todas están por debajo de 0,12%.</div>
@@ -235,8 +236,8 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
   <div class="sumbox" style="border-color:#a12020;background:#fde8e8"><div class="big" style="color:#a12020">⚠️ Advertencia honesta: solo 2 de las 10 tienen la mediana medida de verdad.</div>
   <p style="margin-top:10px"><b><a href="https://www.instagram.com/skinologymedspa/" target="_blank">@skinologymedspa</a> (0,498%) y <a href="https://www.instagram.com/theprivatesuitela/" target="_blank">@theprivatesuitela</a> (0,209%)</b> son medición directa con instagram-cli. Las otras 8 son <b>ESTIMADOS de Flinque</b> (promedios de snapshots viejos, de abr-2025 a may-2026): la medición directa se cortó por el límite de ritmo de Instagram. <b>Hay que volver a medirlas antes de afirmar esos números como definitivos.</b> Cuando se re-mida, el orden puede cambiar — sobre todo entre los puestos 1–6, donde los promedios están inflados por likes sin comentarios.</p></div>
 
-  <h3 class="sub">Top 10 nacional por interacción (10-nov-2026)</h3>
-  <p class="intro">Ordenado por interacción mediana por post — (likes + comentarios) / seguidores — no por seguidores. Cuentas vivas, mínimo 4–5 posts, EE.UU. + Miami. La vara era estar por encima de Med (0,115%).</p>
+  <h3 class="sub">10 referencias nacionales · ranking por validar (10-nov-2026)</h3>
+  <p class="intro">Listado original: combina medianas medidas y promedios estimados. Fórmula de interacción por post — (likes + comentarios) / seguidores — no por seguidores. Cuentas vivas, mínimo 4–5 posts, EE.UU. + Miami. La vara era estar por encima de Med (0,115%).</p>
   <table class="minitable"><tr><th>#</th><th>Cuenta</th><th>Seguidores</th><th>Interacción</th><th>Dato</th></tr>
   <tr><td>1</td><td><a href="https://www.instagram.com/skinconserv/" target="_blank">@skinconserv</a> (Grapevine TX)</td><td>16.598</td><td><b>3,35%</b></td><td>estimado*</td></tr>
   <tr><td>2</td><td><a href="https://www.instagram.com/kbeautylab808/" target="_blank">@kbeautylab808</a> (Hawái/Seattle)</td><td>62.743</td><td><b>3,11%</b></td><td>estimado*</td></tr>
@@ -254,25 +255,23 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
   <div class="glos"><b>Interacción mediana por post</b> = (likes + comentarios) / seguidores, la del post del medio, no el promedio (el promedio lo infla un viral). · <b>* = estimado:</b> promedio de Flinque, snapshot viejo. · <b>✓ = medido de verdad:</b> mediana con instagram-cli. · <b>Cadencia</b> = cuántos posts por semana. · <b>DM keyword</b> = la gente escribe una palabra por mensaje directo ("MORPHEUS", "CUELLO") y eso abre la conversación para reservar.</div>
   <p class="intro" style="margin-top:18px">Datos del 10-nov-2026. Nivel A: instagram-cli (cuenta musadaniel), solo lectura, perfiles públicos. Nivel B: Flinque, fichas públicas. Próximo paso: re-medición con CLI para confirmar los puestos 1–6, 8 y 10.</p>
 
-  <h3 class="sub">Actualización semanal</h3>
-  <p class="intro">Este análisis se actualiza <b>una vez por semana</b>: cada semana se vuelven a medir estas cuentas desde sus perfiles públicos de Instagram — interacción mediana por post, es decir, (likes + comentarios) / seguidores del post del medio, no el promedio — y con eso se actualizan el ranking y la fecha de última actualización. <b>Última medición: 10-nov-2026.</b></p>
-</div></section>
+  <h3 class="sub">Fecha y próxima revisión</h3><p>Última medición publicada: 10-nov-2026. La próxima revisión debe comparar ventanas y métodos equivalentes; su fecha está pendiente de confirmar.</p></div></section>
 
 
-<footer>
+</main><footer>
   <div class="wrap">
-    <p><b>Borradores — nada se publica sin la aprobación de Rosanna.</b></p>
+    <p><b>Med Aesthetics Miami · Tu espacio de trabajo con MuViProject</b></p>
     <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
   </div>
 </footer>
 <div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Ver detalle">
     <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
     <div id="modal-body"></div>
   </div>
 </div>
 <script>
-/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+/* Ver detalle: clona la pieza en el modal, con su botón de aprobar y su
    cajita de feedback. Cierra con la X, con clic fuera del popup, o con
    Escape. Mientras está abierto, el fondo no hace scroll. */
 var _pvScroll = 0;
@@ -316,5 +315,6 @@ function mamFeedback(btn){
   window.open(url, '_blank');
 }
 </script>
+<script src="ux.js" defer></script>
 </body>
 </html>

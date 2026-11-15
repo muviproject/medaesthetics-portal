@@ -158,8 +158,9 @@ footer a{color:var(--gold)}
 .nav a:hover{color:#fff}
 .nav a.active{background:var(--gold);color:#fff}
 </style>
+<link rel="stylesheet" href="ux.css">
 </head>
-<body>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <!-- ============================================================
      CONFIGURACIÓN DEL ACCESO (editar acá para cambiar la clave)
      La contraseña de este portal es una CORTINA VISUAL, no
@@ -213,11 +214,11 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 </script>
 
 <div class="topbar"><div class="wrap"><span>Med Aesthetics Miami · Portal del cliente — MuViProject</span><span><a href="#" onclick="try{sessionStorage.removeItem('mam_auth')}catch(e){};location.reload();return false;">Salir</a></span></div></div>
-<nav class="nav"><div class="wrap"><a href="inicio.html">Inicio</a><a href="index.html">Calendario</a><a href="guiones.html">Guiones</a><a href="graficas.html">Gráficas</a><a href="ofertas.html">Ofertas</a><a href="vallure.html">Vallure</a><a href="anuncios.html">Anuncios</a><a href="analitica.html">Analítica</a><a href="competencia.html">Competencia</a><a href="encuestas.html" class="active">Encuestas</a><a href="pendientes.html">Pendientes</a></div></nav>
+<nav class="nav" aria-label="Navegación principal"><div class="wrap"><a href="index.html">Resumen</a><a href="calendario.html">Calendario</a><a href="revision.html">Para revisar</a><a href="resultados.html">Resultados</a><a href="biblioteca.html" class="active" aria-current="page">Biblioteca</a></div></nav><main id="contenido"><div class="wrap ux-breadcrumb"><a href="biblioteca.html">Biblioteca</a><span aria-hidden="true"> / </span><span>Encuestas</span></div>
 
 
 <section><div class="wrap">
-  <h2>Encuestas compañeras · propuestas (sin programar)</h2>
+  <h1>Encuestas compañeras · propuestas (sin programar)</h1>
   <p class="intro">Estas encuestas NO están en el calendario: son ideas para acompañar una pieza, y Daniel elige cuáles hacer. Cada una iría en IG Stories (sticker de encuesta) y en YT Comunidad (encuesta). En FB no hay encuesta nativa en el feed de la Página: iría como Story con sticker (si la Página lo tiene) o con voto en comentarios.</p>
   <div class="pend"><ul><li><b>lun 23 nov — «Where does age show first?»</b><br>Pregunta: «¿Dónde se te nota primero la edad?»<br>Opciones: Ojos · Cuello · Manos · Mandíbula</li>
 <li><b>mar 24 nov — «Why QuantumRF?»</b><br>Pregunta: «¿Qué te molesta más?»<br>Opciones: Grasa localizada · Flacidez · Las dos</li>
@@ -228,20 +229,20 @@ var PORTAL_EMAIL_DOMAIN = "@medaestheticsmiami.com";
 
 
 
-<footer>
+</main><footer>
   <div class="wrap">
-    <p><b>Borradores — nada se publica sin la aprobación de Rosanna.</b></p>
+    <p><b>Med Aesthetics Miami · Tu espacio de trabajo con MuViProject</b></p>
     <p style="margin-top:8px">Med Aesthetics Miami · (305) 356-7402 · info@medaestheticsmiami.com<br>Portal preparado por <a href="https://muviproject.com">MuViProject</a> · Noviembre 2026</p>
   </div>
 </footer>
 <div id="modal-overlay" class="modal-overlay" onclick="if(event.target===this)closePreview()">
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Vista previa">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Ver detalle">
     <button type="button" class="modal-close" onclick="closePreview()" aria-label="Cerrar">×</button>
     <div id="modal-body"></div>
   </div>
 </div>
 <script>
-/* Vista previa: clona la pieza en el modal, con su botón de aprobar y su
+/* Ver detalle: clona la pieza en el modal, con su botón de aprobar y su
    cajita de feedback. Cierra con la X, con clic fuera del popup, o con
    Escape. Mientras está abierto, el fondo no hace scroll. */
 var _pvScroll = 0;
@@ -285,5 +286,6 @@ function mamFeedback(btn){
   window.open(url, '_blank');
 }
 </script>
+<script src="ux.js" defer></script>
 </body>
 </html>
