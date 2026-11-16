@@ -250,7 +250,7 @@ CALENDAR = [
  ("mié 11 nov", "Reel", "Rosanna a cámara: purging vs. breakout («Before you throw out the product…»)", "Banco · guion #3", "IG + FB + TikTok + YouTube", "Guion y video con Rosanna", "También en TK y como Short en YT."),
  ("jue 12 nov", "Reel", "«A FEW THINGS YOU'LL FIND AT MED AESTHETICS MIAMI» — Rosanna muestra tratamientos", "Deck R3 · guion #21", "IG + FB + TikTok + YouTube", "Video con Rosanna", ""),
  ("vie 13 nov", "Estática", "Tarjeta oferta siempre activa: Botox $10/unidad", "Q4 · G-05", "IG + FB + TikTok + YouTube", "Aprobar diseño de la tarjeta", "También como foto en TK y como publicación de Comunidad con imagen en YT."),
- ("sáb 14 nov", "Reel", "Sculptra — «WHERE CAN SCULPTRA GO?» (rostro, cuello, glúteos)", "Deck R4 · guion #11", "IG + FB + TikTok + YouTube", "Video y contenido de zonas", ""),
+ ("sáb 14 nov", "Reel", "Sculptra — «WHERE CAN SCULPTRA GO?» (rostro, cuello, glúteos)", "Deck R4 · guion #11", "IG + FB + TikTok + YouTube", "Sin video todavía: Vallure no entregó la carpeta de noviembre; decidir si se le pide, se filma o se cambia el post", ""),
  ("dom 15 nov", "Carrusel", "Checklist «Preguntas para tu consulta» v2, con pregunta final para comentarios", "Banco · G-10", "IG + FB + TikTok + YouTube", "Contenido del checklist + CTA final", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
  ("lun 16 nov", "Reel", "Línea de tiempo de tratamientos: HydraFacial mensual, Botox 3–4 meses, Morpheus8 cada 4–6 semanas", "Banco · guion #8", "IG + FB + TikTok + YouTube", "Video y tiempos indicados", "También en TK y como Short en YT."),
  ("mar 17 nov", "Carrusel", "QuantumRF — antes/después de brazos; «individual results vary»", "Deck · G-03", "IG + FB + TikTok + YouTube", "Foto real con consentimiento", "En FB como álbum multi-foto, en TK como carrusel de fotos (Photo Mode, desde el celular) y en YT como publicación de Comunidad con imágenes."),
@@ -274,8 +274,8 @@ GRAPHICS = [
  ("G-01", "Estática-resumen ofertas noviembre (Glow Duo + The Contour Edit + Retire the Razor)", "Tipo 2 · Tarjeta de oferta", "Deck 4-nov — a decidir: recuperar o seguir desde el 10-nov", "Decisión de Daniel/Rosanna: ¿se recupera el 4-nov o se descarta?"),
  ("G-02", "Carrusel «QuantumRF: Men Included» (antes/después abdomen masculino)", "Tipo 1 · Antes / después", "Mar 10-nov", "Confirmar el orden del antes/después + foto real con consentimiento. Diseño borrador con las fotos pendientes ya visible en esta tarjeta."),
  ("G-03", "Carrusel QuantumRF antes/después de brazos", "Tipo 1 · Antes / después", "Mar 17-nov", "Foto real con consentimiento + «individual results vary»"),
- ("G-04", "Carrusel «Black Friday Package Event»", "Tipo 2 · Tarjeta de oferta", "Vie 27-nov", "Precios A CONFIRMAR POR ROSANNA"),
- ("G-05", "Tarjeta oferta siempre activa — Botox $10/unidad", "Tipo 2 · Tarjeta de oferta", "Rotación", "Tarjeta lista, pendiente de aprobación de Rosanna"),
+ ("G-04", "Carrusel «Black Friday Package Event»", "Tipo 2 · Tarjeta de oferta", "Vie 27-nov", "Carrusel v6 visible (nombres en Great Vibes, logo limpio). Morpheus8 $1.750 confirmado; láser $999 y QuantumRF $2.500/$3.000 a confirmar por Rosanna."),
+ ("G-05", "Tarjeta oferta siempre activa — Botox $10/unidad", "Tipo 2 · Tarjeta de oferta", "Rotación", "v7 con logo limpio y precio en Fira Bold dorado — pendiente de aprobación de Rosanna. (La v6 quedó descartada.)"),
  ("G-06", "Tarjeta oferta siempre activa — Láser 30% off", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aprobación del diseño"),
  ("G-07", "Tarjeta oferta siempre activa — Morpheus8 $200 off la serie", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aclarar «Aventura Location Only»"),
  ("G-08", "Tarjeta oferta siempre activa — QuantumRF 15% off", "Tipo 2 · Tarjeta de oferta", "Rotación", "Aprobación del diseño"),
@@ -304,14 +304,20 @@ OFFERS = [
 ]
 
 PENDIENTES = [
- "Orden del antes/después del carrusel del 10-nov (lo pidió Rosanna).",
- "Precios del Black Friday 27–30 nov: Morpheus8 $1.750 CONFIRMADO 10-nov; láser $999 y QuantumRF $2,500/$3,000 a confirmar.",
+ "Orden del antes/después del carrusel del 10-nov (lo pidió Rosanna; el set auditado 14-nov está listo, falta el consentimiento escrito de las pacientes).",
+ "Precios del Black Friday 27–30 nov: Morpheus8 $1.750 CONFIRMADO 10-nov; láser $999 y QuantumRF $2.500/$3.000 a confirmar.",
+ "Máquina de láser del Black Friday: confirmar con Rosanna (Soprano, Motus, Apogee o Candela) + foto real de la máquina de láser y del QuantumRF.",
+ "Video Black Friday: concepto flip cancelado 14-nov; decidir formato (determinista con stills, plantilla de After Effects o re-pensar).",
+ "Reel Sculptra del 14-nov: sin video (Vallure no entregó la carpeta); decidir si se le pide, se filma o se cambia el post.",
  "Posts del 2, 4 y 7-nov: recuperar o seguir desde el 10-nov.",
  "Fecha de la jornada de filmación mensual (los reels del 11, 12, 16, 18, 19, 21, 23 y 24-nov la necesitan).",
- "Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov.",
- "Accesos para publicar: Meta Business y Ads CONFIRMADOS 10-nov (49 campañas, 1 activa); TikTok y Pinterest sin aceptar; Instagram y YouTube sin verificar en vivo.",
- "Contenido de Vallure capturado en el portal 10-nov (10 anuncios de la Biblioteca + 49 posts orgánicos de IG): visuales embebidos 10-nov (capturas de página, 900 px; 3 reels con el fotograma en negro porque el video no cargó en la captura — ver inventario-anuncios-vallure.md §5).",
+ "Fotos reales con consentimiento para los antes/después del 10, 17 y 28-nov (las fotos llegaron 13-nov; falta el consentimiento escrito).",
+ "Accesos para publicar: Meta Business y Ads CONFIRMADOS; página de Facebook de Med sin asignar a Daniel; TikTok sin aceptar; Pinterest vence ~17-nov; Instagram de Med sin vincular.",
+ "Láminas 2+ de los carruseles de Instagram (80 imágenes): bloqueado — solo Daniel puede desbloquearlo con su passkey o pasando las URLs.",
+ "Anuncios: quién apagó las 9 campañas viejas y quién creó «New Leads Campaign 13th Nov» (13-nov); nombres de los 4 leads (verificación con llave de acceso en Business Suite); presupuesto de los avisos nuevos (Botox y Black Friday).",
+ "Canva Pro: revisar qué cobraron (la facturación muestra Trial hasta 14-dic-2026, no el anual $144). Logo con velo en la lámina 5 del carrusel de Canva: reemplazar por el limpio.",
  "Morpheus8: el caption M-06 ofrece 15% off, el Q4 trae $200 off la serie — confirmar cuál rige.",
+ "Dom 29-nov: sin pieza definida (recordatorio Black Friday, reel de humor o no publicar).",
 ]
 
 # Encuestas compañeras — PROPUESTAS, no están en el calendario.
@@ -502,7 +508,9 @@ footer a{color:var(--gold)}
 IMGS = {
  "mar 10 nov": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
  "G-02": ["carousel-10nov-1.png", "carousel-10nov-2.png", "carousel-10nov-3.png"],
- "G-05": ["botox-g05-1080x1350.png"],
+ "G-04": ["black-friday-v6-1-portada.png", "black-friday-v6-2-laser.png", "black-friday-v6-3-morpheus8.png", "black-friday-v6-4-quantumrf.png", "black-friday-v6-5-cierre.png"],
+ "vie 27 nov": ["black-friday-v6-1-portada.png", "black-friday-v6-2-laser.png", "black-friday-v6-3-morpheus8.png", "black-friday-v6-4-quantumrf.png", "black-friday-v6-5-cierre.png"],
+ "G-05": ["botox-g05-v7-1080x1350.png"],
 }
 
 # Capturas de página de Vallure (10-nov-2026): 1a página del PDF de
