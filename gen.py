@@ -601,9 +601,9 @@ def offer_cards():
 
 
 # ---------------------------------------------------------------- anuncios
-# Métricas reales de Ads Manager, leídas el 27-nov-2026 (rango 28-oct al
-# 26-nov-2026, cuenta 140482630498719). Se guardan también en JSON
-# (../med-aesthetics-materiales/anuncios-metricas-2026-11-27.json) para
+# Métricas reales de Ads Manager, leídas el 28-nov-2026 (rango 29-oct al
+# 27-nov-2026, cuenta 140482630498719). Se guardan también en JSON
+# (../med-aesthetics-materiales/anuncios-metricas-2026-11-28.json) para
 # que la actualización diaria reuse el formato. NO inventar números:
 # si un dato no está, va None (se muestra "—").
 # Fotos: la imagen de cada aviso en la Biblioteca, ya en assets/vallure/
@@ -615,60 +615,64 @@ def offer_cards():
 # Offer. El aviso «$200 Off Injectables» NO tiene Ad NN identificado:
 # no se asigna a ningún aviso. Warm Ad 32 no tiene foto en assets.
 ADS_DATA = {
- "actualizado": "27-nov-2026",
- "rango": "28-oct al 26-nov-2026",
+ "actualizado": "28-nov-2026",
+ "rango": "29-oct al 27-nov-2026",
  "cuenta_id": "140482630498719",
  "campanas_total": 49, "entregando": 1, "encendidas": 10, "apagadas": 39,
- "gasto_total": 1213.8, "leads_total": 8,
+ "gasto_total": 1192.06, "leads_total": 8,
  "campanas": [
   dict(nombre="Vallure - Prospecting + Retargeting - Website | CBO",
-       estado="ENCENDIDA", presupuesto_dia=33, gasto=1213.8,
-       impresiones=13047, alcance=4111, frecuencia=3.17, clics=473,
-       cpm=93.03, leads=8, costo_lead=151.73,
+       estado="ENCENDIDA", presupuesto_dia=33, gasto=1192.06,
+       impresiones=12869, alcance=4061, frecuencia=3.17, clics=478,
+       cpm=92.63, leads=8, costo_lead=149.01,
        conjuntos=[
           dict(nombre="Cold Men 25+", gasto=169.09, impresiones=2718, leads=0),
-          dict(nombre="Warm+Retargeting", gasto=929.18, impresiones=9059, leads=7),
-          dict(nombre="Cold Website", gasto=115.53, impresiones=1270, leads=1)],
+          dict(nombre="Warm+Retargeting", gasto=909.57, impresiones=8905, leads=7),
+          dict(nombre="Cold Website", gasto=113.4, impresiones=1246, leads=1)],
        avisos=[
           dict(ad="Ad 23", t="Lift. Tighten. Rebuild.", d="Morpheus8 $200 off la serie, solo Aventura (foto: rostro de mujer, mano con guante).", img="vallure-ad-05.jpg", v="VA BIEN", vc="good",
-               seen=6318, reach=1476, clicks=306, ctr="4,84%", cpc=2.1, spend=643.05, leads=7,
+               seen=6413, reach=1483, clicks=312, ctr="4,87%", cpc=2.09, spend=653.62, leads=7,
                rec="Dejarlo corriendo y darle más presupuesto: es el único aviso de la CBO que trae clientes potenciales (5 en este periodo, 7 resultados: 2 de los resultados no son clientes potenciales). Hacer 2–3 variantes con la misma idea (otra foto, otro texto) para que no se canse."),
           dict(ad="Ad 39", t="20% Off Your First Glow Duo", d="HydraFacial + Aerolase (foto: perfil de mujer, piel luminosa).", img="vallure-ad-01.jpg", v="REGULAR", vc="mid",
                pausado="18-nov", seen=1014, reach=473, clicks=38, ctr="3,75%", cpc=2.3, spend=87.46, leads=1,
                rec="Tiene clics de los más baratos ($2,30, solo detrás del Ad 23 a $2,10), pero nadie dejó sus datos: el resultado que registra no es un cliente potencial. El problema probablemente no es la imagen sino la página a la que llegan: revisar la página de ofertas. Merece una prueba con más presupuesto."),
           dict(ad="Ad 38", t="$10 Per Unit, Every Visit", d="Neuromoduladores (foto: mujer con ojos cerrados, guantes negros).", img="vallure-ad-08.jpg", v="REGULAR", vc="mid",
-               pausado="18-nov", seen=970, reach=508, clicks=36, ctr="3,71%", cpc=3.3, spend=118.91, leads=0,
-               rec="Clics a buen precio ($3,30) y buen CTR, pero 0 clientes potenciales. Revisar a dónde llega el clic y qué pide la página; si en una semana no trae nada, cambiar la imagen."),
+               pausado="18-nov", seen=907, reach=488, clicks=32, ctr="3,53%", cpc=3.38, spend=108.01, leads=0,
+               rec="Clics a buen precio ($3,38) y buen CTR, pero 0 clientes potenciales. Revisar a dónde llega el clic y qué pide la página; si en una semana no trae nada, cambiar la imagen."),
           dict(ad="Ad 33", t="Collagen Remodeling at Depth", d="Morpheus8, Top 10% InMode (foto: mujer recibiendo Morpheus8 en la frente).", img="vallure-ad-04.jpg", v="REGULAR", vc="mid",
-               pausado="18-nov", seen=425, reach=207, clicks=16, ctr="3,76%", cpc=3.5, spend=56.0, leads=0,
-               rec="Buen CTR (3,76%) y clic a $3,50, pero 0 clientes potenciales. Mantenerlo una semana más y mirar si la página de destino convence; si no, cambiar la foto."),
+               pausado="18-nov", seen=420, reach=205, clicks=15, ctr="3,57%", cpc=3.63, spend=54.47, leads=0,
+               rec="Buen CTR (3,57%) y clic a $3,63, pero 0 clientes potenciales. Mantenerlo una semana más y mirar si la página de destino convence; si no, cambiar la foto."),
           dict(ad="Ad 21", t="Your Exclusive Offer Is Here", d="Láser 30% off (foto: mujer, láser en la mejilla).", img="vallure-ad-10.jpg", v="REGULAR", vc="mid",
-               pausado="18-nov", seen=156, reach=116, clicks=4, ctr="2,56%", cpc=3.78, spend=15.11, leads=0,
-               rec="CTR bueno (2,56%) y clic barato ($3,78). Dejarlo correr y ver si con más días trae clientes potenciales; si no, cambiar la imagen."),
+               pausado="18-nov", seen=154, reach=115, clicks=4, ctr="2,60%", cpc=3.63, spend=14.51, leads=0,
+               rec="CTR bueno (2,60%) y clic barato ($3,63). Dejarlo correr y ver si con más días trae clientes potenciales; si no, cambiar la imagen."),
           dict(ad="Ad 41", t="Ad 41 (creatividad sin identificar)", d="En Ads Manager no quedó registrada qué imagen lleva este aviso.", img=None, v="REGULAR", vc="mid",
                pausado="18-nov", seen=58, reach=41, clicks=2, ctr="3,45%", cpc=3.23, spend=6.45, leads=0,
                rec="Solo se mostró 58 veces y tuvo 2 clics: no se puede sacar una conclusión. Dejarlo unos días más o apagarlo si hace falta el presupuesto para el Ad 23."),
           dict(ad="Black Friday 2026 – Carousel", t="Black Friday — carrusel de ofertas", d="Carrusel Black Friday: Morpheus8, láser y QuantumRF (las 4 tarjetas aprobadas).", img=None, v="REGULAR", vc="mid",
-               seen=318, reach=180, clicks=14, ctr="4,40%", cpc=1.69, spend=23.59, leads=0,
-               rec="Aviso nuevo: empezó el 17-nov (el que publicó Daniel) y ya gastó $23,59 con 14 clics a $1,69 (CTR 4,40%). Muestra chica (318 veces visto): todavía no se puede sacar una conclusión. Vigilarlo: si trae clientes potenciales, es el segundo que convierte; si gasta sin traer nada, revisar la página de ofertas."),
+               seen=319, reach=181, clicks=14, ctr="4,39%", cpc=1.69, spend=23.68, leads=0,
+               rec="Aviso nuevo: empezó el 17-nov (el que publicó Daniel) y ya gastó $23,68 con 14 clics a $1,69 (CTR 4,39%). Muestra chica (319 veces visto): todavía no se puede sacar una conclusión. Vigilarlo: si trae clientes potenciales, es el segundo que convierte; si gasta sin traer nada, revisar la página de ofertas."),
+          dict(ad="Morpheus8 Black Friday — 3 Sessions $1,500", t="Morpheus8 Black Friday: 3 sesiones por $1,500", d="Morpheus8 Black Friday: 3 sesiones por $1,500.", img=None, v="REGULAR", vc="mid",
+               seen=54, reach=37, clicks=6, ctr="11,11%", cpc=0.89, spend=5.35, leads=0,
+               rec="Aviso nuevo: estaba apagado y en $0 hasta ayer; ya está encendido y gastando. Lleva $5,35 con 6 clics a $0,89 (CTR 11,11%, el más alto de todos) y 0 clientes potenciales. Muestra chica (54 veces visto): todavía no se puede sacar una conclusión. Vigilarlo: si trae clientes potenciales, es el segundo aviso que convierte. Se apaga el 30-nov, cuando termina Gold Friday."),
+          dict(ad="QuantumRF Black Friday — Save up to $1,000", t="QuantumRF Black Friday: ahorra hasta $1,000", d="QuantumRF Black Friday: ahorra hasta $1,000.", img=None, v="REGULAR", vc="mid",
+               seen=25, reach=20, clicks=1, ctr="4,00%", cpc=2.4, spend=2.4, leads=0,
+               rec="Aviso nuevo: estaba apagado y en $0 hasta ayer; ya está encendido y gastando. Lleva $2,40 con 1 clic a $2,40 y 0 clientes potenciales. Muestra mínima (25 veces visto): no se puede sacar una conclusión. Se apaga el 30-nov, cuando termina Gold Friday."),
           dict(ad="Ad 40", t="Retire the Razor", d="Láser para hombres (foto: torso de hombre con afeitadora).", img="vallure-ad-02.jpg", v="VA MAL", vc="bad",
                pausado="12-nov", seen=2718, reach=1646, clicks=38, ctr="1,40%", cpc=4.45, spend=169.09, leads=0,
                rec="Apagarlo: gastó $169,09 y no trajo ningún cliente potencial. El público de hombres no está convirtiendo con esta oferta; probar otra oferta o pausarlo."),
           dict(ad="Ad 20", t="Your Private Consultation Awaits", d="Rejuvenecimiento vaginal 30% off (foto: torso inferior de mujer, ropa interior blanca).", img="vallure-ad-07.jpg", v="VA MAL", vc="bad",
-               pausado="12-nov", seen=893, reach=527, clicks=16, ctr="1,79%", cpc=4.8, spend=76.73, leads=0,
-               rec="Apagarlo: gastó $76,73 y no trajo nada. La oferta no está convirtiendo con esta imagen; cambiar la imagen o pausarlo."),
+               pausado="12-nov", seen=637, reach=413, clicks=13, ctr="2,04%", cpc=4.01, spend=52.08, leads=0,
+               rec="Apagarlo: gastó $52,08 y no trajo nada. La oferta no está convirtiendo con esta imagen; cambiar la imagen o pausarlo."),
           dict(ad="Ad 30", t="Help Your Skin Keep Up", d="QuantumRF 15% off (foto: abdomen de mujer, «the snapback»).", img="vallure-ad-09.jpg", v="VA MAL", vc="bad",
-               pausado="12-nov", seen=73, reach=56, clicks=2, ctr="2,74%", cpc=4.35, spend=8.69, leads=0,
-               rec="Apagarlo o cambiar la imagen en la CBO: el clic subió a $4,35 y sigue con 0 clientes potenciales. Ojo: esta misma creatividad trajo 1 cliente potencial en Prospecting el 15-oct ($90,09), pero ese día quedó fuera de la ventana de 30 días — en la CBO el problema es el público, no solo la imagen."),
+               pausado="12-nov", seen=62, reach=49, clicks=2, ctr="3,23%", cpc=3.98, spend=7.96, leads=0,
+               rec="Apagarlo o cambiar la imagen en la CBO: el clic bajó a $3,98 y sigue con 0 clientes potenciales. Ojo: esta misma creatividad trajo 1 cliente potencial en Prospecting el 15-oct ($90,09), pero ese día quedó fuera de la ventana de 30 días — en la CBO el problema es el público, no solo la imagen."),
           dict(ad="Ad 34 Video", t="Video de láser (15 s)", d="Video del tratamiento de láser.", img="vallure-ad-06.jpg", img_note="Foto por confirmar: parece ser el video «30% Off Laser Hair Removal» de la Biblioteca, pero no está verificado que sea este aviso.", v="VA MAL",
                vc="bad", pausado="12-nov", seen=72, reach=51, clicks=1, ctr="1,39%", cpc=3.51, spend=3.51, leads=0,
                rec="El video rindió peor acá (CTR 1,39%, el más bajo de todos). No concluir que el video no funciona: el mismo video rindió mejor en la campaña Warm (CTR 16,67% en la ventana anterior). Probar el video de la Warm en la CBO antes de apagarlo."),
        ],
        pausados_con_gasto=[
-          dict(ad="Ad 27", seen=2, clicks=0, spend=0.88),
-          dict(ad="Ad 35", seen=3, clicks=0, spend=0.06),
-          dict(ad="Ad 37 Row 42", seen=27, clicks=0, spend=4.27)],
-       pausados_sin_gasto=["Ad 36 Row 41 (dos avisos distintos con ese nombre)", "Ad 3", "Ad 2", "Ad 36", "Ad 7 Carousel", "Ad 37", "Ad 32", "Ad 1 Video", "Ad 4", "Morpheus8 Black Friday — 3 Sessions $1,500", "Ad 28", "QuantumRF Black Friday — Save up to $1,000"]),
+          dict(ad="Ad 37 Row 42", seen=16, clicks=0, spend=3.47)],
+       pausados_sin_gasto=["Ad 36 Row 41 (dos avisos distintos con ese nombre)", "Ad 3", "Ad 2", "Ad 36", "Ad 7 Carousel", "Ad 37", "Ad 32", "Ad 1 Video", "Ad 4", "Ad 28", "Ad 27", "Ad 35"]),
   dict(nombre="Vallure - Warm + Retargeting - Website",
        estado="APAGADA", presupuesto_dia=None, desde="14-ago-2026",
        gasto=0, impresiones=0, alcance=0, frecuencia=None,
@@ -790,10 +794,10 @@ def anuncios_rows():
     cbo, warm, prosp = d["campanas"]
     out = []
     out.append(
-        '<div class="sumbox"><div class="big">Solo 1 de 49 campañas está entregando anuncios. En 30 días se gastaron $1.213,80 y llegaron 5 clientes potenciales (8 resultados en total).</div>'
-        '<p style="margin-top:10px">Actualizado: <b>27-nov-2026</b> · Datos del <b>28-oct al 26-nov-2026</b> · Cuenta publicitaria Med Aesthetics Miami (140482630498719).</p>'
+        '<div class="sumbox"><div class="big">Solo 1 de 49 campañas está entregando anuncios. En 30 días se gastaron $1.192,06 y llegaron 5 clientes potenciales (8 resultados en total).</div>'
+        '<p style="margin-top:10px">Actualizado: <b>28-nov-2026</b> · Datos del <b>29-oct al 27-nov-2026</b> · Cuenta publicitaria Med Aesthetics Miami (140482630498719).</p>'
         '<p>De las 49 campañas, <b>solo la CBO está entregando anuncios</b> (varias viejas conservan el interruptor encendido pero con fecha final pasada y $0, así que no entregan). '
-        'CBO: $1.213,80 y 5 clientes potenciales (8 resultados) · Warm (apagada): $0 en esta ventana (su actividad era del 19-oct, fuera de los 30 días) · Prospecting (apagada): $0 en esta ventana (su actividad era del 19-oct, fuera de los 30 días).</p></div>')
+        'CBO: $1.192,06 y 5 clientes potenciales (8 resultados) · Warm (apagada): $0 en esta ventana (su actividad era del 19-oct, fuera de los 30 días) · Prospecting (apagada): $0 en esta ventana (su actividad era del 19-oct, fuera de los 30 días).</p></div>')
     out.append(
         '<div class="rule"><b>12-nov-2026:</b> presupuesto de la CBO bajado de $45 a $33 por día (tope ~$1.000/mes, por decisión de Rosanna) y los 8 avisos 🔴 VA MAL pausados. '
         'Quedan prendidos el Ad 23 (el único que trae clientes potenciales) y los 🟡 REGULAR.</div>'
@@ -811,16 +815,17 @@ def anuncios_rows():
     '<div class="rule"><b>24-nov-2026:</b> la ventana se movió un día (salió el 24-oct): la CBO subió de $1.253,63 a $1.274,39 y los resultados se mantienen en 8 (Ad 23: 7 resultados, 4 clientes potenciales). Sin cambios de veredicto: el Ad 23 sigue 🟢 y es el único aviso que convierte. El carrusel Black Friday lleva $20,23 con 13 clics a $1,56 (CTR 4,78%), todavía 0 clientes potenciales (🟡, muestra chica). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Sin reactivación: no existe ninguna campaña «Morpheus8 - 12 Nov Offer» y «Instagram Post: Morpheus8 (Get Offer)» sigue apagada en $0. El Ad 4 quedó en $0,00 y sigue en pausados sin gasto. Hoy 24-nov la CBO lleva $11,55 gastados, 0 resultados. No se tocó nada.</div>'
     '<div class="rule"><b>25-nov-2026:</b> la ventana se movió un día (salió el 25-oct): la CBO bajó de $1.274,39 a $1.248,43 y los resultados subieron de 8 a 9. El Ad 23 trajo el 5.º cliente potencial del periodo (8 resultados, 5 clientes potenciales): sigue 🟢 y es el único aviso que convierte. Sin cambios de veredicto en los demás: el carrusel Black Friday lleva $22,22 con 14 clics a $1,59 (CTR 4,62%), todavía 0 clientes potenciales (🟡, muestra chica). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Sin reactivación: no existe ninguna campaña «Morpheus8 - 12 Nov Offer» y «Instagram Post: Morpheus8 (Get Offer)» sigue apagada en $0. Nuevo aviso en la CBO, creado por Daniel el 24-nov 18:50: «Morpheus8 Black Friday — 3 Sessions $1,500», apagado y en $0 — el precio de $1,500 es el confirmado por Rosanna el 16-nov (el $1,750 que figura en el portal es el valor del 10-nov, anterior a la corrección). El Ad 4 quedó en $0,00 y sigue en pausados sin gasto. Hoy 25-nov la CBO lleva $7,17 gastados, 0 resultados. No se tocó nada.</div>'
     '<div class="rule"><b>26-nov-2026:</b> la ventana se movió un día (salió el 26-oct): la CBO bajó de $1.248,43 a $1.233,84 y los resultados se mantienen en 9 (Ad 23: 8 resultados, 5 clientes potenciales). Sin cambios de veredicto: el Ad 23 sigue 🟢 y es el único aviso que convierte. El carrusel Black Friday lleva $23,03 con 14 clics a $1,65 (CTR 4,47%), todavía 0 clientes potenciales (🟡, muestra chica). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Sin reactivación: no existe ninguna campaña «Morpheus8 - 12 Nov Offer» y «Instagram Post: Morpheus8 (Get Offer)» sigue apagada en $0. El Ad 28 salió de pausados con gasto (quedó en $0,00 en esta ventana) y «Morpheus8 Black Friday — 3 Sessions $1,500» sigue apagado y en $0. Hoy 26-nov la CBO lleva $7,11 gastados, 0 resultados. No se tocó nada.</div>'
-    '<div class="rule"><b>27-nov-2026:</b> la ventana se movió un día (salió el 27-oct): la CBO bajó de $1.233,84 a $1.213,80 y los resultados bajaron de 9 a 8 (Ad 23: de 8 a 7 resultados; el resultado que salió no era un cliente potencial, siguen 5). Sin cambios de veredicto: el Ad 23 sigue 🟢 y es el único aviso que convierte. El carrusel Black Friday lleva $23,59 con 14 clics a $1,69 (CTR 4,40%), todavía 0 clientes potenciales (🟡, muestra chica). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Sin reactivación: no existe ninguna campaña «Morpheus8 - 12 Nov Offer» y «Instagram Post: Morpheus8 (Get Offer)» sigue apagada en $0. Nuevo aviso creado hoy 27-nov: «QuantumRF Black Friday — Save up to $1,000», apagado y en $0 (Daniel lo prende él desde Ads Manager). «Morpheus8 Black Friday — 3 Sessions $1,500» sigue apagado y en $0. Hoy 27-nov la CBO lleva $3,63 gastados, 0 resultados. No se tocó nada.</div>')
+    '<div class="rule"><b>27-nov-2026:</b> la ventana se movió un día (salió el 27-oct): la CBO bajó de $1.233,84 a $1.213,80 y los resultados bajaron de 9 a 8 (Ad 23: de 8 a 7 resultados; el resultado que salió no era un cliente potencial, siguen 5). Sin cambios de veredicto: el Ad 23 sigue 🟢 y es el único aviso que convierte. El carrusel Black Friday lleva $23,59 con 14 clics a $1,69 (CTR 4,40%), todavía 0 clientes potenciales (🟡, muestra chica). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Sin reactivación: no existe ninguna campaña «Morpheus8 - 12 Nov Offer» y «Instagram Post: Morpheus8 (Get Offer)» sigue apagada en $0. Nuevo aviso creado hoy 27-nov: «QuantumRF Black Friday — Save up to $1,000», apagado y en $0 (Daniel lo prende él desde Ads Manager). «Morpheus8 Black Friday — 3 Sessions $1,500» sigue apagado y en $0. Hoy 27-nov la CBO lleva $3,63 gastados, 0 resultados. No se tocó nada.</div>'
+    '<div class="rule"><b>28-nov-2026:</b> la ventana se movió un día (salió el 28-oct): la CBO bajó de $1.213,80 a $1.192,06 y los resultados siguen en 8 (Ad 23: 7 resultados, 5 clientes potenciales, verificados hoy con la columna «Clientes potenciales»). Sin cambios de veredicto en los avisos viejos: el Ad 23 sigue 🟢 y es el único aviso que convierte. El carrusel Black Friday lleva $23,68 con 14 clics a $1,69 (CTR 4,39%), todavía 0 clientes potenciales (🟡, muestra chica). Nuevo: los dos avisos Black Friday ya están encendidos y gastando — «Morpheus8 Black Friday — 3 Sessions $1,500» $5,35 (6 clics a $0,89, CTR 11,11%) y «QuantumRF Black Friday — Save up to $1,000» $2,40 (1 clic a $2,40), ambos 0 clientes potenciales (🟡, muestra chica); se apagan el 30-nov. Ad 27 y Ad 35 quedaron en $0 en esta ventana (su gasto salió del rango). Warm y Prospecting siguen en $0 con todos sus avisos SIN DATOS. Encendidas: 10 (igual que ayer). Hoy 28-nov la CBO lleva $3,07 gastados, 0 resultados. No se tocó nada.</div>')
     # --- CBO (la que corre)
     out.append('<h3 class="sub">Campaña que está corriendo: «Vallure - Prospecting + Retargeting - Website | CBO»</h3>')
     out.append(
-        '<div class="sumbox">Encendida · <b>$33 por día</b> · Gastó <b>$1.213,80</b> · Se mostró <b>13.047 veces</b> · La vieron <b>4.111 personas</b> distintas · '
-        'Cada persona la vio <b>~3,17 veces</b> · <b>473 clics</b> · Cada 1.000 veces que se mostró costó <b>$93,03</b> · <b>8 resultados (5 clientes potenciales)</b> · Cada cliente potencial costó <b>$242,76</b>.'
+        '<div class="sumbox">Encendida · <b>$33 por día</b> · Gastó <b>$1.192,06</b> · Se mostró <b>12.869 veces</b> · La vieron <b>4.061 personas</b> distintas · '
+        'Cada persona la vio <b>~3,17 veces</b> · <b>478 clics</b> · Cada 1.000 veces que se mostró costó <b>$92,63</b> · <b>8 resultados (5 clientes potenciales)</b> · Cada cliente potencial costó <b>$238,41</b>.'
         '<p style="margin-top:10px">Por público: <b>Cold Men 25+:</b> $169,09 · 2.718 veces · 0 clientes potenciales · '
-        '<b>Warm+Retargeting:</b> $929,18 · 9.059 veces · 7 resultados (5 clientes potenciales) · '
-        '<b>Cold Website:</b> $115,53 · 1.270 veces · 1 resultado.</p>'
-        '<p style="margin-top:6px">De sus 11 avisos: <b>1 va bien, 6 regular, 4 van mal</b>.</p></div>')
+        '<b>Warm+Retargeting:</b> $909,57 · 8.905 veces · 7 resultados (5 clientes potenciales) · '
+        '<b>Cold Website:</b> $113,40 · 1.246 veces · 1 resultado.</p>'
+        '<p style="margin-top:6px">De sus 13 avisos: <b>1 va bien, 8 regular, 4 van mal</b>.</p></div>')
     out.append('<div class="grid">%s</div>' % "\n".join(_ad_card(a) for a in cbo["avisos"]))
     out.append('<h3 class="sub">Avisos pausados de la CBO que gastaron algo en el periodo</h3>')
     out.append('<p class="intro">Ya están pausados; gastaron esto antes de apagarse. No hace falta hacer nada con ellos.</p>')
@@ -845,12 +850,12 @@ def anuncios_rows():
         '<div class="pend"><ol style="margin:0;padding-left:22px;line-height:1.8;font-size:15px">'
         '<li><b>El Ad 23 sigue siendo el que más convierte (5 clientes potenciales, 7 resultados): cuidarlo, hacer variantes, darle más presupuesto.</b> El Ad 20 de la Warm traía 1 ($0,51), pero era del 18-oct y ese día quedó fuera de la ventana de 30 días. El Ad 30 de Prospecting traía 1, pero era del 15-oct y ese día quedó fuera de la ventana de 30 días: en este periodo no muestra ninguno. Antes de apagar nada, hay que tener 2–3 variantes del Ad 23 listas.</li>'
         '<li><b>Los avisos con clics pero sin clientes potenciales (Ad 39, Ad 38, Ad 33) apuntan a la página de destino, no a la imagen.</b> La gente hace clic y después no deja sus datos: hay que revisar la página de ofertas y qué pasa después del clic (¿el formulario es largo? ¿pide demasiados datos? ¿carga lento en el celular?).</li>'
-        '<li><b>Nadie sabe si los 5 clientes potenciales se hicieron clientes de verdad.</b> Preguntar en cada consulta cómo llegaron («¿nos viste en Instagram/Facebook?») y anotarlo: sin eso no se sabe si los $1.213,80 volvieron.</li>'
+        '<li><b>Nadie sabe si los 5 clientes potenciales se hicieron clientes de verdad.</b> Preguntar en cada consulta cómo llegaron («¿nos viste en Instagram/Facebook?») y anotarlo: sin eso no se sabe si los $1.192,06 volvieron.</li>'
         '<li><b>El público de hombres no convierte ($169,09 a cero).</b> Pausar el conjunto Cold Men 25+ o cambiar la oferta para hombres.</li>'
         '<li><b>Solo la CBO está entregando anuncios.</b> Las demás campañas no gastan nada en el periodo (algunas conservan el interruptor encendido pero con fecha final pasada, así que no entregan): no hace falta hacer nada más con ellas.</li>'
         '<li><b>El video rindió peor en la CBO (CTR 1,39%); en la Warm no se mostró ni una vez en esta ventana</b> (en la anterior tenía CTR 16,67% con solo 12 vistas). Probar el video de la Warm en la CBO antes de concluir que el video no funciona.</li>'
-        '<li><b>El Ad 39 merece una prueba con más presupuesto.</b> Tiene el segundo clic más barato ($2,30, solo detrás del Ad 23 a $2,10): si la página de destino se arregla, puede ser el segundo que convierta.</li>'
-        '<li><b>Black Friday: el carrusel ya está publicado y gastando</b> ($23,59, 14 clics, sin clientes potenciales todavía). <b>Las ofertas de noviembre terminaron el 26-nov; desde hoy rige Gold Friday (27–30 nov) y el anuncio se apaga el 30-nov.</b> Precios: Morpheus8 $1.500 confirmado el 16-nov; láser $999 y QuantumRF $2.500/$3.000 a confirmar por Rosanna.</li>'
+        '<li><b>El Ad 39 merece una prueba con más presupuesto.</b> Tiene el segundo clic más barato ($2,30, solo detrás del Ad 23 a $2,09): si la página de destino se arregla, puede ser el segundo que convierta.</li>'
+        '<li><b>Black Friday: el carrusel ya está publicado y gastando</b> ($23,68, 14 clics, sin clientes potenciales todavía). <b>Rige Gold Friday (27–30 nov): los dos avisos Black Friday ya están encendidos y gastando (Morpheus8 $5,35 y QuantumRF $2,40, sin clientes potenciales todavía) y se apagan el 30-nov.</b> Precios: Morpheus8 $1.500 confirmado el 16-nov; láser $999 y QuantumRF $2.500/$3.000 a confirmar por Rosanna.</li>'
         '<li><b>Frecuencia 3,17: la gente ve los avisos ~3 veces en 30 días.</b> Vigilar fatiga y refrescar la creatividad cuando la misma gente vea los mismos avisos muchas veces.</li>'
         '</ol></div>')
     # --- Glosario + fuente
@@ -862,7 +867,7 @@ def anuncios_rows():
         '<b>CTR</b> = de cada 100 veces que se mostró, cuántas veces hicieron clic. · '
         '<b>CPC</b> = lo que costó cada clic. · '
         '<b>Cliente potencial</b> = alguien que dejó sus datos (en Ads Manager se llama «lead»).</div>')
-    out.append('<p class="intro" style="margin-top:18px">Datos leídos en Ads Manager el 27-nov-2026. Próxima actualización: diaria.</p>')
+    out.append('<p class="intro" style="margin-top:18px">Datos leídos en Ads Manager el 28-nov-2026. Próxima actualización: diaria.</p>')
     return "\n".join(out)
 
 
@@ -1353,10 +1358,10 @@ consentimiento.
   - `ofertas.html` — Ofertas Q4 verificadas + Black Friday.
   - `vallure.html` — Contenido de Vallure (10 anuncios + 49 posts).
   - `anuncios.html` — Anuncios en simple: métricas reales de Ads Manager
-    (leídas el 27-nov-2026, rango 28-oct al 26-nov-2026), con veredicto
+    (leídas el 28-nov-2026, rango 29-oct al 27-nov-2026), con veredicto
     por aviso (va bien / regular / va mal) y recomendaciones reales.
     Se actualiza una vez por día. Los números viven en
-    `../med-aesthetics-materiales/anuncios-metricas-2026-11-27.json`.
+    `../med-aesthetics-materiales/anuncios-metricas-2026-11-28.json`.
   - `competencia.html` — Competencia: engagement en Miami (Med 0,115%, la
     mejor de las comparables pero muy bajo) y top 10 nacional por
     interacción, con la advertencia honesta (solo 2 medianas medidas de
